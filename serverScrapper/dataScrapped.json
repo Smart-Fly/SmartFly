@@ -1,0 +1,295 @@
+{
+  "Traveloka": [
+    {
+      "airline": "Citilink",
+      "departureTime": "14:40",
+      "arrivalTime": "07:55(+1d)",
+      "price": 688600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
+    },
+    {
+      "airline": "Lion",
+      "departureTime": "09:50",
+      "arrivalTime": "21:20",
+      "price": 871800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+    },
+    {
+      "airline": "Lion",
+      "departureTime": "15:20",
+      "arrivalTime": "21:20",
+      "price": 871800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+    },
+    {
+      "airline": "Lion",
+      "departureTime": "08:55",
+      "arrivalTime": "21:20",
+      "price": 911400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "12:50",
+      "price": 1031300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+    },
+    {
+      "airline": "Batik",
+      "departureTime": "13:50",
+      "arrivalTime": "18:50",
+      "price": 1200100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
+    },
+    {
+      "airline": "Batik",
+      "departureTime": "10:50",
+      "arrivalTime": "16:00",
+      "price": 1234800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
+    },
+    {
+      "airline": "Batik",
+      "departureTime": "10:50",
+      "arrivalTime": "18:30",
+      "price": 1234800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
+    },
+    {
+      "airline": "Batik",
+      "departureTime": "10:50",
+      "arrivalTime": "19:50",
+      "price": 1234800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
+    },
+    {
+      "airline": "Garuda",
+      "departureTime": "15:20",
+      "arrivalTime": "17:40",
+      "price": 1279300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "14:55",
+      "price": 1286300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1286300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+    },
+    {
+      "airline": "Batik",
+      "departureTime": "10:50",
+      "arrivalTime": "21:50",
+      "price": 1314000,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
+    },
+    {
+      "airline": "Citilink",
+      "departureTime": "09:15",
+      "arrivalTime": "16:40",
+      "price": 1567500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "22:15",
+      "price": 2828000,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "10:10(+1d)",
+      "price": 3775100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "10:10(+1d)",
+      "price": 3775100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "10:10(+1d)",
+      "price": 3775100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+    }
+  ],
+  "Tiket": [
+    {
+      "airline": "Citilink Indonesia",
+      "departureTime": "14:40",
+      "arrivalTime": "07:55+1h",
+      "price": 688600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "15:20",
+      "arrivalTime": "21:20",
+      "price": 871800,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "09:50",
+      "arrivalTime": "21:20",
+      "price": 871800,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "08:55",
+      "arrivalTime": "21:20",
+      "price": 911400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+    },
+    {
+      "airline": "Wings Air",
+      "departureTime": "07:00",
+      "arrivalTime": "12:50",
+      "price": 1031300,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836678/string/2018/08/21/2aac432c-b367-41c9-8c22-0b003aa202f2cba0bf273bc8caf2ae4d436d277c3c8b.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "13:50",
+      "arrivalTime": "18:50",
+      "price": 1200100,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "16:00",
+      "price": 1234800,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "18:30",
+      "price": 1234800,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "19:50",
+      "price": 1234800,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
+    },
+    {
+      "airline": "Garuda Indonesia",
+      "departureTime": "15:20",
+      "arrivalTime": "17:40",
+      "price": 1279300,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "21:50",
+      "price": 1314000,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
+    },
+    {
+      "airline": "Citilink Indonesia",
+      "departureTime": "09:15",
+      "arrivalTime": "16:40",
+      "price": 1753400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png"
+    }
+  ],
+  "PegiPegi": [
+    {
+      "airline": "Citilink",
+      "departureTime": "14:40",
+      "arrivalTime": "07:55",
+      "price": 688600,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "09:50",
+      "arrivalTime": "21:20",
+      "price": 871800,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "15:20",
+      "arrivalTime": "21:20",
+      "price": 871800,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "08:55",
+      "arrivalTime": "21:20",
+      "price": 911400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "07:00",
+      "arrivalTime": "12:50",
+      "price": 1031300,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/IW.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "13:50",
+      "arrivalTime": "18:50",
+      "price": 1200100,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "18:30",
+      "price": 1234800,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "16:00",
+      "price": 1234800,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "19:50",
+      "price": 1234800,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "10:50",
+      "arrivalTime": "21:50",
+      "price": 1314000,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png"
+    },
+    {
+      "airline": "Citilink",
+      "departureTime": "09:15",
+      "arrivalTime": "16:40",
+      "price": 1567500,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png"
+    }
+  ]
+}
