@@ -7,7 +7,6 @@ const saveResult = require('../helpers/saveResult')
 class FlightController {
 
   static async getFlightData(req, res) {
-
     const reqeuestBody = {
       dAirportCode: req.body.dAirportCode,
       aAirportCode: req.body.aAirportCode,
@@ -17,7 +16,7 @@ class FlightController {
       psInfant: req.body.psInfant,
       classType: req.body.classType,
     }
-    
+
     try {
 
       const resTraveloka = await Traveloka.getTraveloka(reqeuestBody)
@@ -34,11 +33,11 @@ class FlightController {
         Tiket: resTiketCom,
         PegiPegi: resPegiPegi
       }
-      res.send(AllData)
+      res.status(200).json(AllData)
       saveResult(AllData)
 
     } catch (error) {
-      console.log(error)
+      res.status(500).json({message:"Internal Server Error"})
     }
   }
 }
