@@ -10,6 +10,20 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 // import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 // import SkipNextIcon from '@material-ui/icons/SkipNext';
 import CardResult from '../components/CardResult'
+import { gql, useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom'
+
+const getPredictions = gql `
+  query Prediction($depart: String, $arrive: String) {
+    predictions(departure:$depart, arrival:$arrive) {
+      accuracy
+      slopeGraph
+      intercept
+    }
+  }
+`
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,8 +51,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 const Result = () => {
-    const classes = useStyles();
-    const theme = useTheme();
+  const classes = useStyles();
+  const theme = useTheme();
+  const { departure, arrival } = useParams()
+  const { error, data, loading } = useQuery(getPredictions, {variables: {depart: departure,arrive:arrival}})
+  if (loading) return (<p>Loading</p>)
+  if (error) return (<p>Error</p>)
     return (
         <div id="booking" className='section'>
             <br></br>
@@ -51,7 +69,7 @@ const Result = () => {
                     <Col>
                         <CardResult />
                     </Col>
-                 
+
                 </Row>
                 <Row>
                     <Col md={4}>
@@ -61,7 +79,7 @@ const Result = () => {
                     <Col>
                         <CardResult />
                     </Col>
-                   
+
                 </Row>
                         <br></br>
                 <Row>
@@ -71,7 +89,7 @@ const Result = () => {
                     <Col>
                         <CardResult />
                     </Col>
-                   
+
                 </Row>
             </Container>
 
