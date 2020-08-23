@@ -1,11 +1,13 @@
 const converToNumber = require('../helpers/convertPrice')
+const converDate = require('../helpers/convertDate')
 const Nightmare = require('nightmare')
 const nightmare = Nightmare({ show: false })
 const cheerio = require('cheerio')
 
-const url = 'https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=ECONOMY'
+// const url = 'https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=ECONOMY'
+
 let airline, price, airLineLogo, departureTime, arrivalTime
-let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo:""}
+let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "" }
 let result = []
 
 const getData = html => {
@@ -41,7 +43,29 @@ const getData = html => {
 }
 
 class Traveloka {
-  static async getTraveloka() {
+
+  static async getTraveloka(reqData) {
+    let {
+      dAirportCode,
+      aAirportCode,
+      planDate,
+      psAdult,
+      psChild,
+      psInfant,
+      classType
+    } = reqData
+
+    if (dAirportCode === 'JKT') {
+      dAirportCode = 'JKTA'
+    }
+
+    if (aAirportCode === 'JKT') {
+      aAirportCode = 'JKTA'
+    }
+
+    const NewDate = converDate(planDate, 'TL')
+    const url = `https://www.traveloka.com/en-id/flight/onewaysearch?ap=${dAirportCode}.${aAirportCode}&dt=${NewDate}.NA&ps=${psAdult}.${psChild}.${psInfant}&sc=${classType}`
+    console.log(url, '>> Traveloka')
     try {
       await nightmare
         .goto(url)

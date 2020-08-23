@@ -1,8 +1,8 @@
 const converToNumber = require('../helpers/convertPrice')
+const converDate = require('../helpers/convertDate')
 const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: false })
 const cheerio = require('cheerio')
-const url = 'https://www.tiket.com/pesawat/search?d=SUBC&a=JKTC&dType=CITY&aType=CITY&date=2020-08-24&adult=1&child=0&infant=0&class=economy'
 
 let airline, price, airLineLogo, departureTime, arrivalTime
 let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "" }
@@ -32,17 +32,48 @@ const getData = html => {
     price = converToNumber(price)
     dataJson.price = price
 
-
     result.push({ airline, departureTime, arrivalTime, price, airLineLogo })
   })
 }
 
 class TikeCom {
 
-  static async getTiketCom() {
+  static async getTiketCom(reqData) {
+    let {
+      dAirportCode,
+      aAirportCode,
+      planDate,
+      psAdult,
+      psChild,
+      psInfant,
+      classType
+    } = reqData
+
+    let url = ''
+    let dType = 'AIRPORT', aType = 'AIRPORT' //Departur and Arrival Type (CITY or AIRPORT)
+
+    if (dAirportCode === 'JKT') {
+      dAirportCode = 'JKTC'
+      dType = 'CITY'
+    } else if (dAirportCode === 'YKIA') {
+      dAirportCode = 'JOGC'
+      dType = 'CITY'
+    }
+
+    if (aAirportCode === 'JKT') {
+      aAirportCode = 'JKTC'
+      aType = 'CITY'
+    } else if (aAirportCode === 'YKIA') {
+      aAirportCode = 'JOGC'
+      aType = 'CITY'
+    }
+
+
+    const newDate = converDate(planDate, 'TK')
+    url = `https://www.tiket.com/pesawat/search?d=${dAirportCode}&a=${aAirportCode}&dType=${dType}&aType=${aType}&date=${newDate}&adult=${psAdult}&child=${psChild}&infant=${psInfant}&class=${classType}`
+    console.log(url,'>> Tikete')
     try {
       await nightmare
-
         .goto(url)
         .wait('body')
         .scrollTo(500, 0)

@@ -1,8 +1,9 @@
 const converToNumber = require('../helpers/convertPrice')
+const converDate = require('../helpers/convertDate')
 const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: false })
 const cheerio = require('cheerio')
-const url = 'https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/24-08-2020/1/0/0'
+
 
 let airline, price, airLineLogo, departureTime, arrivalTime
 let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "" }
@@ -19,8 +20,7 @@ let getData = html => {
     airLineLogo = $(item)
       .children('.firstMaskapai')
       .find('.maskapaiLogo img').attr('src')
-    let logo = ('https:' + airLineLogo)
-    dataJson.airLineLogo = logo
+    airLineLogo = ('https:' + airLineLogo)
 
     departureTime = $(item)
       .children('.rute')
@@ -53,7 +53,21 @@ let getData = html => {
 }
 class PegiPegi {
 
-  static async getPegipegi() {
+  static async getPegipegi(reqData) {
+    let {
+      dAirportCode,
+      aAirportCode,
+      planDate,
+      psAdult,
+      psChild,
+      psInfant,
+      classType
+    } = reqData
+
+
+    const NewDate = converDate(planDate, 'TL')
+    const url = `https://www.pegipegi.com/tiket-pesawat/sys/search-results/${dAirportCode}/${aAirportCode}/${NewDate}/${psAdult}/${psChild}/${psInfant}`
+    console.log(url, '>> PegiPegi')
     try {
       await nightmare
         .goto(url)
