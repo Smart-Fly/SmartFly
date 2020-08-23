@@ -212,13 +212,6 @@
     },
     {
       "airline": "Multi-airline",
-      "departureTime": "05:00",
-      "arrivalTime": "12:15",
-      "price": 1112300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
       "departureTime": "06:00",
       "arrivalTime": "14:55",
       "price": 1137600,
@@ -303,13 +296,6 @@
     },
     {
       "airline": "Multi-airline",
-      "departureTime": "06:00",
-      "arrivalTime": "12:15",
-      "price": 1255300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
       "departureTime": "17:00",
       "arrivalTime": "09:45(+1d)",
       "price": 1265200,
@@ -324,10 +310,10 @@
     },
     {
       "airline": "Multi-airline",
-      "departureTime": "05:45",
+      "departureTime": "05:00",
       "arrivalTime": "12:15",
-      "price": 1332300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
+      "price": 1322400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
     },
     {
       "airline": "Lion",
@@ -380,6 +366,13 @@
     },
     {
       "airline": "Multi-airline",
+      "departureTime": "06:00",
+      "arrivalTime": "12:15",
+      "price": 1465400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
+    },
+    {
+      "airline": "Multi-airline",
       "departureTime": "11:50",
       "arrivalTime": "15:10(+1d)",
       "price": 1494800,
@@ -400,11 +393,11 @@
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
     },
     {
-      "airline": "Garuda",
-      "departureTime": "06:00",
+      "airline": "Multi-airline",
+      "departureTime": "05:45",
       "arrivalTime": "12:15",
-      "price": 1530400,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75"
+      "price": 1542400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
     },
     {
       "airline": "Multi-airline",
@@ -610,6 +603,13 @@
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75"
     },
     {
+      "airline": "Garuda",
+      "departureTime": "06:00",
+      "arrivalTime": "12:15",
+      "price": 2125500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75"
+    },
+    {
       "airline": "Multi-airline",
       "departureTime": "11:25",
       "arrivalTime": "15:10(+1d)",
@@ -669,28 +669,28 @@
       "airline": "Multi-airline",
       "departureTime": "07:00",
       "arrivalTime": "22:15",
-      "price": 2482400,
+      "price": 3300800,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
     },
     {
       "airline": "Multi-airline",
       "departureTime": "05:00",
       "arrivalTime": "22:15",
-      "price": 2536300,
+      "price": 3354700,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
     },
     {
       "airline": "Multi-airline",
       "departureTime": "06:00",
       "arrivalTime": "22:15",
-      "price": 2679300,
+      "price": 3497700,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
     },
     {
       "airline": "Multi-airline",
       "departureTime": "05:45",
       "arrivalTime": "22:15",
-      "price": 2756300,
+      "price": 3574700,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
     }
   ],
