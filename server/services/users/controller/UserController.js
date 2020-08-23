@@ -23,10 +23,10 @@ class UserController {
         }
       })
       .then((newUser) => {
-        res.status(201).json({ message: "Success Create User" });
+        res.status(201).json(req.body);
       })
       .catch((err) => {
-        console.log(err, "dapat ga ni gadanta");
+        console.log(err.name)
         next(err);
       });
   }
@@ -52,6 +52,7 @@ class UserController {
           }
         })
         .catch((err) => {
+          console.log(err)
           next(err);
         });
     }
@@ -150,12 +151,12 @@ class UserController {
   }
 
   static updatePromoStatus(req, res, next) {
-    User.findOne({ where: { email: req.userData.email } })
+    User.findOne({ where: { email: req.body.email } })
       .then((data) => {
         if (data) {
           return User.update(
             { subsStatus: req.body.subsStatus },
-            { returning: true, where: { id: req.userData.id } }
+            { returning: true, where: { id: req.body.email } }
           );
         }
       })
@@ -166,7 +167,6 @@ class UserController {
           .json({ data: result, message: `Sucessfully update user` });
       })
       .catch((err) => {
-        console.log(err);
         next(err);
       });
   }

@@ -1,5 +1,5 @@
 const { ApolloServer, gql, makeExecutableSchema } = require('apollo-server');
-// const userSchema = require("./schemas/userSchema")
+const userSchema = require("./schemas/userSchema")
 const predictionSchema = require("./schemas/predictionSchema")
 
 const typeDefs = gql `
@@ -8,8 +8,8 @@ const typeDefs = gql `
 `
 
 const schema = makeExecutableSchema({
-  typeDefs: [typeDefs, predictionSchema.typeDefs],
-  resolvers: [predictionSchema.resolvers],
+  typeDefs: [typeDefs, predictionSchema.typeDefs, userSchema.typeDefs],
+  resolvers: [predictionSchema.resolvers, userSchema.resolvers],
 })
 
 

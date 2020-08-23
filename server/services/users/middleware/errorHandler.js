@@ -1,4 +1,4 @@
-module.exports = function (err, _, res, _) {
+module.exports = function (err, _, res, next) {
   console.log(err.name);
   let statusCode = 500;
   let message = "Internal Server Error";
