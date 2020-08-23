@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const flightControllers = require('../controllers/flightControllers')
 
-router.get('/flightPrice', flightControllers.getFlightData)
+router.post('/flightPrice', flightControllers.getFlightData)
 
 module.exports = router;

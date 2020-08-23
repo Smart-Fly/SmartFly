@@ -17,7 +17,7 @@ class FlightController {
       psInfant: req.body.psInfant,
       classType: req.body.classType,
     }
-
+    
     try {
 
       const resTraveloka = await Traveloka.getTraveloka(reqeuestBody)
