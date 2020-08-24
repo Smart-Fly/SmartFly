@@ -43,7 +43,6 @@ module.exports = function (err, _, res, next) {
       statusCode = 401;
       break;
     case "INVALID_EMAIL":
-      console.log("masuk ke error handler ga");
       message = "Email not Found";
       statusCode = 400;
       break;

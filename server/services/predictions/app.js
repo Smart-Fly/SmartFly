@@ -12,8 +12,10 @@ app.use(express.urlencoded({extended:true}))
 
 
 app.get("/pricePrediction/:departure/:arrival", (req,res) => {
-  let departure = req.params.departure.toLowerCase()
-  let arrival = req.params.arrival.toLowerCase()
+  let departure = req.params.departure
+  let arrival = req.params.arrival
+  console.log(departure)
+  console.log(arrival)
   SearchModel.findAll(departure, arrival)
     .then((data) => {
       if(data.length === 0){

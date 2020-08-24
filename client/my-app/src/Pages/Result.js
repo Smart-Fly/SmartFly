@@ -51,7 +51,7 @@ const Result = () => {
                     <Col>
                         <CardResult />
                     </Col>
-                 
+
                 </Row>
                 <Row>
                     <Col md={4}>
@@ -61,7 +61,7 @@ const Result = () => {
                     <Col>
                         <CardResult />
                     </Col>
-                   
+
                 </Row>
                         <br></br>
                 <Row>
@@ -71,7 +71,7 @@ const Result = () => {
                     <Col>
                         <CardResult />
                     </Col>
-                   
+
                 </Row>
             </Container>
 
