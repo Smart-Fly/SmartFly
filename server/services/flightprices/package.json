@@ -1,7 +1,7 @@
 {
   "name": "server",
   "jest": {
-    "testTimeout":80000
+    "testTimeout": 80000
   },
   "version": "1.0.0",
   "description": "",

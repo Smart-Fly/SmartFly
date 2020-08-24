@@ -29,7 +29,7 @@ const typeDefs = gql `
 
 
   extend type Mutation {
-    getFlight(search: FlightInput) : [Price]
+    getFlight(search: FlightInput) : Price
   }
 `
 

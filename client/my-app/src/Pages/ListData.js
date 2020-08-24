@@ -5,7 +5,7 @@ import CardResult from '../components/CardResult'
 import { useParams, useLocation } from 'react-router-dom'
 import { GET_FLIGHT_SEARCH } from '../query/QueryPrice'
 import { useMutation } from '@apollo/client'
-import './Result.css'
+import './list.css'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Skeleton from '@material-ui/lab/Skeleton';
 
