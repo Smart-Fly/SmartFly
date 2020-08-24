@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
-import CardResult from '../components/CardResult'
+import CardResult from '../../components/CardResult'
 import { Slider, Typography } from "@material-ui/core";
 import { useParams, useLocation } from 'react-router-dom'
-import { GET_FLIGHT_SEARCH } from '../query/QueryPrice'
+import { GET_FLIGHT_SEARCH } from '../../query/QueryPrice'
 import { gql, useMutation, useLazyQuery } from '@apollo/client'
 import './list.css'
 import LinearProgress from '@material-ui/core/LinearProgress'

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -192,9 +192,9 @@ const Navbar = () => {
               <div className={classes.searchIcon}>
                 {/* <SearchIcon /> */}
               </div>
-              <Button onClick={() => setModalShow(true)} variant="contained" color="primary">
+              {pathname != "/" ? <Button onClick={() => setModalShow(true)} variant="contained" color="primary">
                 Searching
-              </Button>
+              </Button> : null}
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
