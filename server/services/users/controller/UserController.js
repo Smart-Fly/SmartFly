@@ -1,7 +1,7 @@
 const { checkPassword } = require("../helpers/bcrypt");
+const { OAuth2Client } = require("google-auth-library");
 const { User } = require("../models");
 const encode = require("../helpers/jwt");
-const { OAuth2Client } = require("google-auth-library");
 const cron = require("node-cron");
 const nodemailer = require("nodemailer");
 const fs = require("fs");
@@ -26,7 +26,7 @@ class UserController {
         res.status(201).json(req.body);
       })
       .catch((err) => {
-        console.log(err.name)
+        console.log(err.name);
         next(err);
       });
   }
@@ -52,7 +52,7 @@ class UserController {
           }
         })
         .catch((err) => {
-          console.log(err)
+          console.log(err);
           next(err);
         });
     }
@@ -151,12 +151,12 @@ class UserController {
   }
 
   static updatePromoStatus(req, res, next) {
-    User.findOne({ where: { email: req.body.email } })
+    User.findOne({ where: { email: req.userData.email } })
       .then((data) => {
         if (data) {
           return User.update(
             { subsStatus: req.body.subsStatus },
-            { returning: true, where: { email: req.body.email } }
+            { returning: true, where: { email: req.userData.email } }
           );
         }
       })

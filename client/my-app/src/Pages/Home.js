@@ -1,5 +1,6 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './style.css'
+import { useHistory, useParams } from 'react-router-dom'
 import DateFnsUtils from '@date-io/date-fns';
 import { stateOptions } from './data'
 import {
@@ -8,9 +9,18 @@ import {
 } from '@material-ui/pickers';
 import Select from 'react-select';
 import { Row, Container } from 'react-bootstrap'
-import { Radio, RadioGroup, FormControl, FormControlLabel } from '@material-ui/core'
+import { Radio, RadioGroup, FormControlLabel ,Button } from '@material-ui/core'
 import { gql, useMutation } from '@apollo/client';
-import { useHistory } from 'react-router-dom'
+const styles = {
+
+    buttonBlue: {
+        color: "white",
+        background: "linear-gradient(45deg, #2196f3 30%, #21cbf3 50%)",
+		boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .30)",
+		height :65,
+		width : "100%"
+	}
+}
 
 const ADD_SEARCH = gql `
 	mutation addSearch($newSearch: SearchInput) {
@@ -21,45 +31,64 @@ const ADD_SEARCH = gql `
 	}
 `
 
-
 const Home = () => {
-	const [selectedDate, setSelectedDate] = useState(new Date());
-	const [cityFrom, setCityFrom] = useState("");
-	const [cityTo, setCityTo] = useState("");
-	const [adults, setAdults] = useState(0)
-	const [children, setChildren] = useState(0)
-	const [seatClass, setSeatClass] = useState('')
-
+	const { slug} = useParams()
 	const history = useHistory()
+	const [selectedDate, setSelectedDate] = useState(new Date()); //Date
+	const [clases, setClases] = useState("economy") // class
+	const [from, setFrom] = useState();// from
+	const [to, setTo] = useState();//too
+	const [totalAdults, setTotalAdults] = useState(1) //set total
+	const [totalChildren, setTotalChildren] = useState(0) //set total
+	const [totalInfant, setTotalInfant] = useState(0) //set total
+
+
 
 	const handleDateChange = (date) => {
 		setSelectedDate(date);
 	};
-	const handlePassAdults = (e) => {
-		setAdults(e.target.value)
-	};
-	const handlePassChildren = (e) => {
-		setChildren(e.target.value)
-	}
-	const handleSelectFrom= (e)=>{
-		if (e) {
-			setCityFrom(e.value)
-		}
-	}
-	const handleSelectTo= (e)=>{
-		if (e) {
-			setCityTo(e.value)
-		}
-	}
-	const handleClass= (e)=>{
-		setSeatClass(e.target.value)
-	}
+	const handleAdults = (e) => {
+		setTotalAdults(e.target.value)
 
-	const searching = (e) => {
+	};
+	const handleChildren = (e) => {
+		setTotalChildren(e.target.value)
+
+	};
+	const handleInfant = (e) => {
+
+		setTotalInfant(e.target.value)
+	};
+	const handleSelectFrom = (e) => {
+		if (e) {
+			// console.log(e)
+			setFrom(e.value)
+		}
+	}
+	const handleSelectTo = (e) => {
+		if (e) {
+			setTo(e.value)
+		}
+	}
+	const handleClass = (e) => {
+		setClases(e.target.value)
+	}
+	var todayDate = selectedDate.toISOString().slice(0, 10);
+	const goSubmit = (e) => {
 		e.preventDefault()
-		const newAddSearch = {departure:cityFrom,arrival:cityTo}
-		addSearch({variables: {newSearch: newAddSearch}})
-		history.push(`/res/${cityFrom}/${cityTo}`)
+
+		history.push({
+			pathname: `/${from}?${to}!${todayDate}@${totalAdults}#${totalChildren}$${totalInfant}=${clases}+`,
+			state: { data: {
+							dAirportCode: from,
+							aAirportCode: to,
+							planDate: todayDate,
+							psAdult: +totalAdults,
+							psChild: +totalChildren,
+							psInfant: +totalInfant,
+							classType: clases
+						} }
+		})
 	}
 
 	const [addSearch, { error, data, loading }] = useMutation(ADD_SEARCH)
@@ -79,7 +108,14 @@ const Home = () => {
 							</div>
 							<div className="col-md-7 col-md-offset-1">
 								<div className="booking-form">
-									<form>
+									<form onSubmit={(e) => goSubmit(e)}>
+										<div className="form-group">
+											<RadioGroup row aria-label="position" name="position" defaultValue="">
+												<FormControlLabel value="Roundtrip" control={<Radio color="primary" />} label="Roundtrip" />
+												<FormControlLabel value="One way" control={<Radio color="primary" />} label="One way" />
+												<FormControlLabel value="Multi-City" control={<Radio color="primary" />} label="Multi-City" />
+											</RadioGroup>
+										</div>
 										<div className="row">
 											<div className="col-md-6">
 												<div className="form-group">
@@ -101,12 +137,12 @@ const Home = () => {
 															borderRadius: 5,
 															// border:0,
 															colors: {
-															  ...theme.colors,
-															//   primary25: 'primary',
-															//   primary: 'black',
-															//   border:0
+																...theme.colors,
+																//   primary25: 'primary',
+																//   primary: 'black',
+																//   border:0
 															},
-														  })}
+														})}
 													/>
 												</div>
 											</div>
@@ -130,12 +166,12 @@ const Home = () => {
 															borderRadius: 5,
 															// border:0,
 															colors: {
-															  ...theme.colors,
-															//   primary25: 'primary',
-															//   primary: 'black',
-															//   border:0
+																...theme.colors,
+																//   primary25: 'primary',
+																//   primary: 'black',
+																//   border:0
 															},
-														  })}
+														})}
 													/>
 												</div>
 											</div>
@@ -143,29 +179,10 @@ const Home = () => {
 										<div className="row">
 											<div className="col-md-6">
 												<div className="form-group">
-												<KeyboardDatePicker
-													margin="normal"
-													id="date-picker-dialog"
-													label="Departing"
-													// variant="inline"
-													// inputVariant="outlined"
-													// className="form-control"
-													format="MM/dd/yyyy"
-													value={selectedDate}
-													onChange={handleDateChange}
-													KeyboardButtonProps={{
-														'aria-label': 'change date',
-													}}
-												/>
-
-												</div>
-											</div>
-											{/* <div className="col-md-6">
-												<div className="form-group">
 													<KeyboardDatePicker
 														margin="normal"
 														id="date-picker-dialog"
-														label="Returning"
+														label="Departing"
 														// variant="inline"
 														// inputVariant="outlined"
 														// className="form-control"
@@ -177,13 +194,27 @@ const Home = () => {
 														}}
 													/>
 												</div>
-											</div> */}
+											</div>
+											<div className="col-md-6">
+												<div className="form-group">
+													<span className="form-label">Travel Class</span>
+													<select
+														onChange={handleClass}
+														className="form-control">
+														<option value="economy">Economy </option>
+														<option value="premium_economy">Premium-Economy </option>
+														<option value="business">Business </option>
+														<option value="first">First </option>
+													</select>
+													<span className="select-arrow"></span>
+												</div>
+											</div>
 										</div>
 										<div className="row">
 											<div className="col-md-4">
 												<div className="form-group">
 													<span className="form-label">Adults (18+)</span>
-													<select onChange={handlePassAdults} className="form-control">
+													<select onChange={handleAdults} className="form-control">
 														<option value="1">1</option>
 														<option>2</option>
 														<option>3</option>
@@ -194,7 +225,7 @@ const Home = () => {
 											<div className="col-md-4">
 												<div className="form-group">
 													<span className="form-label">Children (0-17)</span>
-													<select onChange={handlePassChildren} className="form-control">
+													<select onChange={handleChildren} className="form-control">
 														<option>0</option>
 														<option>1</option>
 														<option>2</option>
@@ -204,21 +235,25 @@ const Home = () => {
 											</div>
 											<div className="col-md-4">
 												<div className="form-group">
-													<span className="form-label">Travel Class</span>
+													<span className="form-label">infant</span>
 													<select
-														onChange={handleClass}
-													className="form-control">
-														<option value="economy">Economy Class</option>
-														<option>Business Class</option>
-														<option>First Class</option>
+														onChange={handleInfant}
+														className="form-control">
+														{/* <option value="economy">Economy Class</option> */}
+														<option>0</option>
+														<option>1</option>
+														<option>2</option>
 													</select>
 													<span className="select-arrow"></span>
 												</div>
 											</div>
 										</div>
-										<div className="form-btn">
-											<button className="submit-btn" onClick={(e) => searching(e)}>Show flights</button>
-										</div>
+										<Button variant="contained" type="submit"  style={{
+                                ...styles.buttonBlue
+                            }} >
+								Show flights
+								</Button>
+
 									</form>
 								</div>
 							</div>
