@@ -1,13 +1,25 @@
 import React, { useEffect } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CardResult from '../components/CardResult'
 import { useParams, useLocation } from 'react-router-dom'
 import { GET_FLIGHT_SEARCH } from '../query/QueryPrice'
-import { useMutation } from '@apollo/client'
+import { gql, useMutation, useLazyQuery } from '@apollo/client'
 import './list.css'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Skeleton from '@material-ui/lab/Skeleton';
+
+
+const GET_PRED = gql `
+	query getPrediction($depart: String, $arrive: String) {
+		predictions(departure: $depart, arrival: $arrive) {
+			accuracy
+			slopeGraph
+      intercept
+		}
+	}
+`
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,6 +52,24 @@ const ListData = () => {
     const { slug } = useParams()
     const { state: { data } } = useLocation()
     const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH)
+    const [getPredictions, { loading: loadingPredictions, data: dataPredictions }] = useLazyQuery(GET_PRED,{
+      variables:{
+        depart: data.dAirportCode,
+        arrive: data.aAirportCode
+      }
+    });
+
+    const getPredict = () => {
+      console.log(data.dAirportCode)
+      console.log(data.aAirportCode)
+      getPredictions()
+      if(dataPredictions){
+        console.log(dataPredictions)
+      }
+      else{
+        console.log(loadingPredictions)
+      }
+    }
 
     useEffect(() => {
         getFlight({
@@ -76,7 +106,6 @@ const ListData = () => {
         )
     }
     if (ticket) {
-
         console.log(ticket.getFlight)
     }
     let dummy = [
@@ -125,6 +154,7 @@ const ListData = () => {
     return (
         <div id="booking1" className='section1'>
             <Container className="mt-5 pt-2">
+            <Button variant="primary" onClick={() => getPredict()}>Get Predictions</Button>
                 <center>
                 <h3>Traveloka</h3>
                 </center>

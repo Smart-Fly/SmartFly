@@ -33,6 +33,7 @@ const resolvers = {
       try {
         const departure = args.departure
         const arrival = args.arrival
+        console.log(departure, arrival)
         const prediction = await axios.get(`http://localhost:3002/pricePrediction/${departure}/${arrival}`)
         return prediction.data
       } catch (error) {
