@@ -57,6 +57,7 @@ const Result = () => {
   const { error, data, loading } = useQuery(getPredictions, {variables: {depart: departure,arrive:arrival}})
   if (loading) return (<p>Loading</p>)
   if (error) return (<p>Error</p>)
+  console.log(data)
     return (
         <div id="booking" className='section'>
             <br></br>

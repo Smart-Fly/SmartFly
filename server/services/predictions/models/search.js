@@ -4,7 +4,7 @@ const { ObjectID } = require("mongodb")
 
 class SearchModel {
   static findAll(departure,arrival) {
-    return Search.find({departure: departure.toLowerCase(), arrival: arrival.toLowerCase()}).toArray()
+    return Search.find({departure: departure, arrival: arrival}).toArray()
   }
 
   static insertOne(newData) {

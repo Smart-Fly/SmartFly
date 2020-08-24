@@ -3,9 +3,9 @@ const axios = require('axios')
 
 const typeDefs = gql `
   type Prediction {
-    accuracy: Int
-    slopeGraph: Int
-    intercept: Int
+    accuracy: Float
+    slopeGraph: Float
+    intercept: Float
   }
 
   extend type Query {

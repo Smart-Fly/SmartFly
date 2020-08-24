@@ -74,7 +74,7 @@ const resolvers = {
         const access_token = args.dataUser.access_token
         const updated = await axios.put(`http://localhost:3001/promotion`,{email, subsStatus},
           { 'headers': { 'access_token': access_token } })
-        return updated.data
+        return updated.data.data
       } catch (error) {
         return error
       }

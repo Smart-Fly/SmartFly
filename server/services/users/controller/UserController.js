@@ -156,7 +156,7 @@ class UserController {
         if (data) {
           return User.update(
             { subsStatus: req.body.subsStatus },
-            { returning: true, where: { id: req.body.email } }
+            { returning: true, where: { email: req.body.email } }
           );
         }
       })
