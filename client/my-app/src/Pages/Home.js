@@ -12,7 +12,6 @@ import { Row, Container } from 'react-bootstrap'
 import { Radio, RadioGroup, FormControlLabel ,Button } from '@material-ui/core'
 import { gql, useMutation } from '@apollo/client';
 const styles = {
-
     buttonBlue: {
         color: "white",
         background: "linear-gradient(45deg, #2196f3 30%, #21cbf3 50%)",
@@ -32,7 +31,7 @@ const ADD_SEARCH = gql `
 `
 
 const Home = () => {
-	const { slug} = useParams()
+	const { slug } = useParams()
 	const history = useHistory()
 	const [selectedDate, setSelectedDate] = useState(new Date()); //Date
 	const [clases, setClases] = useState("economy") // class
