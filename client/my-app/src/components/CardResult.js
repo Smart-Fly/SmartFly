@@ -7,12 +7,12 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Button from '@material-ui/core/Button';
 import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
-import {Col} from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         // display: 'flex',
-        textAlign:'center'
+        textAlign: 'center'
     },
     // details: {
     //     display: 'flex',
@@ -46,26 +46,25 @@ const CardResult = () => {
 
                     {/* <Avatar alt="Remy Sharp" src="https://miro.medium.com/max/2100/1*CvSLUjo2KYXp7M594-5ISg.jpeg" className={classes.large} /> */}
                     <CardContent>
-                    <Avatar alt="Remy Sharp" src="https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75" className={classes.large} />
+                        <Avatar alt="Remy Sharp" src="https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75" className={classes.large} />
                         <Typography gutterBottom variant="h5" component="h2">
                             Lizard
-          </Typography>
+                        </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                             across all continents except Antarctica
-          </Typography>
+                        </Typography>
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
                     <Button size="small" color="primary">
-                       Buy Ticket
-        </Button>
+                        Buy Ticket
+                    </Button>
                     <Button size="small" color="primary">
                         Learn More
-        </Button>
+                    </Button>
                 </CardActions>
             </Card>
-
         </>
     )
 

@@ -67,11 +67,13 @@ class TikeCom {
       aAirportCode = 'JOGC'
       aType = 'CITY'
     }
-
+    // https://m.tiket.com/pesawat/search?d=CGK&a=SUBC&date=2020-08-25&adult=1&child=0&infant=0&class=economy&dType=AIRPORT&aType=CITY&type=depart
+    // https://m.tiket.com/pesawat/search?d=JKTC&a=SUBC&date=2020-08-25&adult=1&child=0&infant=0&class=economy&dType=CITY&aType=CITY&type=depart
+    // https://www.tiket.com/pesawat/search?d=JKTC&a=SUBC&dType=CITY&aType=CITY&date=2020-08-25&adult=1&child=0&infant=0&class=economy
 
     const newDate = converDate(planDate, 'TK')
     url = `https://www.tiket.com/pesawat/search?d=${dAirportCode}&a=${aAirportCode}&dType=${dType}&aType=${aType}&date=${newDate}&adult=${psAdult}&child=${psChild}&infant=${psInfant}&class=${classType}`
-    console.log(url,'>> Tikete')
+    console.log(url,'>> Tiket')
     try {
       await nightmare
         .goto(url)

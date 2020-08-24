@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './style.css'
 import DateFnsUtils from '@date-io/date-fns';
 import { stateOptions } from './data'
@@ -17,7 +17,7 @@ const Home = () => {
 	const [city, setCity] = useState("");
 	const [from, setFrom] = useState("");
 	const [to, setTo] = useState("");
-	const [pas,setPas] = useState("")
+	const [pas, setPas] = useState("")
 
 
 	const handleDateChange = (date) => {
@@ -28,23 +28,23 @@ const Home = () => {
 		// setTrip(e.target.value);
 		console.log(e.target.value)
 	};
-	const handleSelectFrom= (e)=>{
+	const handleSelectFrom = (e) => {
 		if (e) {
 			setCity(e.value)
-			console.log(e.value,"form")
+			console.log(e.value, "form")
 		}
 	}
-	const handleSelectTo= (e)=>{
+	const handleSelectTo = (e) => {
 		// if (e) {
 		// 	setCity(e.value)
 		// }
-		console.log(e.value,'selectTO')
+		console.log(e.value, 'selectTO')
 	}
-	const handleClass= (e)=>{
+	const handleClass = (e) => {
 		// if (e) {
 		// 	setCity(e.value)
 		// }
-		console.log(e.target.value,'value class')
+		console.log(e.target.value, 'value class')
 	}
 
 	return (
@@ -64,7 +64,7 @@ const Home = () => {
 								<div className="booking-form">
 									<form>
 										<div className="form-group">
-											<RadioGroup row aria-label="position"  name="position" defaultValue="">
+											<RadioGroup row aria-label="position" name="position" defaultValue="">
 												<FormControlLabel value="Roundtrip" control={<Radio color="primary" />} label="Roundtrip" />
 												<FormControlLabel value="One way" control={<Radio color="primary" />} label="One way" />
 												<FormControlLabel value="Multi-City" control={<Radio color="primary" />} label="Multi-City" />
@@ -83,7 +83,7 @@ const Home = () => {
 														// defaultValue={colourOptions[0]}
 														onChange={handleSelectFrom}
 														isClearable
-														isSearchable														
+														isSearchable
 														name="color"
 														options={stateOptions}
 														theme={theme => ({
@@ -91,12 +91,12 @@ const Home = () => {
 															borderRadius: 5,
 															// border:0,
 															colors: {
-															  ...theme.colors,
-															//   primary25: 'primary',
-															//   primary: 'black',
-															//   border:0
+																...theme.colors,
+																//   primary25: 'primary',
+																//   primary: 'black',
+																//   border:0
 															},
-														  })}
+														})}
 													/>
 												</div>
 											</div>
@@ -112,7 +112,7 @@ const Home = () => {
 														// defaultValue={colourOptions[0]}
 														onChange={handleSelectTo}
 														isClearable
-														isSearchable														
+														isSearchable
 														name="color"
 														options={stateOptions}
 														theme={theme => ({
@@ -120,12 +120,12 @@ const Home = () => {
 															borderRadius: 5,
 															// border:0,
 															colors: {
-															  ...theme.colors,
-															//   primary25: 'primary',
-															//   primary: 'black',
-															//   border:0
+																...theme.colors,
+																//   primary25: 'primary',
+																//   primary: 'black',
+																//   border:0
 															},
-														  })}
+														})}
 													/>
 												</div>
 											</div>
@@ -133,20 +133,20 @@ const Home = () => {
 										<div className="row">
 											<div className="col-md-6">
 												<div className="form-group">
-												<KeyboardDatePicker
-													margin="normal"
-													id="date-picker-dialog"
-													label="Departing"
-													// variant="inline"
-													// inputVariant="outlined"
-													// className="form-control"
-													format="MM/dd/yyyy"
-													value={selectedDate}
-													onChange={handleDateChange}
-													KeyboardButtonProps={{
-														'aria-label': 'change date',
-													}}
-												/>
+													<KeyboardDatePicker
+														margin="normal"
+														id="date-picker-dialog"
+														label="Departing"
+														// variant="inline"
+														// inputVariant="outlined"
+														// className="form-control"
+														format="MM/dd/yyyy"
+														value={selectedDate}
+														onChange={handleDateChange}
+														KeyboardButtonProps={{
+															'aria-label': 'change date',
+														}}
+													/>
 
 												</div>
 											</div>
@@ -195,9 +195,9 @@ const Home = () => {
 											<div className="col-md-4">
 												<div className="form-group">
 													<span className="form-label">Travel Class</span>
-													<select  
+													<select
 														onChange={handleClass}
-													className="form-control">
+														className="form-control">
 														<option value="economy">Economy Class</option>
 														<option>Business Class</option>
 														<option>First Class</option>

@@ -64,7 +64,6 @@ class PegiPegi {
       classType
     } = reqData
 
-
     const NewDate = converDate(planDate, 'TL')
     const url = `https://www.pegipegi.com/tiket-pesawat/sys/search-results/${dAirportCode}/${aAirportCode}/${NewDate}/${psAdult}/${psChild}/${psInfant}`
     console.log(url, '>> PegiPegi')
