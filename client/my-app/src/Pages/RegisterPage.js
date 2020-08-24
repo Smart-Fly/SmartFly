@@ -2,14 +2,23 @@ import React, { useState } from "react";
 import {
   Input,
   Button,
-  // FormGroup,
-  // Checkbox,
   InputLabel,
   FormControl,
-  // FormControlLabel,
+  FormGroup,
 } from "@material-ui/core";
+import { styled, makeStyles } from "@material-ui/core/styles";
 import { USER_REGISTER } from "../query/userQuery";
 import { useMutation } from "@apollo/client";
+import { Container, Row, Form } from "react-bootstrap";
+
+const useStyle = makeStyles({
+  formStyle: {
+    marginTop: "10%",
+    justifyContent: "center",
+    height: 20,
+    flex: 1,
+  },
+});
 
 const RegisterPage = () => {
   const [userInput, setUserInput] = useState({
@@ -19,6 +28,7 @@ const RegisterPage = () => {
     subsStatus: false,
   });
 
+  const classes = useStyle();
   const [register, { data: newUser, loading }] = useMutation(USER_REGISTER);
 
   const handleOnchance = (e) => {
@@ -44,11 +54,9 @@ const RegisterPage = () => {
 
   return (
     <>
-      {/* <FormGroup className="container w-50"> */}
-      {/* <FormControl onSubmit={(e) => handleSubmit(e)}> */}
-      <div style={{ justifyContent: "center" }}>
-        <form className="container w-50" onSubmit={(e) => handleSubmit(e)}>
-          <h1>REGISTER PAGE</h1>
+      <div className={["col-md-5 justify-content-start"]}>
+        {/* <Form onSubmit={(e) => handleSubmit(e)}> */}
+        <FormGroup>
           <FormControl>
             <InputLabel>User name</InputLabel>
             <Input
@@ -84,10 +92,9 @@ const RegisterPage = () => {
           <Button type="submit" variant="contained" color="primary">
             Register
           </Button>
-        </form>
+        </FormGroup>
+        {/* </Form> */}
       </div>
-      {/* </FormControl> */}
-      {/* </FormGroup> */}
     </>
   );
 };

@@ -19,7 +19,7 @@ app.use(router);
 
 app.use(errorHandler);
 app.listen(port, () => {
-  console.log(`this app running on port ${port}`);
-})
+  console.log(`users running on port ${port}`);
+});
 
 // module.exports = app
