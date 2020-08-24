@@ -10,20 +10,29 @@ import {
 import Select from 'react-select';
 import { Row, Container } from 'react-bootstrap'
 import { Radio, RadioGroup, FormControlLabel ,Button } from '@material-ui/core'
+import { gql, useMutation } from '@apollo/client';
 const styles = {
-  
+
     buttonBlue: {
         color: "white",
         background: "linear-gradient(45deg, #2196f3 30%, #21cbf3 50%)",
 		boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .30)",
 		height :65,
 		width : "100%"
+	}
+}
 
-    }
-};
+const ADD_SEARCH = gql `
+	mutation addSearch($newSearch: SearchInput) {
+		addSearch(search: $newSearch) {
+			departure
+			arrival
+		}
+	}
+`
 
 const Home = () => {
-const { slug} = useParams()
+	const { slug} = useParams()
 	const history = useHistory()
 	const [selectedDate, setSelectedDate] = useState(new Date()); //Date
 	const [clases, setClases] = useState("economy") // class
@@ -82,6 +91,8 @@ const { slug} = useParams()
 		})
 	}
 
+	const [addSearch, { error, data, loading }] = useMutation(ADD_SEARCH)
+
 	return (
 		<div id="booking" className="section">
 			<MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -137,7 +148,7 @@ const { slug} = useParams()
 											</div>
 											<div className="col-md-6">
 												<div className="form-group">
-													<span className="form-label">Flyning to</span>
+													<span className="form-label">Flying to</span>
 													<br></br>
 													<Select
 														// className="basic-single"
@@ -238,7 +249,7 @@ const { slug} = useParams()
 											</div>
 										</div>
 										<Button variant="contained" type="submit"  style={{
-                                ...styles.buttonBlue 
+                                ...styles.buttonBlue
                             }} >
 								Show flights
 								</Button>

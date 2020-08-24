@@ -79,7 +79,7 @@ const resolvers = {
         const updated = await axios.put(
           `http://localhost:3001/promotion`,
           { subsStatus },
-          { headers: { access_token: access_token } }
+          { 'headers': { 'access_token': access_token } }
         );
         return updated.data.data;
       } catch (error) {

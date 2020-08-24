@@ -1,7 +1,7 @@
 export const stateOptions = [
     {
       "name": "Yogyakarta",
-      value: "YKIA",
+      "value": "YKIA",
       "city": "Yogyakarta",
       "coun": "Indonesia",
       "label": "Yogyakarta ALL (YKIA), Yogyakarta"
@@ -14,7 +14,7 @@ export const stateOptions = [
       "coun": "Indonesia",
       "label": "Yogyakarta International Airport (YIA), Yogyakarta"
     },
-    
+
     {
       "name": "Mali",
       "business_id": "135455",

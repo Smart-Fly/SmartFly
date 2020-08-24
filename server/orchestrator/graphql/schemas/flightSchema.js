@@ -11,9 +11,9 @@ const typeDefs = gql `
   }
 
   type Price {
-    Traveloka: [dataPrice]
-    Tiket: [dataPrice]
-    PegiPegi: [dataPrice]
+    Traveloka: [dataPrice!]
+    Tiket: [dataPrice!]
+    PegiPegi: [dataPrice!]
   }
 
 

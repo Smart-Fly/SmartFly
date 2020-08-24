@@ -34,13 +34,12 @@ const useStyles = makeStyles((theme) => ({
         width: 38,
     },
 }));
-const Result = () => {
+const ListData = () => {
     const classes = useStyles();
     const theme = useTheme();
     const { slug } = useParams()
     const { state: { data } } = useLocation()
     const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH)
-
 
     useEffect(() => {
         getFlight({
@@ -61,7 +60,7 @@ const Result = () => {
     if (loading) {
         return (
             <>
-          
+
                         <LinearProgress color="secondary" />
                         <Container  className="mt-5 pt-2">
                         <br></br>
@@ -184,4 +183,4 @@ const Result = () => {
 }
 
 
-export default Result
+export default ListData
