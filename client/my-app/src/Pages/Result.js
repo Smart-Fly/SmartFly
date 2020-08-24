@@ -10,6 +10,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 // import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 // import SkipNextIcon from '@material-ui/icons/SkipNext';
 import CardResult from '../components/CardResult'
+import { Modal } from '@material-ui/core'
 import { gql, useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom'
 
