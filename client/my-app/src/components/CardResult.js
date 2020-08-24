@@ -8,13 +8,14 @@ import {
     Button,
     CardActions,
     Avatar,
-    CardHeader
+    CardHeader,
+    CardMedia
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
         textAlign: 'center'
     },
     details: {
@@ -40,13 +41,14 @@ const CardResult = (props) => {
     return (
         <>
             <Card className={classes.root}>
-                <CardActions>
-                    <CardContent>
-                        <Avatar alt="Remy Sharp" src={data.airLineLogo} className={classes.large} />
-                    </CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <CardContent >
+                        <CardMedia > <img width="150" height="80"  src={data.airLineLogo} /></CardMedia>
+                    <Typography gutterBottom variant="h4" component="h1">
                         {data.airline}
                     </Typography>
+                    </CardContent>
+                
+                <CardActions disableSpacing>
                     <CardHeader
                         title="Departure"
                         subheader={data.departureTime}
@@ -56,13 +58,15 @@ const CardResult = (props) => {
                         subheader={data.arrivalTime}
                     ></CardHeader>
                 </CardActions>
-                <CardActions >
-                    <Button size="small" color="primary">
+                <CardActions disableSpacing>
+                    <CardContent>
+                    <Typography gutterBottom variant="h4" component="h1">
                         {Intl.NumberFormat('id', { style: 'currency', currency: 'idr' }).format(data.price)}
-                    </Button>
-                    <Button size="small" color="primary">
+                    </Typography>
+                    <Button size="big" variant="contained" color="primary">
                         Learn More
                     </Button>
+                    </CardContent>
                 </CardActions>
             </Card>
         </>
