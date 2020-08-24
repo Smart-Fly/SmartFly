@@ -4,20 +4,21 @@ import Result from './Pages/Result'
 import { ApolloProvider } from '@apollo/client'
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import client from './config/config'
 
 
 function App() {
   return (
     <div >
-      {/* <ApolloProvider client={client}>
-      </ApolloProvider> */}
+      <ApolloProvider client={client}>
       <Router>
         <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/res" component={Result} />
+          <Route exact path="/:slug" component={Result} />
         </Switch>
       </Router>
+    </ApolloProvider>
     </div>
   );
 }
