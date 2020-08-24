@@ -9,19 +9,19 @@ import {
 } from '@material-ui/pickers';
 import Select from 'react-select';
 import { Row, Container } from 'react-bootstrap'
-import { Radio, RadioGroup, FormControlLabel ,Button } from '@material-ui/core'
+import { Radio, RadioGroup, FormControlLabel, Button } from '@material-ui/core'
 import { gql, useMutation } from '@apollo/client';
 const styles = {
-    buttonBlue: {
-        color: "white",
-        background: "linear-gradient(45deg, #2196f3 30%, #21cbf3 50%)",
+	buttonBlue: {
+		color: "white",
+		background: "linear-gradient(45deg, #2196f3 30%, #21cbf3 50%)",
 		boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .30)",
-		height :65,
-		width : "100%"
+		height: 65,
+		width: "100%"
 	}
 }
 
-const ADD_SEARCH = gql `
+const ADD_SEARCH = gql`
 	mutation addSearch($newSearch: SearchInput) {
 		addSearch(search: $newSearch) {
 			departure
@@ -78,15 +78,17 @@ const Home = () => {
 
 		history.push({
 			pathname: `/${from}?${to}!${todayDate}@${totalAdults}#${totalChildren}$${totalInfant}=${clases}+`,
-			state: { data: {
-							dAirportCode: from,
-							aAirportCode: to,
-							planDate: todayDate,
-							psAdult: +totalAdults,
-							psChild: +totalChildren,
-							psInfant: +totalInfant,
-							classType: clases
-						} }
+			state: {
+				data: {
+					dAirportCode: from,
+					aAirportCode: to,
+					planDate: todayDate,
+					psAdult: +totalAdults,
+					psChild: +totalChildren,
+					psInfant: +totalInfant,
+					classType: clases
+				}
+			}
 		})
 	}
 
@@ -247,10 +249,10 @@ const Home = () => {
 												</div>
 											</div>
 										</div>
-										<Button variant="contained" type="submit"  style={{
-                                ...styles.buttonBlue
-                            }} >
-								Show flights
+										<Button variant="contained" type="submit" style={{
+											...styles.buttonBlue
+										}} >
+											Show flights
 								</Button>
 
 									</form>

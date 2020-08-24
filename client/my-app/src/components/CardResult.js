@@ -62,10 +62,9 @@ const CardResult = (props) => {
                     </Button>
                     <Button size="small" color="primary">
                         Learn More
-        </Button>
+                    </Button>
                 </CardActions>
             </Card>
-
         </>
     )
 

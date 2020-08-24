@@ -63,6 +63,8 @@ class Traveloka {
       aAirportCode = 'JKTA'
     }
 
+    // https://m.traveloka.com/en-id/search/flights/single.JKTA.SUB.2020-8-25.null.1.0.0.ECONOMY
+    // https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=25-08-2020.NA&ps=1.0.0&sc=ECONOMY
     const NewDate = converDate(planDate, 'TL')
     const url = `https://www.traveloka.com/en-id/flight/onewaysearch?ap=${dAirportCode}.${aAirportCode}&dt=${NewDate}.NA&ps=${psAdult}.${psChild}.${psInfant}&sc=${classType}`
     console.log(url, '>> Traveloka')

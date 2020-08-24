@@ -12,18 +12,18 @@ import UpdatePage from "./Pages/UpdatePage";
 function App() {
   return (
     <ApolloProvider client={client}>
-    <div >
+      <div >
         <Router>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/register" component={RegisterPage} />
-            <Route  path="/login" component={LoginPage} />
+            <Route path="/login" component={LoginPage} />
             <Route path="/update" component={UpdatePage} />
-            <Route  path="/:slug" component={ListData} />
+            <Route path="/:slug" component={ListData} />
           </Switch>
         </Router>
-    </div>
+      </div>
     </ApolloProvider>
   );
 }

@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navbar = () => {
-  const {pathname} = useLocation()
+  const { pathname } = useLocation()
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -169,8 +169,8 @@ const Navbar = () => {
   return (
     <>
       <div className={classes.grow}>
-        <AppBar position="absolute" style={ pathname == "/" ? { background: 'transparent', boxShadow: 'none' ,color:'blue' } :
-         { background: 'transparent', boxShadow: 'none' ,color:'black' } }  >
+        <AppBar position="absolute" style={pathname == "/" ? { background: 'transparent', boxShadow: 'none', color: 'blue' } :
+          { background: 'transparent', boxShadow: 'none', color: 'black' }}  >
           <Toolbar>
             <IconButton
               edge="start"
@@ -180,7 +180,7 @@ const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography className={  classes.title } variant="h6" noWrap>
+            <Typography className={classes.title} variant="h6" noWrap>
               Smart-Fly
           </Typography>
             <div className={classes.search}>
