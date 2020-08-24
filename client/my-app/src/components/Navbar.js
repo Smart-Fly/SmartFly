@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -16,6 +16,9 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { useLocation } from 'react-router-dom';
 import { colors } from '@material-ui/core';
+import { Button } from '@material-ui/core'
+import Modal from '../components/Modal'
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -88,6 +91,7 @@ const Navbar = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [modalShow, setModalShow] = useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -169,6 +173,7 @@ const Navbar = () => {
   return (
     <>
       <div className={classes.grow}>
+        <Modal show={modalShow} onHide={() => setModalShow(false)} ></Modal>
         <AppBar position="absolute" style={pathname == "/" ? { background: 'transparent', boxShadow: 'none', color: 'blue' } :
           { background: 'transparent', boxShadow: 'none', color: 'black' }}  >
           <Toolbar>
@@ -178,37 +183,32 @@ const Navbar = () => {
               color="inherit"
               aria-label="open drawer"
             >
-              <MenuIcon />
+              {/* <MenuIcon /> */}
             </IconButton>
             <Typography className={classes.title} variant="h6" noWrap>
               Smart-Fly
           </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
-                <SearchIcon />
+                {/* <SearchIcon /> */}
               </div>
-              <InputBase
-                placeholder="Search…"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ 'aria-label': 'search' }}
-              />
+              <Button onClick={() => setModalShow(true)} variant="contained" color="primary">
+                Searching
+              </Button>
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              <IconButton aria-label="show 4 new mails" color="inherit">
+              {/* <IconButton aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="secondary">
                   <MailIcon />
                 </Badge>
-              </IconButton>
-              <IconButton aria-label="show 17 new notifications" color="inherit">
+              </IconButton> */}
+              {/* <IconButton aria-label="show 17 new notifications" color="inherit">
                 <Badge badgeContent={17} color="secondary">
                   <NotificationsIcon />
                 </Badge>
-              </IconButton>
-              <IconButton
+              </IconButton> */}
+              {/* <IconButton
                 edge="end"
                 aria-label="account of current user"
                 aria-controls={menuId}
@@ -217,7 +217,7 @@ const Navbar = () => {
                 color="inherit"
               >
                 <AccountCircle />
-              </IconButton>
+              </IconButton> */}
             </div>
             <div className={classes.sectionMobile}>
               <IconButton
@@ -232,8 +232,8 @@ const Navbar = () => {
             </div>
           </Toolbar>
         </AppBar>
-        {renderMobileMenu}
-        {renderMenu}
+        {/* {renderMobileMenu} */}
+        {/* {renderMenu} */}
       </div>
     </>
   )

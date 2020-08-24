@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './Pages/Home'
+import Home from './Pages/home/Home'
 import ListData from './Pages/ListData'
 import { ApolloProvider } from '@apollo/client'
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
