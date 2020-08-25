@@ -49,12 +49,12 @@ select {
   color: #4c4c4c;
 }
 
-p {
+/* p {
   font-size: 12px;
   width: 150px;
   display: inline-block;
   margin-left: 18px;
-}
+} */
 .textHead {
   font-size: 32px;
   font-weight: 300;

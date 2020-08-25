@@ -19,7 +19,7 @@ const AnimatedSwitch = withRouter(({ location }) => {
           <Route path="/register" component={RegisterPage} />
           <Route path="/login" component={LoginPage} />
           <Route path="/update" component={ProfilePage} />
-          {/* <Route path="/:slug" component={ListData} /> */}
+          <Route path="/:slug" component={ListData} />
         </Switch>
       </CSSTransition>
     </TransitionGroup>
