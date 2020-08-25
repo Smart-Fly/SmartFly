@@ -143,12 +143,12 @@ const ListData = () => {
                     if (ValueModal.Lion) {
                         let temp2 = value.filter(data2 => data2.airline.toLocaleLowerCase() == ('lion air' || 'lion'))
                         temp.push(...temp2)
-                        
-                    } 
+
+                    }
                     if (ValueModal.Garuda){
                             let temp3 = value.filter(data3 => data3.airline.toLocaleLowerCase() == ('garuda' || "garuda indonesia") )
                             temp.push(...temp3)
-    
+
                         }
                         if (ValueModal.Batik){
                             let temp4 = value.filter(data4 => data4.airline.toLocaleLowerCase() == ('batik air' || "batik") )
@@ -380,7 +380,7 @@ const ListData = () => {
                             </Col>
                         </Row >
                     )
-                })}
+              })}
                 {/* {ticket && dataTiket().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
