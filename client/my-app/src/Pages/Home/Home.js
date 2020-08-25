@@ -170,6 +170,7 @@ const Home = () => {
                             // inputVariant="outlined"
                             // className="form-control"
                             format="MM/dd/yyyy"
+                            minDate={new Date()}
                             value={selectedDate}
                             onChange={handleDateChange}
                             KeyboardButtonProps={{

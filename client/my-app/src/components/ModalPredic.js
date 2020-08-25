@@ -2,6 +2,8 @@ import React, { useState, createRef } from "react";
 import { Modal } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
+const graph = require("../asset/graph1.png")
+const graph2 = require("../asset/graph2.png")
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,15 +24,16 @@ const ModalPredic = (props) => {
     let { accuracy } = dataPredictions.predictions;
     // console.log(accuracy)
     if (accuracy > 0) {
-      temp = "harga naik";
+      temp = "Buy Now";
     } else {
-      temp = "harga turun";
+      temp = "Wait";
     }
 
     return (
       <>
         <h2> {temp} </h2>
-        <h3> dengan accuracy {Math.round(accuracy)} % </h3>
+        <img src={accuracy > 0 ? graph : graph2} width="300" height="300" />
+        <h3> Accuracy: {accuracy.toFixed(2) * 100} % </h3>
       </>
     );
   };
@@ -47,7 +50,7 @@ const ModalPredic = (props) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            <center>current predictions</center>
+            <center>Future Price Forecast</center>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
