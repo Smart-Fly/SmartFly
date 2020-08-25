@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Input, Button, InputLabel, FormControl } from "@material-ui/core";
 import { USER_LOGIN } from "../../query/userQuery";
 import { useMutation } from "@apollo/client";
@@ -14,7 +14,7 @@ const LoginPage = () => {
     password: "",
   });
   const history = useHistory();
-  const [userLogin, { data, loading }] = useMutation(USER_LOGIN);
+  const [userLogin, { data: userLoginInfo, loading }] = useMutation(USER_LOGIN);
 
   const handleOnchance = (e) => {
     const { name, value } = e.target;
@@ -30,13 +30,15 @@ const LoginPage = () => {
     });
   };
 
-  if (data) {
-    const {
-      userLogin: { access_token },
-    } = data;
-    localStorage.setItem("access_token", access_token);
-    history.push("/update");
-  }
+  useEffect(() => {
+    if (userLoginInfo) {
+      const {
+        userLogin: { access_token },
+      } = userLoginInfo;
+      localStorage.setItem("access_token", access_token);
+      history.push("/");
+    }
+  }, [userLoginInfo, history]);
 
   if (loading) {
     // Tar cari buat loading nya
@@ -48,10 +50,7 @@ const LoginPage = () => {
       <div className="container-login100">
         <div className="wrap-login100">
           {/** [======== SACRED LINE ==========] */}
-          <Form
-            className="login100-form validate-form"
-            onSubmit={(e) => handleSubmit(e)}
-          >
+          <Form className="login100-form" onSubmit={(e) => handleSubmit(e)}>
             <span className="login100-form-title mb-4">
               Login to start Exploring
             </span>

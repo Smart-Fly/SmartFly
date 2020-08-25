@@ -62,8 +62,6 @@ const ListData = () => {
   });
 
   const getPredict = () => {
-    console.log(data.dAirportCode);
-    console.log(data.aAirportCode);
     getPredictions();
     if (dataPredictions) {
       console.log(dataPredictions);
@@ -106,7 +104,7 @@ const ListData = () => {
     );
   }
   if (ticket) {
-    console.log(ticket.getFlight);
+    // console.log(ticket.getFlight);
   }
   // let dummy = [
   //   {
