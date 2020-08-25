@@ -45,9 +45,9 @@ const CardResult = (props) => {
             {" "}
             <img
               width="150"
-              height="80"
+              height="120"
               alt="airline-logo"
-              src={data.airLineLogo}
+              src={(data.airline === "Lion" || data.airline === 'Lion Air') ? 'https://logos-download.com/wp-content/uploads/2016/05/Lion_Air_logo_small.png' : data.airLineLogo}
             />
           </CardMedia>
           <Typography gutterBottom variant="h4" component="h1">
@@ -66,7 +66,7 @@ const CardResult = (props) => {
           <CardMedia>
             {" "}
             <img
-              width="150"
+              width="180"
               height="80"
               alt="flight-service-logo"
               src={data.companyLogo}
@@ -88,7 +88,7 @@ const CardResult = (props) => {
               size="big"
               variant="contained"
             >
-              Learn More
+              Buy Now
             </Button>
           </CardContent>
         </CardActions>
