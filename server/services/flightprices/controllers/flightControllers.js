@@ -31,7 +31,7 @@ class FlightController {
         PegiPegi: resPegiPegi
       }
       res.status(200).json(AllData)
-      saveResult(AllData)
+      // saveResult(AllData)
 
     } catch (error) {
       res.status(500).json({ message: "Internal Server Error" })
