@@ -33,7 +33,7 @@ const getData = html => {
     dataJson.price = price
 
     companyLogo = "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
-    dataJson.companyLogo=companyLogo
+    dataJson.companyLogo=companyLogo 
 
     result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
   })

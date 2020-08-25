@@ -39,7 +39,7 @@ const getData = html => {
     dataJson.price = price
 
     companyLogo = "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
-    dataJson.companyLogo = companyLogo
+    dataJson.companyLogo = companyLogo 
     result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo ,url})
   })
 }

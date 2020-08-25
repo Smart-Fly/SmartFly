@@ -47,7 +47,7 @@ let getData = html => {
     dataJson.price = price
 
     companyLogo ='https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg'
-    dataJson.companyLogo=companyLogo
+    dataJson.companyLogo=companyLogo 
 
     result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
 
