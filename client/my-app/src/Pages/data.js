@@ -394,11 +394,11 @@ export const stateOptions = [
       "business_id": "20141801",
       "value": "JKT",
       "business_name_trans_id": "1193221",
-      "city": "Jakarta (%genaral_all_airport%)",
+      "city": "Jakarta general_all_airport",
       "id": "id",
       "province_id": "0",
       "coun": "Indonesia",
-      "label": "Jakarta (%genaral_all_airport%) (JKT), Jakarta"
+      "label": "Jakarta genaral_all_airport (JKT), Jakarta"
     },
     {
       "name": "Soekarno Hatta",

@@ -19,6 +19,7 @@ import { colors } from '@material-ui/core';
 import { Button } from '@material-ui/core'
 import Modal from '../components/Modal'
 
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -192,8 +193,10 @@ const Navbar = () => {
               <div className={classes.searchIcon}>
                 {/* <SearchIcon /> */}
               </div>
-              {pathname != "/" ? <Button onClick={() => setModalShow(true)} variant="contained" color="primary">
-                Searching
+              {pathname != "/" ? <Button onClick={() => setModalShow(true)} 
+              variant="outlined" 
+              color="primary">
+                New Search
               </Button> : null}
             </div>
             <div className={classes.grow} />
@@ -208,7 +211,7 @@ const Navbar = () => {
                   <NotificationsIcon />
                 </Badge>
               </IconButton> */}
-              {/* <IconButton
+              <IconButton
                 edge="end"
                 aria-label="account of current user"
                 aria-controls={menuId}
@@ -217,7 +220,7 @@ const Navbar = () => {
                 color="inherit"
               >
                 <AccountCircle />
-              </IconButton> */}
+              </IconButton>
             </div>
             <div className={classes.sectionMobile}>
               <IconButton

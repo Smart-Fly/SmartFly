@@ -6,10 +6,11 @@ import { stateOptions } from "../data";
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
-} from "@material-ui/pickers";
-import Select from "react-select";
-import { Row, Container } from "react-bootstrap";
-import { Radio, RadioGroup, FormControlLabel, Button } from "@material-ui/core";
+} from '@material-ui/pickers';
+import Select from 'react-select';
+import { Row, Container } from 'react-bootstrap'
+import { Radio, RadioGroup, FormControlLabel, Button } from '@material-ui/core'
+import { gql, useMutation } from '@apollo/client';
 
 const styles = {
   buttonBlue: {
@@ -17,9 +18,10 @@ const styles = {
     background: "linear-gradient(45deg, #2196f3 30%, #21cbf3 50%)",
     boxShadow: "0 3px 5px 2px rgba(33, 203, 243, .30)",
     height: 65,
-    width: "100%",
-  },
-};
+    width: "100%"
+  }
+}
+
 
 const Home = () => {
   const history = useHistory();
@@ -98,30 +100,7 @@ const Home = () => {
               <div className="col-md-7 col-md-offset-1">
                 <div className="booking-form">
                   <form onSubmit={(e) => goSubmit(e)}>
-                    <div className="form-group">
-                      <RadioGroup
-                        row
-                        aria-label="position"
-                        name="position"
-                        defaultValue=""
-                      >
-                        <FormControlLabel
-                          value="Roundtrip"
-                          control={<Radio color="primary" />}
-                          label="Roundtrip"
-                        />
-                        <FormControlLabel
-                          value="One way"
-                          control={<Radio color="primary" />}
-                          label="One way"
-                        />
-                        <FormControlLabel
-                          value="Multi-City"
-                          control={<Radio color="primary" />}
-                          label="Multi-City"
-                        />
-                      </RadioGroup>
-                    </div>
+                    
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-group">
