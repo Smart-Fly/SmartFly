@@ -4,8 +4,9 @@ const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: false })
 const cheerio = require('cheerio')
 
-let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url, NewDate
-let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo:"" }
+
+let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url
+let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "", url: "" }
 let result = []
 
 let getData = html => {
@@ -46,8 +47,9 @@ let getData = html => {
     price = converToNumber(price)
     dataJson.price = price
 
-    companyLogo ='https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg'
-    dataJson.companyLogo=companyLogo 
+    companyLogo = 'https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg'
+    dataJson.companyLogo = companyLogo
+    dataJson.url = url
 
     result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
 
@@ -66,7 +68,7 @@ class PegiPegi {
       classType
     } = reqData
 
-    NewDate = converDate(planDate, 'TL')
+    const NewDate = converDate(planDate, 'TL')
     url = `https://www.pegipegi.com/tiket-pesawat/sys/search-results/${dAirportCode}/${aAirportCode}/${NewDate}/${psAdult}/${psChild}/${psInfant}`
     console.log(url, '>> PegiPegi')
     try {
