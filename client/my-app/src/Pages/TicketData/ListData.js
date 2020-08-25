@@ -5,10 +5,13 @@ import CardResult from '../../components/CardResult'
 import { Slider, Typography } from "@material-ui/core";
 import { useParams, useLocation } from 'react-router-dom'
 import { GET_FLIGHT_SEARCH } from '../../query/QueryPrice'
-import { gql, useMutation, useLazyQuery } from '@apollo/client'
+import { gql, useMutation, useLazyQuery, useQuery } from '@apollo/client'
 import './list.css'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Skeleton from '@material-ui/lab/Skeleton';
+import ModalPredict from '../../components/ModalPredic'
+import Aos from 'aos'
+import 'aos/dist/aos'
 
 
 const GET_PRED = gql`
@@ -95,6 +98,8 @@ const ListData = () => {
     const classes = useStyles();
     const theme = useTheme();
     const { slug } = useParams()
+    const [modalShow, setModalShow] = useState(false);
+    const [value, setValue] = React.useState([400000, 700000]);
     const { state: { data } } = useLocation()
     const [dummyData, setDataDummy] = useState([])
     const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH)
@@ -106,42 +111,39 @@ const ListData = () => {
     });
 
     const getPredict = () => {
-        console.log(data.dAirportCode)
-        console.log(data.aAirportCode)
         getPredictions()
         if (dataPredictions) {
-            console.log(dataPredictions,'dataa')
+            console.log(dataPredictions, 'dataa')
         }
         else {
             console.log(loadingPredictions)
         }
     }
-    const [value, setValue] = React.useState([400000, 700000]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
+   
     useEffect(() => {
-        getFlight({
-            variables: {
-                search: {
-                    dAirportCode: data.dAirportCode,
-                    aAirportCode: data.aAirportCode,
-                    planDate: data.planDate,
-                    psAdult: data.psAdult,
-                    psChild: data.psChild,
-                    psInfant: data.psInfant,
-                    classType: data.classType
-                }
-            }
-        })
+        // getFlight({
+        //     variables: {
+        //         search: {
+        //             dAirportCode: data.dAirportCode,
+        //             aAirportCode: data.aAirportCode,
+        //             planDate: data.planDate,
+        //             psAdult: data.psAdult,
+        //             psChild: data.psChild,
+        //             psInfant: data.psInfant,
+        //             classType: data.classType
+        //         }
+        //     }
+        // })
     }, [slug, data, getFlight])
 
+    
     if (loading) {
         return (
             <>
-
                 <LinearProgress color="secondary" />
                 <Container className="mt-5 pt-2">
                     <br></br>
@@ -200,49 +202,59 @@ const ListData = () => {
             "price": 798400,
             "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
         },]
-    
-// FIlter
-    const dataTraveloka =  ()=>{
-        let filterTraveloka =  ticket.getFlight.Traveloka.filter(dum => dum.price > value[0] && dum.price < value[1])
+
+    // FIlter
+    const dataTraveloka = () => {
+        let filterTraveloka = ticket.getFlight.Traveloka.filter(dum => dum.price > value[0] && dum.price < value[1])
         return filterTraveloka
     }
-    const dataTiket =  ()=>{
-    let filterTiket = dummy.filter(dum => dum.price > value[0] && dum.price < value[1])
+    const dataTiket = () => {
+        let filterTiket = dummy.filter(dum => dum.price > value[0] && dum.price < value[1])
         return filterTiket
     }
-    const dataPegiPegi =  ()=>{
+    const dataPegiPegi = () => {
         let filterPegiPegi = dummy.filter(dum => dum.price > value[0] && dum.price < value[1])
         return filterPegiPegi
     }
-    const toRupiah=(money)=>{
+    const toRupiah = (money) => {
         return Intl.NumberFormat('id', { style: 'currency', currency: 'idr' }).format(money)
     }
 
-    console.log(ticket)
+    const toModal = () => {
+        getPredict()
+        setModalShow(true)
+    }
 
+    console.log(ticket)
     return (
         <div id="booking1" className='section1'>
-            <Container className="mt-5 pt-2">
+
+            <ModalPredict show={modalShow} dataPredictions={dataPredictions} onHide={() => { setModalShow(false) }} ></ModalPredict>
+            <Container className="mt-5 pt-4">
+            <div className="clearfix ">
+                    <center>
+                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+                    </center>
+                    <Typography className="float-left" >{toRupiah(value[0])}</Typography>
+                    <Typography className="float-right"  >{toRupiah(value[1])}</Typography>
+                    </div>
                 <AirbnbSlider
                     value={value}
                     onChange={handleChange}
                     ThumbComponent={AirbnbThumbComponent}
-                    // defaultValue={[30, 100000000]}
                     step={100000}
-                    // marks
                     min={0}
                     max={5000000}
                 />
-                <div className={classes.margin} >
-                    <Typography gutterBottom>{toRupiah(value[0])} {toRupiah(value[1])}</Typography>
+                
+
+                <div className="clearfix mb-3 mt-3">
+                    <h4 className="float-left ">Traveloka</h4>
                 </div>
-                <center>
-                    <Button variant="primary" onClick={() => getPredict()}>Get Predictions</Button>
-                </center>
-                <center>
-                    <h3>Traveloka</h3>
-                </center>
-                {ticket && dataTraveloka().map((tiket, i) => {
+
+                {/* {ticket && dataTraveloka().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
                             <Col  >
@@ -251,27 +263,27 @@ const ListData = () => {
                                     className="shadow rounded"
 
                                     tiket={tiket} key={i} />
+                            </Col>
+                        </Row >
+                    )
+                })} */}
+                {dummy.map((tiket, i) => {
+                    return (
+                        <Row className="mb-4">
+                            <Col  >
+                                    <CardResult
+                                        className="shadow rounded"
+                                        tiket={tiket} key={i} />
                             </Col>
                         </Row >
                     )
                 })}
-                {/* {dummy.map((tiket, i) => {
-                    return (
-                        <Row className="mb-4">
-                            <Col  >
 
-                                <CardResult
-                                    className="shadow rounded"
-
-                                    tiket={tiket} key={i} />
-                            </Col>
-                        </Row >
-                    )
-                })} */}
-                <center>
-                    <h3>Tiket.com</h3>
-                </center>
-                {/* {ticket && dataTiket().map((tiket, i) => {
+                {/* {dataTiket().length > 0 ?
+                    <div className="clearfix mb-3 mt-3">
+                        <h4 className="float-left ">Tiket.com</h4>
+                    </div> : null}
+                {ticket && dataTiket().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
                             <Col  >
@@ -282,10 +294,11 @@ const ListData = () => {
                         </Row >
                     )
                 })} */}
-                <center>
-                    <h3>pegipegi</h3>
-                </center>
-                {/* {ticket && dataPegiPegi().map((tiket, i) => {
+                {/* {dataPegiPegi().length > 0 ?
+                    <div className="clearfix mb-3 mt-3">
+                        <h4 className="float-left ">PegiPegi</h4>
+                    </div> : null}
+                {ticket && dataPegiPegi().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
                             <Col  >

@@ -6,7 +6,7 @@
 	color: #191a1e;
 }
 body{
-	
+	font-family: 'Montserrat', sans-serif;
 	background-color: #f9f7d9;
 }
 
@@ -14,3 +14,14 @@ body{
 	/* position: relative; */
 	/* height: 100vh; */
 }
+
+/* "Lion Air" ok
+"Lion" ok
+"Batik Air" ok 
+"Batik"
+"Citilink Indonesia"  ok
+"Citilink" ok
+"Multi-airline" ok
+"Multi-maskapai" ok
+"Garuda Indonesia" ok ok
+"Garuda" ok */

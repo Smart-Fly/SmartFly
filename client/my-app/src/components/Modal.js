@@ -191,7 +191,7 @@ const ModalForm = (props) => {
                                                 id="date-picker-dialog"
                                                 label="Departing"
                                                 // variant="inline"
-                                                // inputVariant="outlined"
+                                                inputVariant="outlined"
                                                 // className="form-control"
                                                 format="MM/dd/yyyy"
                                                 value={selectedDate}
