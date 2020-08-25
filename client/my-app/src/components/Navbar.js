@@ -1,24 +1,23 @@
-import React, { useState } from 'react'
-import { fade, makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import { useLocation } from 'react-router-dom';
-import { colors } from '@material-ui/core';
-import { Button } from '@material-ui/core'
-import Modal from '../components/Modal'
-
+import React, { useState } from "react";
+import { fade, makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+// import InputBase from "@material-ui/core/InputBase";
+import Badge from "@material-ui/core/Badge";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+// import MenuIcon from "@material-ui/icons/Menu";
+// import SearchIcon from "@material-ui/icons/Search";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import MailIcon from "@material-ui/icons/Mail";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import MoreIcon from "@material-ui/icons/MoreVert";
+import { useLocation } from "react-router-dom";
+// import { colors } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import Modal from "../components/Modal";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -29,66 +28,66 @@ const useStyles = makeStyles((theme) => ({
     // color: 'blue'
   },
   title: {
-    display: 'none',
+    display: "none",
     // color: 'blue',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
     },
   },
   search: {
-    position: 'relative',
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
+    "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    width: '100%',
+    width: "100%",
     // color: "blue",
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
-      width: 'auto',
+      width: "auto",
     },
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   inputRoot: {
-    color: 'inherit',
+    color: "inherit",
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "20ch",
     },
   },
   sectionDesktop: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
     },
   },
   sectionMobile: {
-    display: 'flex',
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
+    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "none",
     },
   },
 }));
 
 const Navbar = () => {
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -96,7 +95,6 @@ const Navbar = () => {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -174,9 +172,15 @@ const Navbar = () => {
   return (
     <>
       <div className={classes.grow}>
-        <Modal show={modalShow} onHide={() => setModalShow(false)} ></Modal>
-        <AppBar position="absolute" style={pathname == "/" ? { background: 'transparent', boxShadow: 'none', color: 'blue' } :
-          { background: 'transparent', boxShadow: 'none', color: 'black' }}  >
+        <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
+        <AppBar
+          position="absolute"
+          style={
+            pathname === "/"
+              ? { background: "transparent", boxShadow: "none", color: "blue" }
+              : { background: "transparent", boxShadow: "none", color: "black" }
+          }
+        >
           <Toolbar>
             <IconButton
               edge="start"
@@ -188,29 +192,34 @@ const Navbar = () => {
             </IconButton>
             <Typography className={classes.title} variant="h6" noWrap>
               Smart-Fly
-          </Typography>
+            </Typography>
             <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                {/* <SearchIcon /> */}
-              </div>
-              {pathname != "/" ? <Button onClick={() => setModalShow(true)} 
-              variant="outlined" 
-              color="primary">
-                New Search
-              </Button> : null}
+              <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
+              {pathname !== "/" ? (
+                <Button
+                  onClick={() => setModalShow(true)}
+                  variant="outlined"
+                  color="primary"
+                >
+                  New Search
+                </Button>
+              ) : null}
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              {/* <IconButton aria-label="show 4 new mails" color="inherit">
+              <IconButton aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="secondary">
                   <MailIcon />
                 </Badge>
-              </IconButton> */}
-              {/* <IconButton aria-label="show 17 new notifications" color="inherit">
+              </IconButton>
+              <IconButton
+                aria-label="show 17 new notifications"
+                color="inherit"
+              >
                 <Badge badgeContent={17} color="secondary">
                   <NotificationsIcon />
                 </Badge>
-              </IconButton> */}
+              </IconButton>
               <IconButton
                 edge="end"
                 aria-label="account of current user"
@@ -235,12 +244,11 @@ const Navbar = () => {
             </div>
           </Toolbar>
         </AppBar>
-        {/* {renderMobileMenu} */}
-        {/* {renderMenu} */}
+        {renderMobileMenu}
+        {renderMenu}
       </div>
     </>
-  )
-
-}
+  );
+};
 
 export default Navbar;
