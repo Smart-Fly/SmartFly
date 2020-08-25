@@ -103,7 +103,11 @@ const ListData = () => {
   const { slug } = useParams();
   const [modalShow, setModalShow] = useState(false);
   const [modalShowFilter, setModalShowFilter] = useState(false);
-  const [ValueModal, setValueModal] = useState(null);
+  const [ValueModal, setValueModal] = useState({
+    Lion: false,
+    Garuda: false,
+    Batik: false,
+  });
   const [value, setValue] = React.useState([400000, 700000]);
   const {
     state: { data },
@@ -120,7 +124,7 @@ const ListData = () => {
       arrive: data.aAirportCode,
     },
   });
-
+  console.log(ValueModal)
   const getPredict = () => {
     getPredictions();
     if (dataPredictions) {
@@ -318,7 +322,6 @@ const ListData = () => {
 
   // FIlter
 
-  console.log(allData, "TOtal");
 
   const dataTraveloka = () => {
     let filterTraveloka = ticket.getFlight.Traveloka.filter(
@@ -364,105 +367,181 @@ const ListData = () => {
 
   //     console.log(ticket.getFlight.Tiket)
   // }
-  return (
-    <div id="booking1" className="section1">
+  if(allData.length === 0){
+    return (
+      <div id="booking1" className="section1">
       <ModalFilter
-        show={modalShowFilter}
-        filted={(dataModal) => {
-          setValueModal(dataModal);
-        }}
-        onHide={() => {
-          setModalShowFilter(false);
-        }}
+      show={modalShowFilter}
+      filted={(dataModal) => {
+        setValueModal(dataModal);
+      }}
+      onHide={() => {
+        setModalShowFilter(false);
+      }}
       />
 
       <ModalPredict
-        show={modalShow}
-        dataPredictions={dataPredictions}
-        onHide={() => {
-          setModalShow(false);
-        }}
+      show={modalShow}
+      dataPredictions={dataPredictions}
+      onHide={() => {
+        setModalShow(false);
+      }}
       ></ModalPredict>
       <Container className="mt-5 pt-4">
-        <div className="clearfix ">
-          <center>
-            <Button variant="primary" onClick={() => toModal()}>
-              Get Predictions
-            </Button>
-            <br></br>
-            <Button variant="primary" onClick={() => setModalShowFilter(true)}>
-              Filter check
-            </Button>
-            {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
-                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
-          </center>
-          <Typography className="float-left">{toRupiah(value[0])}</Typography>
-          <Typography className="float-right">{toRupiah(value[1])}</Typography>
-        </div>
-        <AirbnbSlider
-          value={value}
-          onChange={handleChange}
-          ThumbComponent={AirbnbThumbComponent}
-          step={100000}
-          min={0}
-          max={5000000}
-        />
+      <div className="clearfix ">
+      <center>
+      <Button variant="primary" onClick={() => toModal()}>
+      Get Predictions
+      </Button>
+      <br></br>
+      <Button variant="primary" onClick={() => setModalShowFilter(true)}>
+      Filter check
+      </Button>
+      {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+      <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
+      </center>
+      <Typography className="float-left" style={{color:'white'}}>{toRupiah(value[0])}</Typography>
+      <Typography className="float-right" style={{color:'white'}}>{toRupiah(value[1])}</Typography>
+      </div>
+      <AirbnbSlider
+      value={value}
+      onChange={handleChange}
+      ThumbComponent={AirbnbThumbComponent}
+      step={100000}
+      min={0}
+      max={5000000}
+      />
 
-        {/* {dummy.map((tiket, i) => {
-                    return (
-                        <Row className="mb-4">
-                            <Col  >
+      {/* {dummy.map((tiket, i) => {
+        return (
+          <Row className="mb-4">
+          <Col  >
 
-                                <CardResult
-                                    className="shadow rounded"
+          <CardResult
+          className="shadow rounded"
 
-                                    tiket={tiket} key={i} />
-                            </Col>
-                        </Row >
-                    )
-                })} */}
+          tiket={tiket} key={i} />
+          </Col>
+          </Row >
+        )
+      })} */
+    }
+    {ticket && dataTraveloka().map((tiket, i) => {
+      return (
+        <Row className="mb-4">
+        <Col  >
+        <CardResult
+        className="shadow rounded"
+        tiket={tiket} key={i} />
+        </Col>
+        </Row >
+      )
+    })
+  }
+  {
+    ticket && dataTiket().map((tiket, i) => {
+      return (
+        <Row className="mb-4">
+        <Col  >
+        <CardResult
+        className="shadow rounded"
+        tiket={tiket} key={i} />
+        </Col>
+        </Row >
+      )
+    })}
 
-        {ticket &&
-          allData.map((tiket, i) => {
-            return (
-              <Row className="mb-4">
-                <Col>
-                  <CardResult
-                    className="shadow rounded"
-                    tiket={tiket}
-                    key={i}
-                  />
-                </Col>
-              </Row>
-            );
-          })}
-        {/* {ticket && dataTiket().map((tiket, i) => {
-                    return (
-                        <Row className="mb-4">
-                            <Col  >
-                                <CardResult
-                                    className="shadow rounded"
-                                    tiket={tiket} key={i} />
-                            </Col>
-                        </Row >
-                    )
-                })} */}
+    {ticket && dataPegiPegi().map((tiket, i) => {
+      return (
+        <Row className="mb-4">
+        <Col  >
 
-        {/* {ticket && dataPegiPegi().map((tiket, i) => {
-                    return (
-                        <Row className="mb-4">
-                            <Col  >
-
-                                <CardResult
-                                    className="shadow rounded"
-                                    tiket={tiket} key={i} />
-                            </Col>
-                        </Row >
-                    )
-                })} */}
-      </Container>
+        <CardResult
+        className="shadow rounded"
+        tiket={tiket} key={i} />
+        </Col>
+        </Row >
+      )
+    })}
+    </Container>
     </div>
   );
+  }
+else{
+  return (
+    <div id="booking1" className="section1">
+    <ModalFilter
+    show={modalShowFilter}
+    filted={(dataModal) => {
+      setValueModal(dataModal);
+    }}
+    onHide={() => {
+      setModalShowFilter(false);
+    }}
+    />
+
+    <ModalPredict
+    show={modalShow}
+    dataPredictions={dataPredictions}
+    onHide={() => {
+      setModalShow(false);
+    }}
+    ></ModalPredict>
+    <Container className="mt-5 pt-4">
+    <div className="clearfix ">
+    <center>
+    <Button variant="primary" onClick={() => toModal()}>
+    Get Predictions
+    </Button>
+    <br></br>
+    <Button variant="primary" onClick={() => setModalShowFilter(true)}>
+    Filter check
+    </Button>
+    {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
+    </center>
+    <Typography className="float-left">{toRupiah(value[0])}</Typography>
+    <Typography className="float-right">{toRupiah(value[1])}</Typography>
+    </div>
+    <AirbnbSlider
+    value={value}
+    onChange={handleChange}
+    ThumbComponent={AirbnbThumbComponent}
+    step={100000}
+    min={0}
+    max={5000000}
+    />
+
+    {/* {dummy.map((tiket, i) => {
+      return (
+        <Row className="mb-4">
+        <Col  >
+
+        <CardResult
+        className="shadow rounded"
+
+        tiket={tiket} key={i} />
+        </Col>
+        </Row >
+      )
+    })} */
+  }
+  {ticket && allData.map((tiket, i) => {
+    return (
+      <Row className="mb-4">
+      <Col  >
+      <CardResult
+      className="shadow rounded"
+      tiket={tiket} key={i} />
+      </Col>
+      </Row >
+    )
+  })
+}
+  </Container>
+  </div>
+  )
+}
 };
 
 export default ListData;
