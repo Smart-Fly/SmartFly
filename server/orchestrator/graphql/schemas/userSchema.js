@@ -4,6 +4,7 @@ const axios = require("axios");
 const typeDefs = gql`
   type Login {
     access_token: String
+    subsStatus: Boolean
   }
 
   type User {
@@ -22,7 +23,7 @@ const typeDefs = gql`
     email: String!
     password: String!
     userName: String!
-    subsStatus: Boolean!
+    subsStatus: Boolean
   }
 
   input UpdateSubs {
@@ -79,7 +80,7 @@ const resolvers = {
         const updated = await axios.put(
           `http://localhost:3001/promotion`,
           { subsStatus },
-          { 'headers': { 'access_token': access_token } }
+          { headers: { access_token: access_token } }
         );
         return updated.data.data;
       } catch (error) {

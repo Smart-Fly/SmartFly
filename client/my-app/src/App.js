@@ -1,29 +1,16 @@
-import React from 'react';
-import Home from './Pages/home/Home'
-import ListData from '../src/Pages/TicketData/ListData'
-import { ApolloProvider } from '@apollo/client'
-import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import client from './config/config'
-import RegisterPage from "./Pages/RegisterPage";
-import LoginPage from "./Pages/LoginPage";
-import UpdatePage from "./Pages/UpdatePage";
+import React from "react";
+import { ApolloProvider } from "@apollo/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import client from "./config/config";
+import { AnimatedSwitch } from "./animations/";
+import "./index.css";
 
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div >
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/register" component={RegisterPage} />
-            <Route path="/login" component={LoginPage} />
-            <Route path="/update" component={UpdatePage} />
-            <Route path="/:slug" component={ListData} />
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <AnimatedSwitch />
+      </Router>
     </ApolloProvider>
   );
 }
