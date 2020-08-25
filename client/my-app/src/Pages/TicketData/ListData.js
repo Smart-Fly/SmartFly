@@ -19,6 +19,7 @@ const GET_PRED = gql`
     }
   }
 `;
+
 function AirbnbThumbComponent(props) {
   return (
     <span {...props}>
@@ -28,6 +29,7 @@ function AirbnbThumbComponent(props) {
     </span>
   );
 }
+
 const AirbnbSlider = withStyles({
   root: {
     color: "#3a8589",
@@ -90,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
     width: 38,
   },
 }));
+
 const ListData = () => {
   const classes = useStyles();
   const theme = useTheme();

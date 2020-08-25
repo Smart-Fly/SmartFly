@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Checkbox, FormControlLabel } from "@material-ui/core";
-import { UPDATE_SUBSCRIPTION } from "../query/userQuery";
+import { UPDATE_SUBSCRIPTION } from "../../query/userQuery";
 import { useMutation } from "@apollo/client";
 
 const ProfilePage = () => {

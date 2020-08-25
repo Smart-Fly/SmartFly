@@ -11,6 +11,8 @@ import { USER_REGISTER } from "../../query/userQuery";
 import { useMutation } from "@apollo/client";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import "./RegisterPage.css";
+import MyGoogleLogin from "../../components/MyGoogleLogin";
 
 const RegisterPage = () => {
   const history = useHistory();
@@ -46,7 +48,7 @@ const RegisterPage = () => {
     if (newUser) {
       history.push("/login");
     }
-  }, [newUser]);
+  }, [newUser, history]);
 
   if (loading) {
     // Tar cari buat loading nya
@@ -55,58 +57,71 @@ const RegisterPage = () => {
 
   return (
     <>
-      <div className={["col-md-5 justify-content-start"]}>
-        <Form onSubmit={(e) => handleSubmit(e)}>
-          <FormGroup>
-            <FormControl>
-              <InputLabel>User name</InputLabel>
-              <Input
-                type="text"
-                name="userName"
-                aria-describedby="my-helper-text"
-                onChange={(e) => handleOnchance(e)}
-              />
-            </FormControl>
-
-            <FormControl>
-              <InputLabel>Email</InputLabel>
-              <Input
-                type="text"
-                name="email"
-                aria-describedby="my-helper-text"
-                onChange={(e) => handleOnchance(e)}
-              />
-            </FormControl>
-
-            <FormControl>
-              <InputLabel>Password</InputLabel>
-              <Input
-                type="password"
-                name="password"
-                aria-describedby="my-helper-text"
-                onChange={(e) => handleOnchance(e)}
-              />
-            </FormControl>
-
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={userInput.subsStatus}
-                  onChange={handleChange}
-                  name="subsStatus"
-                  color="primary"
+      <div className="testbox">
+        <h2 className="textHead">Register here</h2>
+        <div>
+          <Form onSubmit={(e) => handleSubmit(e)}>
+            <FormGroup>
+              <FormControl>
+                <InputLabel>User name</InputLabel>
+                <Input
+                  type="text"
+                  name="userName"
+                  aria-describedby="my-helper-text"
+                  onChange={(e) => handleOnchance(e)}
                 />
-              }
-              label="Primary"
-            />
+              </FormControl>
 
-            {/*  Nanti disini dikasi checkbox aja, gausah pake Switch, lebih cocok checkBox */}
+              <FormControl>
+                <InputLabel>Email</InputLabel>
+                <Input
+                  type="text"
+                  name="email"
+                  aria-describedby="my-helper-text"
+                  onChange={(e) => handleOnchance(e)}
+                />
+              </FormControl>
 
-            <Button type="submit" variant="contained" color="primary">
-              Register
-            </Button>
-          </FormGroup>
-        </Form>
+              <FormControl>
+                <InputLabel>Password</InputLabel>
+                <Input
+                  type="password"
+                  name="password"
+                  aria-describedby="my-helper-text"
+                  onChange={(e) => handleOnchance(e)}
+                />
+              </FormControl>
+
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={userInput.subsStatus}
+                    onChange={handleChange}
+                    name="subsStatus"
+                    color="primary"
+                  />
+                }
+                label="You want to start subscription?"
+              />
+              <div className="termContainer">
+                <span className="termStyle" style={{ display: "inline" }}>
+                  By clicking Register, you agree on our
+                  <span color="blue"> terms and condition</span>.
+                </span>
+              </div>
+
+              <Button type="submit" variant="contained" color="primary">
+                Register
+              </Button>
+              <div className="googleSignIn">
+                <span>Or you can sign in with</span>
+              </div>
+              <div className="googleSignIn-btn">
+                <MyGoogleLogin />
+              </div>
+            </FormGroup>
+          </Form>
+        </div>
       </div>
     </>
   );
