@@ -123,24 +123,24 @@ const ListData = () => {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-   
+
     useEffect(() => {
-        // getFlight({
-        //     variables: {
-        //         search: {
-        //             dAirportCode: data.dAirportCode,
-        //             aAirportCode: data.aAirportCode,
-        //             planDate: data.planDate,
-        //             psAdult: data.psAdult,
-        //             psChild: data.psChild,
-        //             psInfant: data.psInfant,
-        //             classType: data.classType
-        //         }
-        //     }
-        // })
+        getFlight({
+            variables: {
+                search: {
+                    dAirportCode: data.dAirportCode,
+                    aAirportCode: data.aAirportCode,
+                    planDate: data.planDate,
+                    psAdult: data.psAdult,
+                    psChild: data.psChild,
+                    psInfant: data.psInfant,
+                    classType: data.classType
+                }
+            }
+        })
     }, [slug, data, getFlight])
 
-    
+
     if (loading) {
         return (
             <>
@@ -160,48 +160,88 @@ const ListData = () => {
     }
 
     let dummy = [
+
         {
-            "airline": "Lion Air",
+            "airline": "Lion",
             "departureTime": "18:30",
             "arrivalTime": "21:20",
             "price": 624600,
-            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
         },
         {
-            "airline": "Lion Air",
-            "departureTime": "07:00",
-            "arrivalTime": "12:50",
-            "price": 685700,
-            "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
-        },
-        {
-            "airline": "Lion Air",
+            "airline": "Lion",
             "departureTime": "05:00",
             "arrivalTime": "10:20",
-            "price": 739600,
-            "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+            "price": 685700,
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
         },
         {
-            "airline": "Lion Air",
-            "departureTime": "05:00",
-            "arrivalTime": "12:50",
-            "price": 739600,
-            "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+            "airline": "Batik",
+            "departureTime": "07:00",
+            "arrivalTime": "09:50",
+            "price": 798400,
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
         },
         {
-            "airline": "Batik Air",
+            "airline": "Batik",
+            "departureTime": "13:00",
+            "arrivalTime": "16:00",
+            "price": 798400,
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
+        },
+        {
+            "airline": "Batik",
             "departureTime": "15:40",
             "arrivalTime": "18:30",
             "price": 798400,
-            "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
         },
         {
-            "airline": "Batik Air",
+            "airline": "Batik",
             "departureTime": "17:00",
             "arrivalTime": "19:50",
             "price": 798400,
-            "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png"
-        },]
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
+        },
+        {
+            "airline": "Citilink",
+            "departureTime": "04:55",
+            "arrivalTime": "07:55",
+            "price": 856700,
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
+        },
+        {
+            "airline": "Citilink",
+            "departureTime": "14:15",
+            "arrivalTime": "17:10",
+            "price": 856700,
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
+        },
+        {
+            "airline": "Citilink",
+            "departureTime": "16:40",
+            "arrivalTime": "19:40",
+            "price": 856700,
+            "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+            "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
+            "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
+        }]
 
     // FIlter
     const dataTraveloka = () => {
@@ -209,37 +249,50 @@ const ListData = () => {
         return filterTraveloka
     }
     const dataTiket = () => {
-        let filterTiket = dummy.filter(dum => dum.price > value[0] && dum.price < value[1])
+        let filterTiket = ticket.getFlight.Tiket.filter(dum => dum.price > value[0] && dum.price < value[1])
         return filterTiket
     }
     const dataPegiPegi = () => {
-        let filterPegiPegi = dummy.filter(dum => dum.price > value[0] && dum.price < value[1])
+        let filterPegiPegi = ticket.getFlight.PegiPegi.filter(dum => dum.price > value[0] && dum.price < value[1])
         return filterPegiPegi
     }
     const toRupiah = (money) => {
         return Intl.NumberFormat('id', { style: 'currency', currency: 'idr' }).format(money)
     }
 
+    // const filterLion = () =>{
+    //     let lions = dummy.filter(dum => dum.airline.toLowerCase() == "Lion Air".toLowerCase())
+    //     return lions
+    // }
+
+    // console.log(filterLion())
+    if (ticket) {
+        // console.log(ticket.getFlight.Tiket)
+        console.log(dataPegiPegi(),'pegis')
+        console.log(dataTiket(),'ticekt')
+    }
     const toModal = () => {
         getPredict()
         setModalShow(true)
     }
+    if (ticket) {
 
-    console.log(ticket)
+        console.log(ticket.getFlight.Tiket)
+    }
     return (
         <div id="booking1" className='section1'>
 
             <ModalPredict show={modalShow} dataPredictions={dataPredictions} onHide={() => { setModalShow(false) }} ></ModalPredict>
             <Container className="mt-5 pt-4">
-            <div className="clearfix ">
+                <div className="clearfix ">
                     <center>
-                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
-                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
-                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+                        <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+                        {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+                    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
                     </center>
                     <Typography className="float-left" >{toRupiah(value[0])}</Typography>
                     <Typography className="float-right"  >{toRupiah(value[1])}</Typography>
-                    </div>
+                </div>
                 <AirbnbSlider
                     value={value}
                     onChange={handleChange}
@@ -248,13 +301,22 @@ const ListData = () => {
                     min={0}
                     max={5000000}
                 />
-                
 
-                <div className="clearfix mb-3 mt-3">
-                    <h4 className="float-left ">Traveloka</h4>
-                </div>
 
-                {/* {ticket && dataTraveloka().map((tiket, i) => {
+            
+
+                {/* {dummy.map((tiket, i) => {
+                    return (
+                        <Row className="mb-4">
+                            <Col  >
+                                    <CardResult
+                                        className="shadow rounded"
+                                        tiket={tiket} key={i} />
+                            </Col>
+                        </Row >
+                    )
+                })} */}
+                {ticket && dataTraveloka().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
                             <Col  >
@@ -266,23 +328,10 @@ const ListData = () => {
                             </Col>
                         </Row >
                     )
-                })} */}
-                {dummy.map((tiket, i) => {
-                    return (
-                        <Row className="mb-4">
-                            <Col  >
-                                    <CardResult
-                                        className="shadow rounded"
-                                        tiket={tiket} key={i} />
-                            </Col>
-                        </Row >
-                    )
                 })}
 
-                {/* {dataTiket().length > 0 ?
-                    <div className="clearfix mb-3 mt-3">
-                        <h4 className="float-left ">Tiket.com</h4>
-                    </div> : null}
+
+            
                 {ticket && dataTiket().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
@@ -293,11 +342,8 @@ const ListData = () => {
                             </Col>
                         </Row >
                     )
-                })} */}
-                {/* {dataPegiPegi().length > 0 ?
-                    <div className="clearfix mb-3 mt-3">
-                        <h4 className="float-left ">PegiPegi</h4>
-                    </div> : null}
+                })}
+          
                 {ticket && dataPegiPegi().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
@@ -309,7 +355,7 @@ const ListData = () => {
                             </Col>
                         </Row >
                     )
-                })} */}
+                })}
             </Container>
         </div>
     )

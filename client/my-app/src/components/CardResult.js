@@ -58,12 +58,15 @@ const CardResult = (props) => {
                         subheader={data.arrivalTime}
                     ></CardHeader>
                 </CardActions>
+                <CardContent>
+                    <CardMedia > <img width="150" height="80"  src={data.companyLogo} /></CardMedia>
+                </CardContent>
                 <CardActions disableSpacing>
                     <CardContent>
                     <Typography gutterBottom variant="h4" component="h1">
                         {Intl.NumberFormat('id', { style: 'currency', currency: 'idr' }).format(data.price)}
                     </Typography>
-                    <Button size="big" variant="contained" color="primary">
+                    <Button  href={data.url}  target="_blank" target="_blank" size="big" variant="contained" >
                         Learn More
                     </Button>
                     </CardContent>
