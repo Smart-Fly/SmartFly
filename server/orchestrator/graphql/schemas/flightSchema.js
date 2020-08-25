@@ -10,6 +10,8 @@ const typeDefs = gql`
     arrivalTime: String
     price: Int
     airLineLogo: String
+    companyLogo: String
+    url: String
   }
 
   type Price {
