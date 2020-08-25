@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -18,6 +18,9 @@ import { useLocation } from "react-router-dom";
 // import { colors } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import Modal from "../components/Modal";
+import { GET_CACHE_USER } from "../query/cacheQuery";
+import client from "../config/config";
+import { set } from "date-fns";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -92,9 +95,28 @@ const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [modalShow, setModalShow] = useState(false);
-
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const menuId = "primary-search-account-menu";
+  const mobileMenuId = "primary-search-account-menu-mobile";
+  const [userInfo, setUserInfo] = useState({
+    userName: "",
+    subsStatus: false,
+  });
+  const { cacheUser } = client.readQuery({
+    query: GET_CACHE_USER,
+  });
+
+  useEffect(() => {
+    if (cacheUser) {
+      const { userNameCache, subsStatusCache } = cacheUser;
+      setUserInfo({
+        ...userInfo,
+        userName: userNameCache,
+        subsStatus: subsStatusCache,
+      });
+    }
+  }, [cacheUser]);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -113,7 +135,6 @@ const Navbar = () => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -129,7 +150,6 @@ const Navbar = () => {
     </Menu>
   );
 
-  const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
     <Menu
       anchorEl={mobileMoreAnchorEl}
@@ -140,7 +160,7 @@ const Navbar = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {/* <MenuItem>
+      <MenuItem>
         <IconButton aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="secondary">
             <MailIcon />
@@ -155,7 +175,7 @@ const Navbar = () => {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem> */}
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -169,86 +189,86 @@ const Navbar = () => {
       </MenuItem>
     </Menu>
   );
-  return (
-    <>
-      <div className={classes.grow}>
-        <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
-        <AppBar
-          position="absolute"
-          style={
-            pathname === "/"
-              ? { background: "transparent", boxShadow: "none", color: "blue" }
-              : { background: "transparent", boxShadow: "none", color: "black" }
-          }
-        >
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="open drawer"
-            >
-              {/* <MenuIcon /> */}
-            </IconButton>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Smart-Fly
-            </Typography>
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
-              {pathname !== "/" ? (
-                <Button
-                  onClick={() => setModalShow(true)}
-                  variant="outlined"
-                  color="primary"
+
+  if (pathname !== "/login" && pathname !== "/register") {
+    return (
+      <>
+        <div className={classes.grow}>
+          <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
+          <AppBar
+            position="absolute"
+            style={
+              pathname === "/"
+                ? {
+                    background: "transparent",
+                    boxShadow: "none",
+                    color: "blue",
+                  }
+                : {
+                    background: "transparent",
+                    boxShadow: "none",
+                    color: "black",
+                  }
+            }
+          >
+            <Toolbar>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="open drawer"
+              >
+                {/* <MenuIcon /> */}
+              </IconButton>
+              <Typography className={classes.title} variant="h6" noWrap>
+                Smart-Fly
+              </Typography>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
+                {pathname !== "/" ? (
+                  <Button
+                    onClick={() => setModalShow(true)}
+                    variant="outlined"
+                    color="primary"
+                  >
+                    New Search
+                  </Button>
+                ) : null}
+              </div>
+              <div className={classes.grow} />
+              <div className={classes.sectionDesktop}>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
                 >
-                  New Search
-                </Button>
-              ) : null}
-            </div>
-            <div className={classes.grow} />
-            <div className={classes.sectionDesktop}>
-              <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
-                <Badge badgeContent={17} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen}
-                color="inherit"
-              >
-                <MoreIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
-        </AppBar>
-        {renderMobileMenu}
-        {renderMenu}
-      </div>
-    </>
-  );
+                  <AccountCircle />
+                </IconButton>
+              </div>
+              <div className={classes.sectionMobile}>
+                <IconButton
+                  aria-label="show more"
+                  aria-controls={mobileMenuId}
+                  aria-haspopup="true"
+                  onClick={handleMobileMenuOpen}
+                  color="inherit"
+                >
+                  <MoreIcon />
+                </IconButton>
+              </div>
+            </Toolbar>
+          </AppBar>
+          {renderMobileMenu}
+          {renderMenu}
+        </div>
+      </>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Navbar;
