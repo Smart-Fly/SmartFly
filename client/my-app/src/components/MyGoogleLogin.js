@@ -10,7 +10,7 @@ const clientId =
 
 const MyGoogleLogin = () => {
   const history = useHistory();
-  const [googleLogin, { data, loading }] = useMutation(GOOGLE_LOGIN);
+  const [googleLogin, { data }] = useMutation(GOOGLE_LOGIN);
   const onSuccess = (res) => {
     console.log(`login success`, res);
     if (res) {
@@ -35,7 +35,7 @@ const MyGoogleLogin = () => {
       localStorage.setItem("access_token", access_token);
       history.push("/");
     }
-  }, [data]);
+  }, [data, history]);
 
   return (
     <div>

@@ -91,7 +91,7 @@ const LoginPage = () => {
               </div>
 
               <div className="text-center p-t-46 p-b-20">
-                <a className="txt2" href="">
+                <a className="txt2" href="/register">
                   sign up
                 </a>
                 <span className="txt2"> or login using</span>
