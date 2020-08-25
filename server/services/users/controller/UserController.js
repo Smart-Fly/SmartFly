@@ -45,7 +45,11 @@ class UserController {
               let access_token = encode(user);
               res
                 .status(200)
-                .json({ access_token, subsStatus: user.subsStatus });
+                .json({
+                  access_token,
+                  subsStatus: user.subsStatus,
+                  userName: user.userName,
+                });
             } else {
               next({ name: "INVALID_PASSWORD" });
             }

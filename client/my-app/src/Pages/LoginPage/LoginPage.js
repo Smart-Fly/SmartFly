@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Input, Button, InputLabel, FormControl } from "@material-ui/core";
-import { USER_LOGIN } from "../../query/userQuery";
-import { useMutation } from "@apollo/client";
-import { useHistory } from "react-router-dom";
-import { Form } from "react-bootstrap";
 import "./LoginPage.css";
 import "./LoginPageUtil.css";
+import { Form } from "react-bootstrap";
+import client from "../../config/config";
+import { useMutation } from "@apollo/client";
+import { useHistory } from "react-router-dom";
+import { GET_USER } from "../../query/cacheQuery";
+import React, { useState, useEffect } from "react";
+import { USER_LOGIN } from "../../query/userQuery";
 import MyGoogleLogin from "../../components/MyGoogleLogin";
+import { Input, Button, InputLabel, FormControl } from "@material-ui/core";
 
 const LoginPage = () => {
   const [userLoginData, setUserLoginData] = useState({
@@ -32,13 +34,35 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (userLoginInfo) {
+      console.log(userLoginInfo, "ini apa nih");
       const {
         userLogin: { access_token },
       } = userLoginInfo;
       localStorage.setItem("access_token", access_token);
       history.push("/");
+      // addToCache();
     }
   }, [userLoginInfo, history]);
+
+  // Use Effect buat set cache
+
+  // const addToCache = () => {
+  //   const { userLoginCache } = client.readQuery(GET_USER);
+  //   console.log(userLoginCache, "ini apa");
+  // client.writeQuery({
+  //   query: GET_USER,
+  //   data: {
+  //     userLoginCache : {...userLoginCache, userLoginCache.subsStatus: }
+  //   },
+  // });
+  // };
+
+  useEffect(() => {
+    if (userLoginInfo) {
+      const { userLoginCache } = client.readQuery(GET_USER);
+      console.log(userLoginCache, "INI DATANYA DARI CACHE");
+    }
+  });
 
   if (loading) {
     // Tar cari buat loading nya
