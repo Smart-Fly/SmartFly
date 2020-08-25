@@ -47,6 +47,7 @@ app.get("/pricePrediction/:departure/:arrival", (req,res) => {
 
           var process = spawn('python3',["./helpers/machineLearning.py",dataX,dataY])
           process.stdout.on('data', function(data) {
+            console.log(data)
             let accuracy = +data.toString().split(' ')[0]
             let slopeGraph = data.toString().split(' ')[1]
             let intercept = +data.toString().split(' ')[2]
