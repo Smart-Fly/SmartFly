@@ -4,8 +4,8 @@ const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: false })
 const cheerio = require('cheerio')
 
-let airline, price, airLineLogo, departureTime, arrivalTime
-let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "" }
+let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url, NewDate
+let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo:""}
 let result = []
 
 const getData = html => {
@@ -32,7 +32,10 @@ const getData = html => {
     price = converToNumber(price)
     dataJson.price = price
 
-    result.push({ airline, departureTime, arrivalTime, price, airLineLogo })
+    companyLogo = "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    dataJson.companyLogo=companyLogo
+
+    result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
   })
 }
 
@@ -49,7 +52,6 @@ class TikeCom {
       classType
     } = reqData
 
-    let url = ''
     let dType = 'AIRPORT', aType = 'AIRPORT' //Departur and Arrival Type (CITY or AIRPORT)
 
     if (dAirportCode === 'JKT') {
@@ -67,12 +69,9 @@ class TikeCom {
       aAirportCode = 'JOGC'
       aType = 'CITY'
     }
-    // https://m.tiket.com/pesawat/search?d=CGK&a=SUBC&date=2020-08-25&adult=1&child=0&infant=0&class=economy&dType=AIRPORT&aType=CITY&type=depart
-    // https://m.tiket.com/pesawat/search?d=JKTC&a=SUBC&date=2020-08-25&adult=1&child=0&infant=0&class=economy&dType=CITY&aType=CITY&type=depart
-    // https://www.tiket.com/pesawat/search?d=JKTC&a=SUBC&dType=CITY&aType=CITY&date=2020-08-25&adult=1&child=0&infant=0&class=economy
 
-    const newDate = converDate(planDate, 'TK')
-    url = `https://www.tiket.com/pesawat/search?d=${dAirportCode}&a=${aAirportCode}&dType=${dType}&aType=${aType}&date=${newDate}&adult=${psAdult}&child=${psChild}&infant=${psInfant}&class=${classType}`
+    NewDate = converDate(planDate, 'TK')
+    url = `https://www.tiket.com/pesawat/search?d=${dAirportCode}&a=${aAirportCode}&dType=${dType}&aType=${aType}&date=${NewDate}&adult=${psAdult}&child=${psChild}&infant=${psInfant}&class=${classType}`
     console.log(url,'>> Tiket')
     try {
       await nightmare

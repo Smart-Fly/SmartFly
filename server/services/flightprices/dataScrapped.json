@@ -1,764 +1,1295 @@
 {
   "Traveloka": [
     {
-      "airline": "Wings",
-      "departureTime": "08:10",
-      "arrivalTime": "09:20",
-      "price": 706200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349805026-5fecb4ceb5f79e38f2a5ae50f33b813e.png?tr=q-75"
+      "airline": "Lion",
+      "departureTime": "18:30",
+      "arrivalTime": "21:20",
+      "price": 624600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
       "airline": "Lion",
-      "departureTime": "08:45",
-      "arrivalTime": "14:00",
-      "price": 860800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+      "departureTime": "05:00",
+      "arrivalTime": "10:20",
+      "price": 685700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
-      "airline": "Lion",
-      "departureTime": "08:45",
-      "arrivalTime": "17:30",
-      "price": 860800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+      "airline": "Batik",
+      "departureTime": "07:00",
+      "arrivalTime": "09:50",
+      "price": 798400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
-      "airline": "Lion",
-      "departureTime": "13:20",
-      "arrivalTime": "17:30",
-      "price": 860800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+      "airline": "Batik",
+      "departureTime": "13:00",
+      "arrivalTime": "16:00",
+      "price": 798400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
-      "airline": "Lion",
-      "departureTime": "08:45",
-      "arrivalTime": "07:30(+1d)",
-      "price": 950800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+      "airline": "Batik",
+      "departureTime": "15:40",
+      "arrivalTime": "18:30",
+      "price": 798400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
-      "airline": "Lion",
-      "departureTime": "08:45",
-      "arrivalTime": "10:30(+1d)",
-      "price": 950800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "13:20",
-      "arrivalTime": "07:30(+1d)",
-      "price": 950800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "13:20",
-      "arrivalTime": "10:30(+1d)",
-      "price": 950800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "13:20",
-      "arrivalTime": "12:20(+1d)",
-      "price": 950800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "13:20",
-      "arrivalTime": "14:00(+1d)",
-      "price": 950800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:10",
-      "arrivalTime": "07:30(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:10",
-      "arrivalTime": "10:30(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:10",
-      "arrivalTime": "12:20(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:10",
-      "arrivalTime": "14:00(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:10",
-      "arrivalTime": "17:30(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "16:40",
-      "arrivalTime": "07:30(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "16:40",
-      "arrivalTime": "10:30(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "16:40",
-      "arrivalTime": "12:20(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "16:40",
-      "arrivalTime": "14:00(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "16:40",
-      "arrivalTime": "17:30(+1d)",
-      "price": 999200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:40",
-      "arrivalTime": "14:00",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:40",
-      "arrivalTime": "17:30",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:40",
-      "arrivalTime": "07:30(+1d)",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:40",
-      "arrivalTime": "10:30(+1d)",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:50",
-      "arrivalTime": "07:30(+1d)",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:50",
-      "arrivalTime": "10:30(+1d)",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:50",
-      "arrivalTime": "12:20(+1d)",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:50",
-      "arrivalTime": "14:00(+1d)",
-      "price": 1164200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:45",
-      "arrivalTime": "16:05",
-      "price": 1178500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:45",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1178500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:45",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1178500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1178500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1178500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "16:05(+1d)",
-      "price": 1178500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "15:10",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1226900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "15:10",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1226900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "15:10",
-      "arrivalTime": "16:05(+1d)",
-      "price": 1226900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "16:40",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1226900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "16:40",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1226900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "16:40",
-      "arrivalTime": "16:05(+1d)",
-      "price": 1226900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "13:20",
-      "arrivalTime": "12:35(+1d)",
-      "price": 1296800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:10",
-      "arrivalTime": "12:35(+1d)",
-      "price": 1345200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "16:40",
-      "arrivalTime": "12:35(+1d)",
-      "price": 1345200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "14:50",
-      "price": 1364600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:50",
-      "arrivalTime": "12:35(+1d)",
-      "price": 1510200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
+      "airline": "Batik",
+      "departureTime": "17:00",
+      "arrivalTime": "19:50",
+      "price": 798400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
       "airline": "Citilink",
-      "departureTime": "16:35",
-      "arrivalTime": "13:55(+1d)",
-      "price": 1679700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "07:30(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "10:30(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "12:20(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "14:00(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:30",
-      "arrivalTime": "07:30(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:30",
-      "arrivalTime": "10:30(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:30",
-      "arrivalTime": "12:20(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:30",
-      "arrivalTime": "14:00(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "15:30",
-      "arrivalTime": "17:30(+1d)",
-      "price": 1703800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "08:00",
-      "arrivalTime": "07:30(+1d)",
-      "price": 1718100,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "08:00",
-      "arrivalTime": "10:30(+1d)",
-      "price": 1718100,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "08:00",
-      "arrivalTime": "12:20(+1d)",
-      "price": 1718100,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "07:30(+1d)",
-      "price": 1772000,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "10:30(+1d)",
-      "price": 1772000,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "12:20(+1d)",
-      "price": 1772000,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "14:00(+1d)",
-      "price": 1772000,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "07:30(+1d)",
-      "price": 1833600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "10:30(+1d)",
-      "price": 1833600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "12:20(+1d)",
-      "price": 1833600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "10:30",
-      "arrivalTime": "14:00(+1d)",
-      "price": 1833600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+      "departureTime": "04:55",
+      "arrivalTime": "07:55",
+      "price": 856700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
       "airline": "Citilink",
-      "departureTime": "08:40",
-      "arrivalTime": "16:05",
-      "price": 1833700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
+      "departureTime": "14:15",
+      "arrivalTime": "17:10",
+      "price": 856700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
-      "airline": "Multi-airline",
-      "departureTime": "10:30",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1931500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "10:30",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1931500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "15:30",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1931500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "15:30",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1931500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "15:30",
-      "arrivalTime": "16:05(+1d)",
-      "price": 1931500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:00",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1945800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "08:00",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1945800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "10:30",
-      "arrivalTime": "08:40(+1d)",
-      "price": 1999700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "10:30",
-      "arrivalTime": "10:45(+1d)",
-      "price": 1999700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "07:30(+1d)",
-      "price": 2033800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "10:30(+1d)",
-      "price": 2033800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "12:20(+1d)",
-      "price": 2033800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "14:00(+1d)",
-      "price": 2033800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "17:30(+1d)",
-      "price": 2033800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "10:30",
-      "arrivalTime": "08:40(+1d)",
-      "price": 2061300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "10:30",
-      "arrivalTime": "10:45(+1d)",
-      "price": 2061300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "08:40(+1d)",
-      "price": 2261500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "10:45(+1d)",
-      "price": 2261500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "16:05(+1d)",
-      "price": 2261500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "15:15",
-      "arrivalTime": "12:10(+1d)",
-      "price": 3448000,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "15:15",
-      "arrivalTime": "16:15(+1d)",
-      "price": 3448000,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "13:20",
-      "arrivalTime": "16:15(+1d)",
-      "price": 3504500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "15:10",
-      "arrivalTime": "16:15(+1d)",
-      "price": 3552900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
-    },
-    {
-      "airline": "Multi-airline",
+      "airline": "Citilink",
       "departureTime": "16:40",
-      "arrivalTime": "16:15(+1d)",
-      "price": 3552900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75"
+      "arrivalTime": "19:40",
+      "price": 856700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Batik",
+      "departureTime": "08:55",
+      "arrivalTime": "11:45",
+      "price": 877600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Batik",
+      "departureTime": "19:00",
+      "arrivalTime": "21:50",
+      "price": 877600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     },
     {
       "airline": "Multi-airline",
-      "departureTime": "13:50",
-      "arrivalTime": "16:15(+1d)",
-      "price": 3717900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75"
+      "departureTime": "05:00",
+      "arrivalTime": "14:55",
+      "price": 940700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "09:00",
+      "arrivalTime": "14:55",
+      "price": 940700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "09:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 940700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "04:30",
+      "arrivalTime": "08:30",
+      "price": 946400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "12:30",
+      "arrivalTime": "09:45(+1d)",
+      "price": 994600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "12:30",
+      "arrivalTime": "14:55(+1d)",
+      "price": 994600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:45",
+      "arrivalTime": "12:50",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:35",
+      "arrivalTime": "10:20(+1d)",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "12:00",
+      "arrivalTime": "10:20(+1d)",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "12:00",
+      "arrivalTime": "12:50(+1d)",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "13:40",
+      "arrivalTime": "10:20(+1d)",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "13:40",
+      "arrivalTime": "12:50(+1d)",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "19:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "19:00",
+      "arrivalTime": "14:55(+1d)",
+      "price": 1049600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:50",
+      "arrivalTime": "10:15(+1d)",
+      "price": 1065700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "06:00",
+      "arrivalTime": "14:55",
+      "price": 1137600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:00",
+      "arrivalTime": "12:15",
+      "price": 1145300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "14:55",
+      "price": 1158500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1158500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "08:00",
+      "arrivalTime": "14:55",
+      "price": 1201400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "08:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1201400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "10:30",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1201400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1201400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "14:55(+1d)",
+      "price": 1201400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "17:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1201400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "17:00",
+      "arrivalTime": "14:55(+1d)",
+      "price": 1201400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "06:00",
+      "arrivalTime": "12:50",
+      "price": 1337700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "06:00",
+      "arrivalTime": "12:15",
+      "price": 1342200,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:15",
+      "arrivalTime": "14:55",
+      "price": 1402200,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:15",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1402200,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:45",
+      "arrivalTime": "12:15",
+      "price": 1419200,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "12:00",
+      "arrivalTime": "15:10(+1d)",
+      "price": 1459400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "12:00",
+      "arrivalTime": "15:10(+1d)",
+      "price": 1459400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "13:40",
+      "arrivalTime": "15:10(+1d)",
+      "price": 1459400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "13:40",
+      "arrivalTime": "15:10(+1d)",
+      "price": 1459400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:45",
+      "arrivalTime": "15:10",
+      "price": 1477000,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "06:00",
+      "arrivalTime": "14:55",
+      "price": 1502700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "10:15(+1d)",
+      "price": 1645300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "13:30",
+      "arrivalTime": "10:15(+1d)",
+      "price": 1645300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "00:40",
+      "arrivalTime": "14:55",
+      "price": 1650800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "01:30",
+      "arrivalTime": "14:55",
+      "price": 1650800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Garuda",
+      "departureTime": "07:05",
+      "arrivalTime": "10:10",
+      "price": 1709100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Garuda",
+      "departureTime": "09:50",
+      "arrivalTime": "12:40",
+      "price": 1709100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Garuda",
+      "departureTime": "11:30",
+      "arrivalTime": "14:35",
+      "price": 1709100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "00:40",
+      "arrivalTime": "14:55",
+      "price": 1712400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "01:30",
+      "arrivalTime": "14:55",
+      "price": 1712400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:25",
+      "arrivalTime": "10:20(+1d)",
+      "price": 1722700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:25",
+      "arrivalTime": "12:50(+1d)",
+      "price": 1722700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "14:00",
+      "arrivalTime": "10:20(+1d)",
+      "price": 1722700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "14:00",
+      "arrivalTime": "12:50(+1d)",
+      "price": 1722700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "10:20(+1d)",
+      "price": 1722700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "12:50(+1d)",
+      "price": 1722700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "06:00",
+      "arrivalTime": "15:10",
+      "price": 1765100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:25",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1887700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:25",
+      "arrivalTime": "14:55(+1d)",
+      "price": 1887700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "14:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1887700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "14:00",
+      "arrivalTime": "14:55(+1d)",
+      "price": 1887700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 1887700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "14:55(+1d)",
+      "price": 1887700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "01:10",
+      "arrivalTime": "14:55",
+      "price": 1958800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "02:00",
+      "arrivalTime": "14:55",
+      "price": 1958800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Garuda",
+      "departureTime": "06:00",
+      "arrivalTime": "12:15",
+      "price": 2002300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:25",
+      "arrivalTime": "15:10(+1d)",
+      "price": 2132500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:25",
+      "arrivalTime": "15:10(+1d)",
+      "price": 2132500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "14:00",
+      "arrivalTime": "15:10(+1d)",
+      "price": 2132500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "14:00",
+      "arrivalTime": "15:10(+1d)",
+      "price": 2132500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "15:10(+1d)",
+      "price": 2132500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "15:00",
+      "arrivalTime": "15:10(+1d)",
+      "price": 2132500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:00",
+      "arrivalTime": "10:20(+1d)",
+      "price": 2890400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:00",
+      "arrivalTime": "12:50(+1d)",
+      "price": 2890400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:00",
+      "arrivalTime": "09:45(+1d)",
+      "price": 3055400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "11:00",
+      "arrivalTime": "14:55(+1d)",
+      "price": 3055400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:00",
+      "arrivalTime": "22:15",
+      "price": 3300800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "06:00",
+      "arrivalTime": "22:15",
+      "price": 3497700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "07:00",
+      "arrivalTime": "22:15",
+      "price": 3518600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
+    },
+    {
+      "airline": "Multi-airline",
+      "departureTime": "05:45",
+      "arrivalTime": "22:15",
+      "price": 3574700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy"
     }
   ],
   "Tiket": [
     {
-      "airline": "Wings Air",
-      "departureTime": "08:10",
-      "arrivalTime": "09:20",
-      "price": 706200,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836678/string/2018/08/21/2aac432c-b367-41c9-8c22-0b003aa202f2cba0bf273bc8caf2ae4d436d277c3c8b.png"
+      "airline": "Lion Air",
+      "departureTime": "18:30",
+      "arrivalTime": "21:20",
+      "price": 624600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
     },
     {
       "airline": "Lion Air",
-      "departureTime": "13:20",
-      "arrivalTime": "17:30",
-      "price": 860800,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+      "departureTime": "05:00",
+      "arrivalTime": "10:20",
+      "price": 685700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
     },
     {
       "airline": "Lion Air",
-      "departureTime": "08:45",
-      "arrivalTime": "14:00",
-      "price": 860800,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+      "departureTime": "07:00",
+      "arrivalTime": "12:50",
+      "price": 685700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
     },
     {
       "airline": "Lion Air",
-      "departureTime": "08:45",
-      "arrivalTime": "17:30",
-      "price": 860800,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+      "departureTime": "05:00",
+      "arrivalTime": "12:50",
+      "price": 685700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "07:00",
+      "arrivalTime": "09:50",
+      "price": 798400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "15:40",
+      "arrivalTime": "18:30",
+      "price": 798400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "17:00",
+      "arrivalTime": "19:50",
+      "price": 798400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "13:00",
+      "arrivalTime": "16:00",
+      "price": 798400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Citilink Indonesia",
+      "departureTime": "14:15",
+      "arrivalTime": "17:10",
+      "price": 856700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Citilink Indonesia",
+      "departureTime": "04:55",
+      "arrivalTime": "07:55",
+      "price": 856700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Citilink Indonesia",
+      "departureTime": "16:40",
+      "arrivalTime": "19:40",
+      "price": 856700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "08:55",
+      "arrivalTime": "11:45",
+      "price": 877600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "19:00",
+      "arrivalTime": "21:50",
+      "price": 877600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
     },
     {
       "airline": "Lion Air",
-      "departureTime": "10:30",
-      "arrivalTime": "14:50",
-      "price": 1364600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png"
+      "departureTime": "04:30",
+      "arrivalTime": "08:30",
+      "price": 946400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "09:05",
+      "arrivalTime": "15:10",
+      "price": 966200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "04:30",
+      "arrivalTime": "15:10",
+      "price": 966200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "01:30",
+      "arrivalTime": "11:40",
+      "price": 1406200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "00:40",
+      "arrivalTime": "11:40",
+      "price": 1406200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
     },
     {
       "airline": "Garuda Indonesia",
-      "departureTime": "15:15",
-      "arrivalTime": "12:10+1h",
-      "price": 3448000,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png"
+      "departureTime": "09:50",
+      "arrivalTime": "12:40",
+      "price": 1709100,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
     },
     {
       "airline": "Garuda Indonesia",
-      "departureTime": "15:15",
-      "arrivalTime": "16:15+1h",
-      "price": 3448000,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png"
+      "departureTime": "07:05",
+      "arrivalTime": "10:10",
+      "price": 1709100,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Garuda Indonesia",
+      "departureTime": "11:30",
+      "arrivalTime": "14:35",
+      "price": 1709100,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "06:00",
+      "arrivalTime": "11:40",
+      "price": 1714200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "02:00",
+      "arrivalTime": "11:40",
+      "price": 1714200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "01:10",
+      "arrivalTime": "11:40",
+      "price": 1714200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "04:30",
+      "arrivalTime": "11:40",
+      "price": 1814300,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "04:30",
+      "arrivalTime": "14:40",
+      "price": 1906700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Garuda Indonesia",
+      "departureTime": "06:00",
+      "arrivalTime": "12:15",
+      "price": 2002300,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "03:00",
+      "arrivalTime": "11:40",
+      "price": 3718400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy",
+      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=DPS&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=1&class=economy"
     }
   ],
   "PegiPegi": [
     {
-      "airline": "Wings Air",
-      "departureTime": "08:10",
-      "arrivalTime": "09:20",
-      "price": 706200,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/IW.png"
+      "airline": "Lion Air",
+      "departureTime": "18:30",
+      "arrivalTime": "21:20",
+      "price": 624600,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     },
     {
       "airline": "Lion Air",
-      "departureTime": "08:45",
-      "arrivalTime": "14:00",
-      "price": 860800,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png"
+      "departureTime": "05:00",
+      "arrivalTime": "12:50",
+      "price": 685700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     },
     {
       "airline": "Lion Air",
-      "departureTime": "08:45",
-      "arrivalTime": "17:30",
-      "price": 860800,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png"
+      "departureTime": "05:00",
+      "arrivalTime": "10:20",
+      "price": 685700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     },
     {
-      "airline": "Lion Air",
-      "departureTime": "13:20",
-      "arrivalTime": "17:30",
-      "price": 860800,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png"
+      "airline": "Batik Air",
+      "departureTime": "07:00",
+      "arrivalTime": "09:50",
+      "price": 798400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "13:00",
+      "arrivalTime": "16:00",
+      "price": 798400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "15:40",
+      "arrivalTime": "18:30",
+      "price": 798400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "17:00",
+      "arrivalTime": "19:50",
+      "price": 798400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     },
     {
       "airline": "Citilink",
-      "departureTime": "08:40",
-      "arrivalTime": "16:05",
-      "price": 1296900,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "10:30",
-      "arrivalTime": "14:50",
-      "price": 1364600,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png"
+      "departureTime": "04:55",
+      "arrivalTime": "07:55",
+      "price": 856700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     },
     {
       "airline": "Citilink",
-      "departureTime": "16:35",
-      "arrivalTime": "13:55",
-      "price": 1679700,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png"
+      "departureTime": "14:15",
+      "arrivalTime": "17:10",
+      "price": 856700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Citilink",
+      "departureTime": "16:40",
+      "arrivalTime": "19:40",
+      "price": 856700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "08:55",
+      "arrivalTime": "11:45",
+      "price": 877600,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Batik Air",
+      "departureTime": "19:00",
+      "arrivalTime": "21:50",
+      "price": 877600,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "07:00",
+      "arrivalTime": "12:50",
+      "price": 903500,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "04:30",
+      "arrivalTime": "08:30",
+      "price": 946400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "04:30",
+      "arrivalTime": "15:10",
+      "price": 966200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "09:05",
+      "arrivalTime": "15:10",
+      "price": 966200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "00:40",
+      "arrivalTime": "11:40",
+      "price": 1461200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "01:30",
+      "arrivalTime": "11:40",
+      "price": 1461200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     },
     {
       "airline": "Garuda Indonesia",
-      "departureTime": "15:15",
-      "arrivalTime": "12:10",
-      "price": 3448000,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png"
+      "departureTime": "07:05",
+      "arrivalTime": "10:10",
+      "price": 1709100,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     },
     {
       "airline": "Garuda Indonesia",
-      "departureTime": "15:15",
-      "arrivalTime": "16:15",
-      "price": 3448000,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png"
+      "departureTime": "09:50",
+      "arrivalTime": "12:40",
+      "price": 1709100,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Garuda Indonesia",
+      "departureTime": "11:30",
+      "arrivalTime": "14:35",
+      "price": 1709100,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "01:10",
+      "arrivalTime": "11:40",
+      "price": 1769200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "02:00",
+      "arrivalTime": "11:40",
+      "price": 1769200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "06:00",
+      "arrivalTime": "11:40",
+      "price": 1769200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "04:30",
+      "arrivalTime": "11:40",
+      "price": 1869300,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Lion Air",
+      "departureTime": "04:30",
+      "arrivalTime": "14:40",
+      "price": 1906700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Garuda Indonesia",
+      "departureTime": "06:00",
+      "arrivalTime": "12:15",
+      "price": 2002300,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
+    },
+    {
+      "airline": "Multi-maskapai",
+      "departureTime": "03:00",
+      "arrivalTime": "11:40",
+      "price": 3809700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/DPS/28-08-2020/1/0/1"
     }
   ]
 }

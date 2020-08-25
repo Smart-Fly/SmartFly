@@ -6,7 +6,7 @@ const cheerio = require('cheerio')
 
 // const url = 'https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=ECONOMY'
 
-let airline, price, airLineLogo, departureTime, arrivalTime
+let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url, NewDate
 let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "" }
 let result = []
 
@@ -38,7 +38,9 @@ const getData = html => {
     price = converToNumber(price)
     dataJson.price = price
 
-    result.push({ airline, departureTime, arrivalTime, price, airLineLogo })
+    companyLogo = "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png"
+    dataJson.companyLogo = companyLogo
+    result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo ,url})
   })
 }
 
@@ -63,10 +65,8 @@ class Traveloka {
       aAirportCode = 'JKTA'
     }
 
-    // https://m.traveloka.com/en-id/search/flights/single.JKTA.SUB.2020-8-25.null.1.0.0.ECONOMY
-    // https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=25-08-2020.NA&ps=1.0.0&sc=ECONOMY
-    const NewDate = converDate(planDate, 'TL')
-    const url = `https://www.traveloka.com/en-id/flight/onewaysearch?ap=${dAirportCode}.${aAirportCode}&dt=${NewDate}.NA&ps=${psAdult}.${psChild}.${psInfant}&sc=${classType}`
+    NewDate = converDate(planDate, 'TL')
+    url = `https://www.traveloka.com/en-id/flight/onewaysearch?ap=${dAirportCode}.${aAirportCode}&dt=${NewDate}.NA&ps=${psAdult}.${psChild}.${psInfant}&sc=${classType}`
     console.log(url, '>> Traveloka')
     try {
       await nightmare
