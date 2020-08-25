@@ -59,9 +59,11 @@ const ListData = () => {
       }
     });
 
+		useEffect(() => {
+			getPredictions()
+		})
+
     const getPredict = () => {
-      console.log(data.dAirportCode)
-      console.log(data.aAirportCode)
       getPredictions()
       if(dataPredictions){
         console.log(dataPredictions)
@@ -202,8 +204,6 @@ const ListData = () => {
                         </Row >
                     )
                 })}
-
-
 
             </Container>
 
