@@ -9,6 +9,8 @@ export const GET_FLIGHT_SEARCH = gql `
             arrivalTime
             price
             airLineLogo
+            companyLogo
+            url
         }
         Tiket{
             airline
@@ -16,6 +18,8 @@ export const GET_FLIGHT_SEARCH = gql `
             arrivalTime
             price
             airLineLogo
+            companyLogo
+            url
         }
         PegiPegi{
             airline
@@ -23,8 +27,9 @@ export const GET_FLIGHT_SEARCH = gql `
             arrivalTime
             price
             airLineLogo
+            companyLogo
+            url
         }
     }
   }
 `;
-
