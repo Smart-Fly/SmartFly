@@ -3,7 +3,6 @@ const TiketCom = require('../models/tiketcom')
 const PegiPegi = require('../models/pegipegi')
 const saveResult = require('../helpers/saveResult')
 
-
 class FlightController {
 
   static async getFlightData(req, res) {
@@ -16,9 +15,7 @@ class FlightController {
       psInfant: req.body.psInfant,
       classType: req.body.classType,
     }
-
     try {
-
       const resTraveloka = await Traveloka.getTraveloka(reqeuestBody)
       console.log('Traveloka')
 
@@ -37,7 +34,7 @@ class FlightController {
       saveResult(AllData)
 
     } catch (error) {
-      res.status(500).json({message:"Internal Server Error"})
+      res.status(500).json({ message: "Internal Server Error" })
     }
   }
 }
