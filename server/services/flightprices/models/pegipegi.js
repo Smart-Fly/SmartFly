@@ -6,7 +6,7 @@ const cheerio = require('cheerio')
 
 
 let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url
-let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "", url: "" }
+let dataJson = { travelAgent:"", airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "", url: "" }
 let result = []
 
 let getData = html => {
@@ -51,7 +51,7 @@ let getData = html => {
     dataJson.companyLogo = companyLogo
     dataJson.url = url
 
-    result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
+    result.push({ travelAgent:"PegiPegi", airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
 
   })
 }
