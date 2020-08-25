@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
-import CardResult from '../../components/CardResult'
+import React, { useEffect, useState } from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
+import CardResult from "../../components/CardResult";
 import { Slider, Typography } from "@material-ui/core";
 import { useParams, useLocation } from 'react-router-dom'
 import { GET_FLIGHT_SEARCH } from '../../query/QueryPrice'
@@ -10,19 +10,20 @@ import './list.css'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Skeleton from '@material-ui/lab/Skeleton';
 import ModalPredict from '../../components/ModalPredic'
-import Aos from 'aos'
-import 'aos/dist/aos'
+import ModalFilter from '../../components/ModalFilter'
+// import Aos from 'aos'
+// import 'aos/dist/aos'
 
 
 const GET_PRED = gql`
-	query getPrediction($depart: String, $arrive: String) {
-		predictions(departure: $depart, arrival: $arrive) {
-			accuracy
-			slopeGraph
+  query getPrediction($depart: String, $arrive: String) {
+    predictions(departure: $depart, arrival: $arrive) {
+      accuracy
+      slopeGraph
       intercept
-		}
-	}
-`
+    }
+  }
+`;
 function AirbnbThumbComponent(props) {
     return (
         <span {...props}>
@@ -36,7 +37,7 @@ const AirbnbSlider = withStyles({
     root: {
         color: "#3a8589",
         height: 3,
-        padding: "13px 0"
+        padding: "13px 0",
     },
     thumb: {
         height: 27,
@@ -47,7 +48,7 @@ const AirbnbSlider = withStyles({
         marginLeft: -13,
         boxShadow: "#ebebeb 0 2px 2px",
         "&:focus, &:hover, &$active": {
-            boxShadow: "#ccc 0 2px 3px 1px"
+            boxShadow: "#ccc 0 2px 3px 1px",
         },
         "& .bar": {
             // display: inline-block !important;
@@ -55,37 +56,37 @@ const AirbnbSlider = withStyles({
             width: 1,
             backgroundColor: "currentColor",
             marginLeft: 1,
-            marginRight: 1
-        }
+            marginRight: 1,
+        },
     },
     active: {},
     track: {
-        height: 3
+        height: 3,
     },
     rail: {
         color: "#d8d8d8",
         opacity: 1,
-        height: 3
-    }
+        height: 3,
+    },
 })(Slider);
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
+        display: "flex",
     },
     details: {
-        display: 'flex',
-        flexDirection: 'column',
+        display: "flex",
+        flexDirection: "column",
     },
     content: {
-        flex: '1 0 auto',
+        flex: "1 0 auto",
     },
     cover: {
         width: 151,
     },
     controls: {
-        display: 'flex',
-        alignItems: 'center',
+        display: "flex",
+        alignItems: "center",
         paddingLeft: theme.spacing(1),
         paddingBottom: theme.spacing(1),
     },
@@ -99,9 +100,12 @@ const ListData = () => {
     const theme = useTheme();
     const { slug } = useParams()
     const [modalShow, setModalShow] = useState(false);
+    const [modalShowFilter, setModalShowFilter] = useState(false);
+    const [ValueModal, setValueModal] = useState(null);
     const [value, setValue] = React.useState([400000, 700000]);
     const { state: { data } } = useLocation()
     const [dummyData, setDataDummy] = useState([])
+    const [allData, setAllData] = useState([])
     const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH)
     const [getPredictions, { loading: loadingPredictions, data: dataPredictions }] = useLazyQuery(GET_PRED, {
         variables: {
@@ -113,17 +117,45 @@ const ListData = () => {
     const getPredict = () => {
         getPredictions()
         if (dataPredictions) {
-            console.log(dataPredictions, 'dataa')
+            // console.log(dataPredictions, 'dataa')
         }
         else {
-            console.log(loadingPredictions)
+            // console.log(loadingPredictions)
         }
     }
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    useEffect(() => {
 
+        if (ticket) {
+            // console.log(ticket)
+            let temp = []
+            for (const [key, value] of Object.entries(ticket.getFlight)) {
+                // console.log(`${key}: ${value}`);
+                console.log(value, 'value')
+                console.log(key, 'keyd')
+                if ("__typename" != key) {
+                    if (ValueModal.Lion) {
+                        let temp2 = value.filter(data2 => data2.airline.toLocaleLowerCase() == ('lion air' || 'lion'))
+                        temp.push(...temp2)
+                        
+                    } 
+                    if (ValueModal.Garuda){
+                            let temp3 = value.filter(data3 => data3.airline.toLocaleLowerCase() == ('garuda' || "garuda indonesia") )
+                            temp.push(...temp3)
+    
+                        }
+                        if (ValueModal.Batik){
+                            let temp4 = value.filter(data4 => data4.airline.toLocaleLowerCase() == ('batik air' || "batik") )
+                            temp.push(...temp4)
+                        }
+                }
+            }
+            setAllData(temp)
+        }
+    }, [ValueModal])
     useEffect(() => {
         getFlight({
             variables: {
@@ -134,12 +166,11 @@ const ListData = () => {
                     psAdult: data.psAdult,
                     psChild: data.psChild,
                     psInfant: data.psInfant,
-                    classType: data.classType
-                }
-            }
-        })
-    }, [slug, data, getFlight])
-
+                    classType: data.classType,
+                },
+            },
+        });
+    }, [slug, data, getFlight]);
 
     if (loading) {
         return (
@@ -244,6 +275,9 @@ const ListData = () => {
         }]
 
     // FIlter
+
+    console.log(allData, 'TOtal')
+
     const dataTraveloka = () => {
         let filterTraveloka = ticket.getFlight.Traveloka.filter(dum => dum.price > value[0] && dum.price < value[1])
         return filterTraveloka
@@ -268,25 +302,37 @@ const ListData = () => {
     // console.log(filterLion())
     if (ticket) {
         // console.log(ticket.getFlight.Tiket)
-        console.log(dataPegiPegi(),'pegis')
-        console.log(dataTiket(),'ticekt')
+        // console.log(dataPegiPegi(), 'pegis')
+        // console.log(dataTiket(), 'ticekt')
     }
     const toModal = () => {
         getPredict()
         setModalShow(true)
     }
-    if (ticket) {
+    // if (ticket) {
 
-        console.log(ticket.getFlight.Tiket)
-    }
+    //     console.log(ticket.getFlight.Tiket)
+    // }
     return (
         <div id="booking1" className='section1'>
 
-            <ModalPredict show={modalShow} dataPredictions={dataPredictions} onHide={() => { setModalShow(false) }} ></ModalPredict>
+
+            <ModalFilter show={modalShowFilter} filted={(dataModal) => { setValueModal(dataModal) }}
+                onHide={() => { setModalShowFilter(false) }}
+            />
+
+
+
+            <ModalPredict show={modalShow} dataPredictions={dataPredictions}
+
+                onHide={() => { setModalShow(false) }}
+            ></ModalPredict>
             <Container className="mt-5 pt-4">
                 <div className="clearfix ">
                     <center>
                         <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+                        <br></br>
+                        <Button variant="primary" onClick={() => setModalShowFilter(true)} >Filter check</Button>
                         {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
                     <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
                     </center>
@@ -303,36 +349,25 @@ const ListData = () => {
                 />
 
 
-            
+
 
                 {/* {dummy.map((tiket, i) => {
                     return (
                         <Row className="mb-4">
                             <Col  >
-                                    <CardResult
-                                        className="shadow rounded"
-                                        tiket={tiket} key={i} />
+
+                                <CardResult
+                                    className="shadow rounded"
+
+                                    tiket={tiket} key={i} />
                             </Col>
                         </Row >
                     )
                 })} */}
-                {ticket && dataTraveloka().map((tiket, i) => {
-                    return (
-                        <Row className="mb-4">
-                            <Col  >
-
-                                <CardResult
-                                    className="shadow rounded"
-
-                                    tiket={tiket} key={i} />
-                            </Col>
-                        </Row >
-                    )
-                })}
 
 
-            
-                {ticket && dataTiket().map((tiket, i) => {
+
+            {ticket && allData.map((tiket, i) => {
                     return (
                         <Row className="mb-4">
                             <Col  >
@@ -343,8 +378,19 @@ const ListData = () => {
                         </Row >
                     )
                 })}
-          
-                {ticket && dataPegiPegi().map((tiket, i) => {
+                {/* {ticket && dataTiket().map((tiket, i) => {
+                    return (
+                        <Row className="mb-4">
+                            <Col  >
+                                <CardResult
+                                    className="shadow rounded"
+                                    tiket={tiket} key={i} />
+                            </Col>
+                        </Row >
+                    )
+                })} */}
+
+                {/* {ticket && dataPegiPegi().map((tiket, i) => {
                     return (
                         <Row className="mb-4">
                             <Col  >
@@ -355,12 +401,12 @@ const ListData = () => {
                             </Col>
                         </Row >
                     )
-                })}
+                })} */}
             </Container>
         </div>
     )
-
 }
 
 
-export default ListData
+
+export default ListData;

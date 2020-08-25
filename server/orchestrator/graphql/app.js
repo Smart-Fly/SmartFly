@@ -1,21 +1,29 @@
-const { ApolloServer, gql, makeExecutableSchema } = require('apollo-server');
-const userSchema = require("./schemas/userSchema")
-const predictionSchema = require("./schemas/predictionSchema")
-const flightSchema = require("./schemas/flightSchema")
+const { ApolloServer, gql, makeExecutableSchema } = require("apollo-server");
+const userSchema = require("./schemas/userSchema");
+const predictionSchema = require("./schemas/predictionSchema");
+const flightSchema = require("./schemas/flightSchema");
 
-const typeDefs = gql `
+const typeDefs = gql`
   type Query
   type Mutation
-`
+`;
 
 const schema = makeExecutableSchema({
-  typeDefs: [typeDefs, predictionSchema.typeDefs, userSchema.typeDefs, flightSchema.typeDefs],
-  resolvers: [predictionSchema.resolvers, userSchema.resolvers, flightSchema.resolvers]
-})
+  typeDefs: [
+    typeDefs,
+    predictionSchema.typeDefs,
+    userSchema.typeDefs,
+    flightSchema.typeDefs,
+  ],
+  resolvers: [
+    predictionSchema.resolvers,
+    userSchema.resolvers,
+    flightSchema.resolvers,
+  ],
+});
 
-
-const server = new ApolloServer({ schema })
+const server = new ApolloServer({ schema });
 
 server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
+  console.log(`🚀 Apollo Server ready at ${url}`);
 });

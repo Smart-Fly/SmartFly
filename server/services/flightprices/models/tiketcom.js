@@ -5,7 +5,7 @@ const nightmare = Nightmare({ show: false })
 const cheerio = require('cheerio')
 
 let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url, NewDate
-let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo:""}
+let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "" }
 let result = []
 
 const getData = html => {
@@ -72,7 +72,7 @@ class TikeCom {
 
     NewDate = converDate(planDate, 'TK')
     url = `https://www.tiket.com/pesawat/search?d=${dAirportCode}&a=${aAirportCode}&dType=${dType}&aType=${aType}&date=${NewDate}&adult=${psAdult}&child=${psChild}&infant=${psInfant}&class=${classType}`
-    console.log(url,'>> Tiket')
+    console.log(url, '>> Tiket')
     try {
       await nightmare
         .goto(url)

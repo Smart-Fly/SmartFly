@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Checkbox,
-  // FormGroup,
-  FormControlLabel,
-} from "@material-ui/core";
+import { Button, Checkbox, FormControlLabel } from "@material-ui/core";
 import { UPDATE_SUBSCRIPTION } from "../query/userQuery";
 import { useMutation } from "@apollo/client";
 
-const UpdatePage = () => {
+const ProfilePage = () => {
   const [updateSubs, setUpdateSubs] = useState({
     access_token: localStorage.getItem("access_token"),
     subsStatus: false,
@@ -71,4 +66,4 @@ const UpdatePage = () => {
   );
 };
 
-export default UpdatePage;
+export default ProfilePage;
