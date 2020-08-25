@@ -4,9 +4,9 @@ import { USER_LOGIN } from "../../query/userQuery";
 import { useMutation } from "@apollo/client";
 import { useHistory } from "react-router-dom";
 import { Form } from "react-bootstrap";
-import { SocialMediaIconsReact } from "social-media-icons-react";
 import "./LoginPage.css";
 import "./LoginPageUtil.css";
+import MyGoogleLogin from "../../components/MyGoogleLogin";
 
 const LoginPage = () => {
   const [userLoginData, setUserLoginData] = useState({
@@ -91,36 +91,14 @@ const LoginPage = () => {
               </div>
 
               <div className="text-center p-t-46 p-b-20">
-                <span className="txt2">or sign up using</span>
+                <a className="txt2" href="">
+                  sign up
+                </a>
+                <span className="txt2"> or login using</span>
               </div>
 
               <div className="flex-c-m">
-                <SocialMediaIconsReact
-                  borderColor="rgba(0,0,0,0.25)"
-                  borderWidth="2"
-                  borderStyle="solid"
-                  icon="twitter"
-                  iconColor="rgba(255,255,255,1)"
-                  backgroundColor="rgba(28,186,223,1)"
-                  iconSize="4"
-                  roundness="50%"
-                  url="https://some-website.com/my-social-media-url"
-                  size="35"
-                  // className="login100-form-social-item flex-cm bgl m-r-5"
-                />
-                <SocialMediaIconsReact
-                  borderColor="rgba(0,0,0,0.25)"
-                  borderWidth="2"
-                  borderStyle="solid"
-                  icon="facebook"
-                  iconColor="rgba(255,255,255,1)"
-                  backgroundColor="rgba(59,89,152,1)"
-                  iconSize="4"
-                  roundness="50%"
-                  url="https://some-website.com/my-social-media-url"
-                  size="35"
-                  // className="login100-form-social-item flex-cm bgl m-r-5"
-                />
+                <MyGoogleLogin />
               </div>
             </Form.Group>
           </Form>

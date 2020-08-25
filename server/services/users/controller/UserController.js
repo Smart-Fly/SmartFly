@@ -43,7 +43,9 @@ class UserController {
 
             if (compare) {
               let access_token = encode(user);
-              res.status(200).json({ access_token });
+              res
+                .status(200)
+                .json({ access_token, subsStatus: user.subsStatus });
             } else {
               next({ name: "INVALID_PASSWORD" });
             }
