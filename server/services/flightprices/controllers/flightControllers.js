@@ -7,7 +7,7 @@ class FlightController {
 
   static async getFlightData(req, res) {
     const DataTicket=[]
-    const reqeuestBody = {
+    const requestBody = {
       dAirportCode: req.body.dAirportCode,
       aAirportCode: req.body.aAirportCode,
       planDate: req.body.planDate,
@@ -18,15 +18,15 @@ class FlightController {
     }
 
     try {
-      const resTraveloka = await Traveloka.getTraveloka(reqeuestBody)
+      const resTraveloka = await Traveloka.getTraveloka(requestBody)
       DataTicket.push(...resTraveloka)
       console.log('Traveloka')
 
-      const resTiketCom = await TiketCom.getTiketCom(reqeuestBody)
+      const resTiketCom = await TiketCom.getTiketCom(requestBody)
       DataTicket.push(...resTiketCom)
       console.log('Tiket')
 
-      const resPegiPegi = await PegiPegi.getPegipegi(reqeuestBody)
+      const resPegiPegi = await PegiPegi.getPegipegi(requestBody)
       DataTicket.push(...resPegiPegi)
       console.log('Pegipegi')
 
