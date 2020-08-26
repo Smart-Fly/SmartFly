@@ -7,7 +7,7 @@ const cheerio = require('cheerio')
 // const url = 'https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=ECONOMY'
 
 let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url
-let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "", url: "" }
+let dataJson = { travelAgent:"", airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "", url: "" }
 let result = []
 
 const getData = html => {
@@ -42,7 +42,7 @@ const getData = html => {
     dataJson.companyLogo = companyLogo
     dataJson.url = url
 
-    result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
+    result.push({ travelAgent:"Traveloka", airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
   })
 }
 

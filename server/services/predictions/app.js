@@ -39,7 +39,7 @@ app.get("/pricePrediction/:departure/:arrival", (req, res) => {
         let data1 = Array.from(Array(data2.length), (_, index) => index + 1);
         const dataX = JSON.stringify(data1);
         const dataY = JSON.stringify(data2);
-        var process = spawn("python3", [
+        var process = spawn("python", [
           "./helpers/machineLearning.py",
           dataX,
           dataY,

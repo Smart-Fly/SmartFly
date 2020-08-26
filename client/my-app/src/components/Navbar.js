@@ -1,23 +1,20 @@
-import React, { useState } from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import React, { useState, useEffect } from "react";
+import client from "../config/config";
+import Modal from "../components/Modal";
+import Menu from "@material-ui/core/Menu";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-// import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import SearchIcon from "@material-ui/icons/Search";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
+import { Form } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-// import { colors } from "@material-ui/core";
+import { GET_CACHE_USER } from "../query/cacheQuery";
+import { fade, makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
-import Modal from "../components/Modal";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -90,29 +87,73 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [modalShow, setModalShow] = useState(false);
-
   const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const menuId = "primary-search-account-menu";
+
+  /** START STATE YANG DIGUNAKAN */
+  const [isLoggedIn, setIsLoggedIn] = useState(null); // check Login
+  const [updatedSubsStatus, setUpdatedStatus] = useState();
+  const [checkedSubsStatus, setCheckedSubsStatus] = useState(null); // Buat ngerubah value di switch
+  const [updateSubs, setUpdateSubs] = useState({
+    access_token: localStorage.getItem("access_token"),
+    subsStatus: false,
+  }); // Ini buat onSubmit yang dikirim ke server
+
+  /** END STATE YANG DIGUNAKAN */
+
+  /** ============= START FUNGSI UPDATE DARI LUQMAN ================ */
+  const [userInfo, setUserInfo] = useState({
+    userName: "",
+    subsStatus: false,
+  });
+  const { cacheUser } = client.readQuery({
+    query: GET_CACHE_USER,
+  });
+
+  useEffect(() => {
+    if (cacheUser) {
+      const { userNameCache, subsStatusCache } = cacheUser;
+      setUserInfo({
+        ...userInfo,
+        userName: userNameCache,
+        subsStatus: subsStatusCache,
+      });
+      setCheckedSubsStatus(subsStatusCache);
+    }
+  }, [cacheUser, userInfo]);
+
+  const handleChange = (e) => {
+    const { name, checked } = e.target;
+    setUpdateSubs({ ...updateSubs, [name]: checked });
+  };
+
+  useEffect(() => {
+    checkLoggedIn();
+  });
+
+  const checkLoggedIn = () => {
+    localStorage.getItem("access_token");
+    if ("access_token") {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  const toggleChecked = (e) => {
+    const { name, checked } = e.target;
+    setUpdateSubs({ ...updateSubs, [name]: checked });
+    // setCheckedSubsStatus()
+  };
+
+  /** ============= END FUNGSI UPDATE DARI LUQMAN ================ */
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
-
+<<<<<<< HEAD
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -129,83 +170,29 @@ const Navbar = () => {
       <MenuItem onClick={handleMenuClose}>woqeiqwopeiwqpopqoweiqwopeipoqwiepqo</MenuItem>
     </Menu>
   );
+=======
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+>>>>>>> development
 
-  const mobileMenuId = "primary-search-account-menu-mobile";
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
-  return (
+  const renderMenu = (
     <>
-      <div className={classes.grow}>
-        <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
-        <AppBar
-          position="absolute"
-          style={
-            pathname === "/"
-              ? { background: "transparent", boxShadow: "none", color: "blue" }
-              : { background: "transparent", boxShadow: "none", color: "black" }
-          }
-        >
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="open drawer"
-            >
-              {/* <MenuIcon /> */}
-            </IconButton>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Smart-Fly
-            </Typography>
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
-              {pathname !== "/" ? (
-                <Button
-                  onClick={() => setModalShow(true)}
-                  variant="outlined"
-                  color="primary"
-                >
-                  New Search
-                </Button>
-              ) : null}
+      <Menu
+        anchorEl={anchorEl}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        id={menuId}
+        keepMounted
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        open={isMenuOpen}
+        onClose={handleMenuClose}
+      >
+        <div className="row">
+          <MenuItem onClick={handleMenuClose}>
+            <div className="col-sm-12">
+              <span>You re signed in as</span>
             </div>
+<<<<<<< HEAD
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
 
@@ -231,14 +218,95 @@ const Navbar = () => {
               >
                 <MoreIcon />
               </IconButton>
+=======
+            <div className="col-sm-8">
+              <span>{userInfo.userName}</span>
+>>>>>>> development
             </div>
-          </Toolbar>
-        </AppBar>
-        {renderMobileMenu}
-        {renderMenu}
-      </div>
+          </MenuItem>
+        </div>
+
+        <div className="row justify content center">
+          <MenuItem onClick={handleMenuClose}>
+            <FormControlLabel
+              control={
+                <Switch checked={checkedSubsStatus} onChange={toggleChecked} />
+              }
+              label="Normal"
+            />
+            {/* {updatedStatus ? <Button>Save changes!</Button> : null} */}
+          </MenuItem>
+        </div>
+      </Menu>
     </>
   );
+
+  if (pathname !== "/login" && pathname !== "/register") {
+    return (
+      <>
+        <div className={classes.grow}>
+          <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
+          <AppBar
+            position="absolute"
+            style={
+              pathname === "/"
+                ? {
+                    background: "transparent",
+                    boxShadow: "none",
+                    color: "blue",
+                  }
+                : {
+                    background: "transparent",
+                    boxShadow: "none",
+                    color: "black",
+                  }
+            }
+          >
+            <Toolbar>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="open drawer"
+              ></IconButton>
+              <Typography className={classes.title} variant="h6" noWrap>
+                Smart-Fly
+              </Typography>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
+                {pathname !== "/" ? (
+                  <Button
+                    onClick={() => setModalShow(true)}
+                    variant="outlined"
+                    color="primary"
+                  >
+                    New Search
+                  </Button>
+                ) : null}
+              </div>
+              <div className={classes.grow} />
+              <div className={classes.sectionDesktop}>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                >
+                  <AccountCircle style={{ fontSize: 40 }} />
+                </IconButton>
+              </div>
+            </Toolbar>
+            {/* {isLoggedIn ? renderMenu : null} */}
+            {renderMenu}
+          </AppBar>
+        </div>
+      </>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Navbar;

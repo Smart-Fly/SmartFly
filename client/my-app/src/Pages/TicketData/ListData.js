@@ -11,10 +11,13 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
+<<<<<<< HEAD
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 // import Aos from 'aos'
 // import 'aos/dist/aos'
+=======
+>>>>>>> development
 
 const GET_PRED = gql`
   query getPrediction($depart: String, $arrive: String) {
@@ -123,13 +126,15 @@ const ListData = (props) => {
     Lion: false,
     Garuda: false,
     Batik: false,
+    Citilink: false,
+    Multi: false,
   });
-  const [value, setValue] = React.useState([400000, 700000]);
+  const [value, setValue] = React.useState([400000, 3000000]);
   const {
     state: { data },
   } = useLocation();
-  const [dummyData, setDataDummy] = useState([]);
-  const [allData, setAllData] = useState([]);
+
+  // const [ticketBucket, setTicketBucket] = useState([]);
   const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH);
   const [
     getPredictions,
@@ -140,56 +145,19 @@ const ListData = (props) => {
       arrive: data.aAirportCode,
     },
   });
-  console.log(ValueModal)
+  console.log(ValueModal);
   const getPredict = () => {
     getPredictions();
     if (dataPredictions) {
-      // console.log(dataPredictions, 'dataa')
+      console.log(dataPredictions, "dataa");
     } else {
-      // console.log(loadingPredictions)
+      console.log(loadingPredictions);
     }
   };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  useEffect(() => {
-    if (ticket) {
-      // console.log(ticket)
-      let temp = [];
-      for (const [key, value] of Object.entries(ticket.getFlight)) {
-        // console.log(`${key}: ${value}`);
-        console.log(value, "value");
-        console.log(key, "keyd");
-        if ("__typename" !== key) {
-          if (ValueModal.Lion) {
-            let temp2 = value.filter(
-              (data2) =>
-                data2.airline.toLocaleLowerCase() === ("lion air" || "lion")
-            );
-            temp.push(...temp2);
-          }
-          if (ValueModal.Garuda) {
-            let temp3 = value.filter(
-              (data3) =>
-                data3.airline.toLocaleLowerCase() ===
-                ("garuda" || "garuda indonesia")
-            );
-            temp.push(...temp3);
-          }
-          if (ValueModal.Batik) {
-            let temp4 = value.filter(
-              (data4) =>
-                data4.airline.toLocaleLowerCase() === ("batik air" || "batik")
-            );
-            temp.push(...temp4);
-          }
-        }
-      }
-      setAllData(temp);
-    }
-  }, [ValueModal, ticket]);
 
   useEffect(() => {
     getFlight({
@@ -211,152 +179,73 @@ const ListData = (props) => {
     return (
       <>
         <LinearProgress color="secondary" />
-        <Container className="mt-5 pt-2">
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-        </Container>
+        <div id="cek">
+          <Container>
+            <br></br>
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+          </Container>
+        </div>
       </>
     );
   }
+  // let bucket = []
 
-  let dummy = [
-    {
-      airline: "Lion",
-      departureTime: "18:30",
-      arrivalTime: "21:20",
-      price: 624600,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Lion",
-      departureTime: "05:00",
-      arrivalTime: "10:20",
-      price: 685700,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Batik",
-      departureTime: "07:00",
-      arrivalTime: "09:50",
-      price: 798400,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Batik",
-      departureTime: "13:00",
-      arrivalTime: "16:00",
-      price: 798400,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Batik",
-      departureTime: "15:40",
-      arrivalTime: "18:30",
-      price: 798400,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Batik",
-      departureTime: "17:00",
-      arrivalTime: "19:50",
-      price: 798400,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Citilink",
-      departureTime: "04:55",
-      arrivalTime: "07:55",
-      price: 856700,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Citilink",
-      departureTime: "14:15",
-      arrivalTime: "17:10",
-      price: 856700,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-    {
-      airline: "Citilink",
-      departureTime: "16:40",
-      arrivalTime: "19:40",
-      price: 856700,
-      airLineLogo:
-        "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
-      url:
-        "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.DPS&dt=28-08-2020.NA&ps=1.0.1&sc=economy",
-      companyLogo:
-        "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-    },
-  ];
-
-  // FIlter
-
-
-  const dataTraveloka = () => {
-    let filterTraveloka = ticket.getFlight.Traveloka.filter(
-      (dum) => dum.price > value[0] && dum.price < value[1]
+  if (ticket) {
+  }
+  const allTicket = () => {
+    let filterAllTicket = ticket.getFlight.AllData.filter(
+      (filterTicket) =>
+        filterTicket.price > value[0] && filterTicket.price < value[1]
     );
-    return filterTraveloka;
+    if (ValueModal.Lion) {
+      let filterLion = filterAllTicket.filter(
+        (data2) => data2.airline.toLocaleLowerCase() === ("lion air" || "lion")
+      );
+      return filterLion;
+    }
+    if (ValueModal.Garuda) {
+      let filterGaruda = filterAllTicket.filter(
+        (data2) =>
+          data2.airline.toLocaleLowerCase() === ("garuda" || "garuda indonesia")
+      );
+      return filterGaruda;
+    }
+    if (ValueModal.Batik) {
+      let filterBatik = filterAllTicket.filter(
+        (data2) =>
+          data2.airline.toLocaleLowerCase() === ("batik air" || "batik")
+      );
+      return filterBatik;
+    }
+    if (ValueModal.Citilink) {
+      let filterCitilink = filterAllTicket.filter(
+        (data2) =>
+          data2.airline.toLocaleLowerCase() ===
+          ("citilink" || "citilink indonesia")
+      );
+      console.log(filterCitilink);
+      return filterCitilink;
+    }
+    if (ValueModal.Multi) {
+      let filterMulti = filterAllTicket.filter(
+        (data2) => data2.airline === ("Multi-maskapai" || "Multi-airline")
+      );
+      return filterMulti;
+    } else {
+      return filterAllTicket;
+    }
   };
-  const dataTiket = () => {
-    let filterTiket = ticket.getFlight.Tiket.filter(
-      (dum) => dum.price > value[0] && dum.price < value[1]
-    );
-    return filterTiket;
-  };
-  const dataPegiPegi = () => {
-    let filterPegiPegi = ticket.getFlight.PegiPegi.filter(
-      (dum) => dum.price > value[0] && dum.price < value[1]
-    );
-    return filterPegiPegi;
-  };
+  // console.log(bucket,'array')
+
+  // console.log(modalShowFilter)
+  // console.log(ticketBucket, 'bcuekt')
   const toRupiah = (money) => {
     return Intl.NumberFormat("id", {
       style: "currency",
@@ -364,45 +253,37 @@ const ListData = (props) => {
     }).format(money);
   };
 
-  // const filterLion = () =>{
-  //     let lions = dummy.filter(dum => dum.airline.toLowerCase() == "Lion Air".toLowerCase())
-  //     return lions
+  // if (ticket) {
+  //   console.log(ticket.getFlight.AllData, 'data total')
+  //   console.log(allTicket(), 'data filter')
   // }
-
-  // console.log(filterLion())
-  if (ticket) {
-    // console.log(ticket.getFlight.Tiket)
-    // console.log(dataPegiPegi(), 'pegis')
-    // console.log(dataTiket(), 'ticekt')
-  }
   const toModal = () => {
     getPredict();
     setModalShow(true);
   };
-  // if (ticket) {
 
-  //     console.log(ticket.getFlight.Tiket)
-  // }
-  if(allData.length === 0){
-    return (
-      <div id="booking1" className="section1">
+  return (
+    <div id="booking1">
       <ModalFilter
-      show={modalShowFilter}
-      filted={(dataModal) => {
-        setValueModal(dataModal);
-      }}
-      onHide={() => {
-        setModalShowFilter(false);
-      }}
+        show={modalShowFilter}
+        filted={(dataModal) => {
+          {
+            setValueModal(dataModal);
+          }
+        }}
+        onHide={() => {
+          setModalShowFilter(false);
+        }}
       />
 
       <ModalPredict
-      show={modalShow}
-      dataPredictions={dataPredictions}
-      onHide={() => {
-        setModalShow(false);
-      }}
+        show={modalShow}
+        dataPredictions={dataPredictions}
+        onHide={() => {
+          setModalShow(false);
+        }}
       ></ModalPredict>
+<<<<<<< HEAD
       <Container className="mt-5 pt-4">
       <div className="clearfix ">
       <center>
@@ -466,98 +347,59 @@ const ListData = (props) => {
         </Row >
       )
     })}
+=======
+      <Container>
+        <div className="clearfix ">
+          <center>
+            <br></br>
+            <Button variant="primary" onClick={() => toModal()}>
+              Get Predictions
+            </Button>
+            <Button
+              variant="primary"
+              style={{ margin: "10px" }}
+              onClick={() => setModalShowFilter(true)}
+            >
+              Filter check
+            </Button>
+          </center>
+          <Typography className="float-left" style={{ color: "white" }}>
+            {toRupiah(value[0])}
+          </Typography>
+          <Typography className="float-right" style={{ color: "white" }}>
+            {toRupiah(value[1])}
+          </Typography>
+        </div>
+        <AirbnbSlider
+          value={value}
+          onChange={handleChange}
+          ThumbComponent={AirbnbThumbComponent}
+          step={100000}
+          min={0}
+          max={5000000}
+        />
+        <br></br>
+        <br></br>
+>>>>>>> development
 
-    {ticket && dataPegiPegi().map((tiket, i) => {
-      return (
-        <Row className="mb-4">
-        <Col  >
-
-        <CardResult
-        className="shadow rounded"
-        tiket={tiket} key={i} />
-        </Col>
-        </Row >
-      )
-    })}
-    </Container>
+        {ticket &&
+          allTicket().map((tiket, i) => {
+            return (
+              <Row className="mb-4">
+                <Col>
+                  <CardResult
+                    className="shadow rounded"
+                    tiket={tiket}
+                    key={i}
+                  />
+                </Col>
+              </Row>
+            );
+          })}
+      </Container>
+      <br></br>
     </div>
   );
-  }
-else{
-  return (
-    <div id="booking1" className="section1">
-    <ModalFilter
-    show={modalShowFilter}
-    filted={(dataModal) => {
-      setValueModal(dataModal);
-    }}
-    onHide={() => {
-      setModalShowFilter(false);
-    }}
-    />
-
-    <ModalPredict
-    show={modalShow}
-    dataPredictions={dataPredictions}
-    onHide={() => {
-      setModalShow(false);
-    }}
-    ></ModalPredict>
-    <Container className="mt-5 pt-4">
-    <div className="clearfix ">
-    <center>
-    <Button variant="primary" onClick={() => toModal()}>
-    Get Predictions
-    </Button>
-    <br></br>
-    <Button variant="primary" onClick={() => setModalShowFilter(true)}>
-    Filter check
-    </Button>
-    {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
-    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
-    </center>
-    <Typography className="float-left">{toRupiah(value[0])}</Typography>
-    <Typography className="float-right">{toRupiah(value[1])}</Typography>
-    </div>
-    <AirbnbSlider
-    value={value}
-    onChange={handleChange}
-    ThumbComponent={AirbnbThumbComponent}
-    step={100000}
-    min={0}
-    max={5000000}
-    />
-
-    {/* {dummy.map((tiket, i) => {
-      return (
-        <Row className="mb-4">
-        <Col  >
-
-        <CardResult
-        className="shadow rounded"
-
-        tiket={tiket} key={i} />
-        </Col>
-        </Row >
-      )
-    })} */
-  }
-  {ticket && allData.map((tiket, i) => {
-    return (
-      <Row className="mb-4">
-      <Col  >
-      <CardResult
-      className="shadow rounded"
-      tiket={tiket} key={i} />
-      </Col>
-      </Row >
-    )
-  })
-}
-  </Container>
-  </div>
-  )
-}
 };
 ListData.propTypes = {
   children: PropTypes.node,

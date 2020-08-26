@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Input, Button, InputLabel, FormControl } from "@material-ui/core";
-import { USER_LOGIN } from "../../query/userQuery";
-import { useMutation } from "@apollo/client";
-import { useHistory } from "react-router-dom";
-import { Form } from "react-bootstrap";
 import "./LoginPage.css";
 import "./LoginPageUtil.css";
+import { Form } from "react-bootstrap";
+import { useMutation } from "@apollo/client";
+import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { USER_LOGIN } from "../../query/userQuery";
 import MyGoogleLogin from "../../components/MyGoogleLogin";
+import { Input, Button, InputLabel, FormControl } from "@material-ui/core";
+import client, { userCache } from "../../config/config";
+import { GET_CACHE_USER } from "../../query/cacheQuery";
 
 const LoginPage = () => {
   const [userLoginData, setUserLoginData] = useState({
@@ -15,7 +17,6 @@ const LoginPage = () => {
   });
   const history = useHistory();
   const [userLogin, { data: userLoginInfo, loading }] = useMutation(USER_LOGIN);
-
   const handleOnchance = (e) => {
     const { name, value } = e.target;
     setUserLoginData({ ...userLoginData, [name]: value });
@@ -30,11 +31,44 @@ const LoginPage = () => {
     });
   };
 
+  const addToCache = (userLoginInfo) => {
+    const { cacheUser } = client.readQuery({
+      query: GET_CACHE_USER,
+    });
+
+    if (userLoginInfo) {
+      const {
+        userLogin: { subsStatus, userName },
+      } = userLoginInfo;
+      client.writeQuery({
+        query: GET_CACHE_USER,
+        data: {
+          cacheUser: {
+            userNameCache: userName,
+            subsStatusCache: subsStatus,
+          },
+        },
+      });
+    }
+    return cacheUser;
+  };
+
+  useEffect(() => {
+    if (userLoginInfo) {
+      addToCache(userLoginInfo);
+    }
+  }, [addToCache, userLoginInfo]);
+
   useEffect(() => {
     if (userLoginInfo) {
       const {
-        userLogin: { access_token },
+        userLogin: { access_token, subsStatus, userName },
       } = userLoginInfo;
+      let generateUserCache = {
+        cacheUsername: userName,
+        cacheSubstatus: subsStatus,
+      };
+      userCache(generateUserCache);
       localStorage.setItem("access_token", access_token);
       history.push("/");
     }

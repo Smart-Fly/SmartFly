@@ -15,9 +15,7 @@ const typeDefs = gql`
   }
 
   type Price {
-    Traveloka: [dataPrice!]
-    Tiket: [dataPrice!]
-    PegiPegi: [dataPrice!]
+    AllData: [dataPrice!]
   }
 
 
@@ -52,7 +50,7 @@ const resolvers = {
         try {
           const searchToAdd = args.search
           const addToSearch = await axios.post(`http://localhost:3003/flightPrice`, searchToAdd)
-          await redis.set(`prices-${uKey.dACode}/${uKey.aACode}/${uKey.pDate}/${uKey.cType}`, JSON.stringify(addToSearch.data), 'EX', 20)
+          await redis.set(`prices-${uKey.dACode}/${uKey.aACode}/${uKey.pDate}/${uKey.cType}`, JSON.stringify(addToSearch.data), 'EX', 1800)
           return addToSearch.data
 
         } catch (err) {
