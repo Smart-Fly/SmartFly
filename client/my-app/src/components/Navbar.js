@@ -18,6 +18,7 @@ import { useLocation } from "react-router-dom";
 // import { colors } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import Modal from "../components/Modal";
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -200,6 +201,8 @@ const Navbar = () => {
                 <Button
                   onClick={() => setModalShow(true)}
                   color="primary"
+                  variant="contained"
+                  startIcon={<SearchIcon/>}
                 >
                   New Search
                 </Button>

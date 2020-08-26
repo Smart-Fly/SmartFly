@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import CardResult from "../../components/CardResult";
+import Button from '@material-ui/core/Button';
 import { Slider, Typography } from "@material-ui/core";
 import { useParams, useLocation } from "react-router-dom";
 import { GET_FLIGHT_SEARCH } from "../../query/QueryPrice";
@@ -11,6 +12,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
+import FilterListIcon from '@material-ui/icons/FilterList';
 
 const GET_PRED = gql`
   query getPrediction($depart: String, $arrive: String) {
@@ -260,10 +262,10 @@ const ListData = () => {
           <center>
 
             <br></br>
-            <Button variant="primary" onClick={() => toModal()}>
+            <Button startIcon={<FilterListIcon/>} variant="primary" onClick={() => toModal()}>
               Get Predictions
       </Button>
-            <Button variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+            <Button startIcon={<FilterListIcon/>} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
               Filter check
       </Button>
           </center>

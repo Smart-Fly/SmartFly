@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardMedia,
 } from "@material-ui/core";
+import TelegramIcon from '@material-ui/icons/Telegram';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -127,6 +128,7 @@ const CardResult = (props) => {
               target="_blank"
               size="big"
               variant="contained"
+              startIcon={<TelegramIcon/>}
             >
               Buy Now
             </Button>
