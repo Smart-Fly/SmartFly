@@ -10,7 +10,7 @@ const saveData = (Data) => {
 
   //Create File JSON
   fs.unlinkSync('./dataScrapped.json')
-  fs.writeFile('dataScrapped.json', JSON.stringify(Data, null, 2), () => {
+  fs.writeFile('dataScrapped.json', JSON.stringify('dataScrapped', null, 2), () => {
     console.log('file has been created')
   })
 }
