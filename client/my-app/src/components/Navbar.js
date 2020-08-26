@@ -99,7 +99,10 @@ const Navbar = () => {
   const isMenuOpen = Boolean(anchorEl);
   const menuId = "primary-search-account-menu";
 
+  /** ============= START FUNGSI UPDATE DARI LUQMAN ================ */
+
   /** START STATE YANG DIGUNAKAN */
+
   const [showUserName, setShowUserName] = useState(""); // check Login
   const [showSubsStatus, setShowSubsstatus] = useState(false);
   const [showButton, setShowButton] = useState(false);
@@ -125,6 +128,13 @@ const Navbar = () => {
       setShowSubsstatus(subsStatusCache);
     }
   }, [cacheUser]);
+
+  useEffect(() => {
+    if (localStorage) {
+      setShowUserName(localStorage.getItem("userName"));
+      setShowSubsstatus(localStorage.getItem("subsStatus"));
+    }
+  }, [localStorage]);
 
   const toggleSwitchChange = (e) => {
     const { checked } = e.target;
