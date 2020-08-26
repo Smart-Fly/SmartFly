@@ -7,7 +7,7 @@ import {
   Home,
   // ListData,
   RegisterPage,
-  LoginPage,
+  UserPage,
 } from "./Pages";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/register" component={RegisterPage} />
-          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/login" component={UserPage} />
           {/* <Route path="/:slug" component={ListData} /> */}
         </Switch>
       </Router>

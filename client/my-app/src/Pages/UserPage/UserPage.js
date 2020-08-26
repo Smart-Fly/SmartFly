@@ -1,5 +1,5 @@
-import "./LoginPage.css";
-import "./LoginPageUtil.css";
+import "./UserPage.css";
+import "./UserPageUtils.css";
 import ReactCardFlip from "react-card-flip";
 import React, { useState, useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
@@ -11,19 +11,10 @@ import { Checkbox, FormControlLabel } from "@material-ui/core";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
 import { createMuiTheme } from "@material-ui/core";
-const theme = createMuiTheme({
-  props: {
-    // Name of the component ⚛️
-    MuiButtonBase: {
-      // The properties to apply
-      disableRipple: true, // No more ripple, on the whole application 💣!
-    },
-  },
-});
 const loginBG = require("../../asset/LoginBG.jpeg");
 const logo = require("../../asset/LogoWithoutBg.png");
 
-const LoginPage = () => {
+const UserPage = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const handleFlipCard = () => {
     setIsFlipped(!isFlipped);
@@ -122,10 +113,10 @@ const LoginPage = () => {
                 className="login100-form"
                 onSubmit={(e) => handleSubmitLogin(e)}
               >
-                <div className="login100-form-logo">
+                <div className="login100-form-logo m-t-30">
                   <img src={logo} alt="Logo" />
                 </div>
-                <span className="login100-form-title p-t-20 p-b-30 m-t-35">
+                <span className="login100-form-title p-t-20 p-b-20 m-t-20">
                   Login Here
                 </span>
                 {/* * =========== Start Email Login ============ */}
@@ -142,11 +133,17 @@ const LoginPage = () => {
                       height: "50px",
                       borderRadius: "25px",
                       padding: "0px 30px 0px 70px",
+                      outline: "none",
+                      boxShadow: "none",
+                      border: "none",
                     }}
                   />
                   <span className="focus-input100"></span>
                   <span className="symbol-input100">
-                    <i className="fa fa-user" style={{ marginTop: "10px" }}></i>
+                    <i
+                      className="fas fa-envelope"
+                      style={{ marginTop: "10px" }}
+                    ></i>
                   </span>
                 </div>
                 {/* * =========== End Email Login ============ */}
@@ -166,6 +163,8 @@ const LoginPage = () => {
                       borderRadius: "25px",
                       padding: "0px 30px 0px 70px",
                       outline: "none",
+                      boxShadow: "none",
+                      border: "none",
                     }}
                   />
                   <span className="focus-input100"></span>
@@ -226,19 +225,19 @@ const LoginPage = () => {
                 className="login100-form"
                 onSubmit={(e) => handleRegisterSubmit(e)}
               >
-                <div className="login100-form-logo">
+                <div className="login100-form-logo m-t-30">
                   <img src={logo} alt="Logo" />
                 </div>
-                <span className="login100-form-title p-t-20 p-b-30 m-t-35">
+                <span className="login100-form-title p-t-20 p-b-20 m-t-20">
                   Register Here
                 </span>
                 {/** =============== START Username REGISTER CARD ============= */}
-                <div className="wrap-input100 m-b-10 p-l-6">
+                <div className="wrap-input100 ">
                   <input
                     className="input100"
-                    placeholder="Username"
+                    placeholder="Email"
                     type="text"
-                    name="userName"
+                    name="email"
                     aria-describedby="my-helper-text"
                     onChange={(e) => handleRegisterOnChange(e)}
                     style={{
@@ -246,11 +245,17 @@ const LoginPage = () => {
                       height: "50px",
                       borderRadius: "25px",
                       padding: "0px 30px 0px 70px",
+                      outline: "none",
+                      boxShadow: "none",
+                      border: "none",
                     }}
                   />
                   <span className="focus-input100"></span>
                   <span className="symbol-input100">
-                    <i className="fa fa-user" style={{ marginTop: "10px" }}></i>
+                    <i
+                      className="fas fa-user"
+                      style={{ marginTop: "10px" }}
+                    ></i>
                   </span>
                 </div>
                 {/** =============== end Username REGISTER CARD ============= */}
@@ -269,6 +274,9 @@ const LoginPage = () => {
                       height: "50px",
                       borderRadius: "25px",
                       padding: "0px 30px 0px 70px",
+                      outline: "none",
+                      boxShadow: "none",
+                      border: "none",
                     }}
                   />
                   <span className="focus-input100"></span>
@@ -282,19 +290,22 @@ const LoginPage = () => {
                 {/* * =========== End Email Register ============ */}
 
                 {/* * =========== Start Password Register ============ */}
-                <div className="wrap-input100 p-l-6">
+                <div className="wrap-input100 ">
                   <input
                     className="input100"
-                    placeholder="Email"
-                    type="password"
-                    name="password"
+                    placeholder="Password"
+                    type="text"
+                    name="email"
                     aria-describedby="my-helper-text"
                     onChange={(e) => handleRegisterOnChange(e)}
                     style={{
                       width: "100%",
                       height: "50px",
                       borderRadius: "25px",
-                      padding: "0px 30px 0px 80px",
+                      padding: "0px 30px 0px 70px",
+                      outline: "none",
+                      boxShadow: "none",
+                      border: "none",
                     }}
                   />
                   <span className="focus-input100"></span>
@@ -320,8 +331,8 @@ const LoginPage = () => {
                           color: "white",
                           paddingLeft: "90px",
                         }}
-                        icon={<CheckBoxOutlineBlankIcon fontSize="default" />}
-                        checkedIcon={<CheckBoxIcon fontSize="default" />}
+                        icon={<CheckBoxOutlineBlankIcon fontSize="large" />}
+                        checkedIcon={<CheckBoxIcon fontSize="large" />}
                       />
                     }
                     label="You want to start subscription?"
@@ -358,4 +369,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default UserPage;
