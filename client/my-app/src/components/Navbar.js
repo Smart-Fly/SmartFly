@@ -199,7 +199,6 @@ const Navbar = () => {
               {pathname !== "/" ? (
                 <Button
                   onClick={() => setModalShow(true)}
-                  variant="outlined"
                   color="primary"
                 >
                   New Search

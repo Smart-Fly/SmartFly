@@ -102,11 +102,11 @@ const ListData = () => {
   const [modalShow, setModalShow] = useState(false);
   const [modalShowFilter, setModalShowFilter] = useState(false);
   const [ValueModal, setValueModal] = useState({
-    Lion: false,
-    Garuda: false,
-    Batik: false,
-    Citilink: false,
-    Multi: false
+    Lion: true,
+    Garuda: true,
+    Batik: true,
+    Citilink: true,
+    Multi: true
   });
   const [value, setValue] = React.useState([400000, 3000000]);
   const {
@@ -115,6 +115,15 @@ const ListData = () => {
 
   // const [ticketBucket, setTicketBucket] = useState([]);
   const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH);
+  const [ticketLocal, setTicketLocal] = useState([])
+
+
+  useEffect(() => {
+    if (ticket != null) {
+
+      setTicketLocal(ticket.getFlight.AllData)
+    }
+  }, [ticket])
   const [
     getPredictions,
     { loading: loadingPredictions, data: dataPredictions },
@@ -124,7 +133,7 @@ const ListData = () => {
       arrive: data.aAirportCode,
     },
   });
-  console.log(ValueModal)
+  // console.log(ValueModal)
   const getPredict = () => {
     getPredictions();
     if (dataPredictions) {
@@ -156,96 +165,92 @@ const ListData = () => {
     });
   }, [slug, data, getFlight]);
 
+
+
+
+  const onFilter = (params) => {
+    const newTicketLocal = ticket.getFlight.AllData.filter(ticketfil => {
+      const filterPrice = ticketfil.price > value[0] && ticketfil.price < value[1]
+      if (ticketfil.airline.toLocaleLowerCase() == ("lion air" || "lion")) {
+        if (params.Lion) return filterPrice
+      }
+      else if (ticketfil.airline == ("Garuda" || "Garuda Indonesia")) {
+        if (params.Garuda) return filterPrice
+      }
+      else if (ticketfil.airline.toLocaleLowerCase() == ("batik air" || "batik")) {
+        if (params.Batik) return filterPrice
+      }
+      else if (ticketfil.airline == ("Citilink" || "Citilink Indonesia")) {
+        if (params.Citilink) return filterPrice
+      }
+      else if (ticketfil.airline == ("Multi-maskapai" || "Multi-airline")) {
+        if (params.Multi) return filterPrice
+      } else if (params.Lion == false && params.Garuda == false
+        && params.Batik == false && params.Citilink == false && params.Multi == false) {
+        return filterPrice
+      }
+    })
+    setTicketLocal(newTicketLocal)
+  }
+
+  useEffect(() => {
+    if (ticket != null) {
+      onFilter(ValueModal)
+    }
+    console.log(value)
+  }, [value])
+
   if (loading) {
     return (
       <>
         <LinearProgress color="secondary" />
-          <div id='cek'>
-        <Container >
-          <br></br>
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-        </Container>
-          </div>
+        <div id='cek'>
+          <Container >
+            <br></br>
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+          </Container>
+        </div>
       </>
     );
   }
-  // let bucket = []
+
+
+  const toRupiah = (money) => {
+    return money.toLocaleString('id-ID')
+
+  };
+
 
   if (ticket) {
-
+    console.log(ticketLocal, 'data total')
+    // console.log(allTicket(), 'data filter')
   }
-  const allTicket = () => {
-    let filterAllTicket = ticket.getFlight.AllData.filter((filterTicket) => filterTicket.price > value[0] && filterTicket.price < value[1]);
-    if (ValueModal.Lion) {
-      let filterLion = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("lion air" || "lion"));
-      return filterLion
-    }
-    if (ValueModal.Garuda) {
-      let filterGaruda = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("garuda" || "garuda indonesia"));
-      return filterGaruda
-
-    }
-    if (ValueModal.Batik) {
-      let filterBatik = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("batik air" || "batik"));
-      return filterBatik
-
-    }
-    if (ValueModal.Citilink) {
-      let filterCitilink = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("citilink" || "citilink indonesia"));
-      console.log(filterCitilink)
-      return filterCitilink
-    }
-    if (ValueModal.Multi) {
-      let filterMulti = filterAllTicket.filter((data2) => data2.airline === ("Multi-maskapai" || "Multi-airline"));
-      return filterMulti
-    } else {
-      return filterAllTicket;
-    }
-
-  };
-  // console.log(bucket,'array')
-
-  // console.log(modalShowFilter)
-  // console.log(ticketBucket, 'bcuekt')
-  const toRupiah = (money) => {
-    return Intl.NumberFormat("id", {
-      style: "currency",
-      currency: "idr",
-    }).format(money);
-  };
-
-
-  // if (ticket) {
-  //   console.log(ticket.getFlight.AllData, 'data total')
-  //   console.log(allTicket(), 'data filter')
-  // }
   const toModal = () => {
     getPredict();
     setModalShow(true);
   };
+  const toModalFilter = (params) => {
+    onFilter(params)
+    setValueModal(params)
+    setModalShowFilter(false)
+  }
 
   return (
     <div id="booking1" >
-      <ModalFilter
-        show={modalShowFilter}
-        filted={(dataModal) => {
-         { setValueModal(dataModal)}
-        }}
+      <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)}
         onHide={() => {
           setModalShowFilter(false);
         }}
       />
 
-      <ModalPredict
-        show={modalShow}
-        dataPredictions={dataPredictions}
+      <ModalPredict show={modalShow} dataPredictions={dataPredictions}
         onHide={() => {
           setModalShow(false);
         }}
@@ -254,17 +259,17 @@ const ListData = () => {
         <div className="clearfix ">
           <center>
 
-        <br></br>
+            <br></br>
             <Button variant="primary" onClick={() => toModal()}>
               Get Predictions
       </Button>
-            <Button variant="primary" style={{margin:'10px'}} onClick={() => setModalShowFilter(true)}>
+            <Button variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
               Filter check
       </Button>
           </center>
-          <Typography className="float-left" style={{ color: 'white' }}>{toRupiah(value[0])}</Typography>
-          <Typography className="float-right" style={{ color: 'white' }}>{toRupiah(value[1])}</Typography>
-          </div>
+          <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
+          <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+        </div>
         <AirbnbSlider
           value={value}
           onChange={handleChange}
@@ -273,10 +278,10 @@ const ListData = () => {
           min={0}
           max={5000000}
         />
-          <br></br>
-          <br></br>
+        <br></br>
+        <br></br>
 
-        {ticket && allTicket().map((tiket, i) => {
+        {ticket && ticketLocal.map((tiket, i) => {
           return (
             <Row className="mb-4">
               <Col  >
