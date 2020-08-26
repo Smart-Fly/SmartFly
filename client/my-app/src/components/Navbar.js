@@ -10,12 +10,15 @@ import Typography from "@material-ui/core/Typography";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import AccountCircle from "@material-ui/icons/AccountCircle";
+import { Button } from "@material-ui/core";
 import { Form } from "react-bootstrap";
+import { useMutation } from "@apollo/client";
 import { useLocation } from "react-router-dom";
 import { GET_CACHE_USER } from "../query/cacheQuery";
 import { fade, makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
+import { UPDATE_SUBSCRIPTION } from "../query/userQuery";
 
+const logoSmartFly = require("../asset/SmartFlyLogo.png");
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -81,6 +84,11 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  logo: {
+    borderRadius: "30%",
+    width: "4rem",
+    height: "4rem",
+  },
 }));
 
 const Navbar = () => {
@@ -92,59 +100,51 @@ const Navbar = () => {
   const menuId = "primary-search-account-menu";
 
   /** START STATE YANG DIGUNAKAN */
-  const [isLoggedIn, setIsLoggedIn] = useState(null); // check Login
-  const [updatedSubsStatus, setUpdatedStatus] = useState();
-  const [checkedSubsStatus, setCheckedSubsStatus] = useState(null); // Buat ngerubah value di switch
-  const [updateSubs, setUpdateSubs] = useState({
-    access_token: localStorage.getItem("access_token"),
+  const [showUserName, setShowUserName] = useState(""); // check Login
+  const [showSubsStatus, setShowSubsstatus] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const [userSubsToUpdate, setUserSubsToUpdate] = useState({
+    access_token: "",
     subsStatus: false,
   }); // Ini buat onSubmit yang dikirim ke server
 
   /** END STATE YANG DIGUNAKAN */
 
-  /** ============= START FUNGSI UPDATE DARI LUQMAN ================ */
-  const [userInfo, setUserInfo] = useState({
-    userName: "",
-    subsStatus: false,
-  });
   const { cacheUser } = client.readQuery({
     query: GET_CACHE_USER,
   });
 
+  const [updateSubscription, { data, loading }] = useMutation(
+    UPDATE_SUBSCRIPTION
+  );
+
   useEffect(() => {
     if (cacheUser) {
       const { userNameCache, subsStatusCache } = cacheUser;
-      setUserInfo({
-        ...userInfo,
-        userName: userNameCache,
-        subsStatus: subsStatusCache,
-      });
-      setCheckedSubsStatus(subsStatusCache);
+      setShowUserName(userNameCache);
+      setShowSubsstatus(subsStatusCache);
     }
-  }, [cacheUser, userInfo]);
+  }, [cacheUser]);
 
-  const handleChange = (e) => {
-    const { name, checked } = e.target;
-    setUpdateSubs({ ...updateSubs, [name]: checked });
+  const toggleSwitchChange = (e) => {
+    const { checked } = e.target;
+    setShowSubsstatus(checked);
+    setShowButton(true);
+    setUserSubsToUpdate();
   };
 
-  useEffect(() => {
-    checkLoggedIn();
-  });
-
-  const checkLoggedIn = () => {
-    localStorage.getItem("access_token");
-    if ("access_token") {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
-  };
-
-  const toggleChecked = (e) => {
-    const { name, checked } = e.target;
-    setUpdateSubs({ ...updateSubs, [name]: checked });
-    // setCheckedSubsStatus()
+  const handleSubmitSubs = (e) => {
+    e.preventDefault();
+    updateSubscription({
+      variables: {
+        updateData: {
+          ...setUserSubsToUpdate,
+          subsStatus: showSubsStatus,
+          access_token: localStorage.getItem("access_token"),
+        },
+      },
+    });
+    handleMenuClose();
   };
 
   /** ============= END FUNGSI UPDATE DARI LUQMAN ================ */
@@ -167,27 +167,36 @@ const Navbar = () => {
         transformOrigin={{ vertical: "top", horizontal: "right" }}
         open={isMenuOpen}
         onClose={handleMenuClose}
+        position="absolute"
       >
-        <div className="row">
+        <div className="row justify-content-start">
           <MenuItem onClick={handleMenuClose}>
-            <div className="col-sm-12">
-              <span>You re signed in as</span>
-            </div>
-            <div className="col-sm-8">
-              <span>{userInfo.userName}</span>
+            <div className="col-lg-12">
+              <span style={{ fontSize: 15 }}>
+                You are Sign in as {showUserName}
+              </span>
             </div>
           </MenuItem>
-        </div>
 
-        <div className="row justify content center">
-          <MenuItem onClick={handleMenuClose}>
-            <FormControlLabel
-              control={
-                <Switch checked={checkedSubsStatus} onChange={toggleChecked} />
-              }
-              label="Normal"
-            />
-            {/* {updatedStatus ? <Button>Save changes!</Button> : null} */}
+          <MenuItem>
+            <Form onSubmit={(e) => handleSubmitSubs(e)}>
+              <FormControlLabel
+                control={
+                  <Switch
+                    name="checkedA"
+                    checked={showSubsStatus}
+                    onChange={toggleSwitchChange}
+                    variant="primary"
+                  />
+                }
+                label="Change Subs Plan"
+              />
+              {showButton ? (
+                <Button type="submit" variant="primary">
+                  Save changes
+                </Button>
+              ) : null}
+            </Form>
           </MenuItem>
         </div>
       </Menu>
@@ -200,20 +209,23 @@ const Navbar = () => {
         <div className={classes.grow}>
           <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
           <AppBar
-            position="absolute"
-            style={
-              pathname === "/"
-                ? {
-                    background: "transparent",
-                    boxShadow: "none",
-                    color: "blue",
-                  }
-                : {
-                    background: "transparent",
-                    boxShadow: "none",
-                    color: "black",
-                  }
-            }
+            // position="absolute"
+            // style={
+            //   pathname === "/"
+            //     ? {
+            //         background: "transparent",
+            //         boxShadow: "none",
+            //         color: "blue",
+            //       }
+            //     : {
+            //         background: "transparent",
+            //         boxShadow: "none",
+            //         color: "black",
+            //       }
+            // }
+            color="light"
+            style={{ background: "transparent" }}
+            title={<img src={logoSmartFly} />}
           >
             <Toolbar>
               <IconButton
@@ -222,6 +234,7 @@ const Navbar = () => {
                 color="inherit"
                 aria-label="open drawer"
               ></IconButton>
+              <img src={logoSmartFly} alt="logo" className={classes.logo} />
               <Typography className={classes.title} variant="h6" noWrap>
                 Smart-Fly
               </Typography>
