@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import CardResult from "../../components/CardResult";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import { Slider, Typography } from "@material-ui/core";
 import { useParams, useLocation } from "react-router-dom";
 import { GET_FLIGHT_SEARCH } from "../../query/QueryPrice";
@@ -12,7 +12,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
-import FilterListIcon from '@material-ui/icons/FilterList';
+import FilterListIcon from "@material-ui/icons/FilterList";
 
 const GET_PRED = gql`
   query getPrediction($depart: String, $arrive: String) {
@@ -108,7 +108,7 @@ const ListData = () => {
     Garuda: true,
     Batik: true,
     Citilink: true,
-    Multi: true
+    Multi: true,
   });
   const [value, setValue] = React.useState([400000, 3000000]);
   const {
@@ -117,15 +117,13 @@ const ListData = () => {
 
   // const [ticketBucket, setTicketBucket] = useState([]);
   const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH);
-  const [ticketLocal, setTicketLocal] = useState([])
-
+  const [ticketLocal, setTicketLocal] = useState([]);
 
   useEffect(() => {
     if (ticket != null) {
-
-      setTicketLocal(ticket.getFlight.AllData)
+      setTicketLocal(ticket.getFlight.AllData);
     }
-  }, [ticket])
+  }, [ticket]);
   const [
     getPredictions,
     { loading: loadingPredictions, data: dataPredictions },
@@ -165,51 +163,50 @@ const ListData = () => {
     });
   }, [slug, data, getFlight]);
 
-
-
-
   const onFilter = (params) => {
-    const newTicketLocal = ticket.getFlight.AllData.filter(ticketfil => {
-      const filterPrice = ticketfil.price > value[0] && ticketfil.price < value[1]
-      if (ticketfil.airline.toLocaleLowerCase() == ("lion air" || "lion")) {
-        if (params.Lion) return filterPrice
+    const newTicketLocal = ticket.getFlight.AllData.filter((ticketfil) => {
+      const filterPrice =
+        ticketfil.price > value[0] && ticketfil.price < value[1];
+      if (ticketfil.airline.toLocaleLowerCase() === ("lion air" || "lion")) {
+        if (params.Lion) return filterPrice;
+      } else if (ticketfil.airline === ("Garuda" || "Garuda Indonesia")) {
+        if (params.Garuda) return filterPrice;
+      } else if (
+        ticketfil.airline.toLocaleLowerCase() === ("batik air" || "batik")
+      ) {
+        if (params.Batik) return filterPrice;
+      } else if (ticketfil.airline === ("Citilink" || "Citilink Indonesia")) {
+        if (params.Citilink) return filterPrice;
+      } else if (ticketfil.airline === ("Multi-maskapai" || "Multi-airline")) {
+        if (params.Multi) return filterPrice;
+      } else if (
+        params.Lion === false &&
+        params.Garuda === false &&
+        params.Batik === false &&
+        params.Citilink === false &&
+        params.Multi === false
+      ) {
+        return filterPrice;
       }
-      else if (ticketfil.airline == ("Garuda" || "Garuda Indonesia")) {
-        if (params.Garuda) return filterPrice
-      }
-      else if (ticketfil.airline.toLocaleLowerCase() == ("batik air" || "batik")) {
-        if (params.Batik) return filterPrice
-      }
-      else if (ticketfil.airline == ("Citilink" || "Citilink Indonesia")) {
-        if (params.Citilink) return filterPrice
-      }
-      else if (ticketfil.airline == ("Multi-maskapai" || "Multi-airline")) {
-        if (params.Multi) return filterPrice
-      } else if (params.Lion == false && params.Garuda == false
-        && params.Batik == false && params.Citilink == false && params.Multi == false) {
-        return filterPrice
-      }
-    })
-    setTicketLocal(newTicketLocal)
-  }
+    });
+    setTicketLocal(newTicketLocal);
+  };
 
   useEffect(() => {
     if (ticket != null) {
-      onFilter(ValueModal)
+      onFilter(ValueModal);
     }
-    console.log(value)
-  }, [value])
+  }, [value, ValueModal, ticket]);
 
   if (loading) {
     return (
       <>
-        <div id='cek' >
+        <div id="cek">
           <LinearProgress color="secondary" />
-          <Container >
+          <Container>
             <br></br>
             <br></br>
-            <div style={{ marginTop: '60px' }} >
-
+            <div style={{ marginTop: "60px" }}>
               <Skeleton variant="rect" width={1100} height={120} />
               <br></br>
               <Skeleton variant="rect" width={1100} height={120} />
@@ -225,13 +222,11 @@ const ListData = () => {
   }
 
   const toRupiah = (money) => {
-    return money.toLocaleString('id-ID')
-
+    return money.toLocaleString("id-ID");
   };
 
-
   if (ticket) {
-    console.log(ticketLocal, 'data total')
+    console.log(ticketLocal, "data total");
     // console.log(allTicket(), 'data filter')
   }
   const toModal = () => {
@@ -239,21 +234,25 @@ const ListData = () => {
     setModalShow(true);
   };
   const toModalFilter = (params) => {
-    onFilter(params)
-    setValueModal(params)
-    setModalShowFilter(false)
-  }
+    onFilter(params);
+    setValueModal(params);
+    setModalShowFilter(false);
+  };
 
   return (
-    <div >
-      <div id="booking1" >
-        <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)}
+    <div>
+      <div id="booking1">
+        <ModalFilter
+          show={modalShowFilter}
+          filted={(dataModal) => toModalFilter(dataModal)}
           onHide={() => {
             setModalShowFilter(false);
           }}
         />
 
-        <ModalPredict show={modalShow} dataPredictions={dataPredictions}
+        <ModalPredict
+          show={modalShow}
+          dataPredictions={dataPredictions}
           onHide={() => {
             setModalShow(false);
           }}
@@ -261,17 +260,29 @@ const ListData = () => {
         <Container>
           <div className="clearfix ">
             <center>
-
               <br></br>
-              <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
+              <Button
+                startIcon={<FilterListIcon />}
+                variant="primary"
+                onClick={() => toModal()}
+              >
                 Get Predictions
-      </Button>
-              <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+              </Button>
+              <Button
+                startIcon={<FilterListIcon />}
+                variant="primary"
+                style={{ margin: "10px" }}
+                onClick={() => setModalShowFilter(true)}
+              >
                 Filter check
-            </Button>
+              </Button>
             </center>
-            <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
-            <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+            <Typography className="float-left" style={{ color: "white" }}>
+              Rp {toRupiah(value[0])}
+            </Typography>
+            <Typography className="float-right" style={{ color: "white" }}>
+              Rp {toRupiah(value[1])}
+            </Typography>
           </div>
           <AirbnbSlider
             value={value}
@@ -284,23 +295,24 @@ const ListData = () => {
           <br></br>
           <br></br>
 
-          {ticket && ticketLocal.map((tiket, i) => {
-            return (
-              <Row className="mb-4">
-                <Col  >
-                  <CardResult
-                    className="shadow rounded"
-                    tiket={tiket} key={i} />
-                </Col>
-              </Row >
-            )
-          })
-          }
+          {ticket &&
+            ticketLocal.map((tiket, i) => {
+              return (
+                <Row className="mb-4">
+                  <Col>
+                    <CardResult
+                      className="shadow rounded"
+                      tiket={tiket}
+                      key={i}
+                    />
+                  </Col>
+                </Row>
+              );
+            })}
         </Container>
         <br></br>
       </div>
     </div>
-
   );
 };
 

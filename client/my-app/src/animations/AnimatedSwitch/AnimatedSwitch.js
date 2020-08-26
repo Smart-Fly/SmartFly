@@ -2,23 +2,17 @@ import React from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./AnimatedSwitch.css";
-import {
-  Home,
-  ListData,
-  RegisterPage,
-  LoginPage,
-  ProfilePage,
-} from "../../Pages";
+import { Home, ListData, RegisterPage, LoginPage } from "../../Pages";
 
 const AnimatedSwitch = withRouter(({ location }) => {
+  console.log(location.key, "ini apa");
   return (
     <TransitionGroup>
       <CSSTransition key={location.key} classNames="slide" timeout={1000}>
         <Switch location={location}>
           <Route exact path="/" component={Home} />
-          <Route path="/register" component={RegisterPage} />
-          <Route path="/login" component={LoginPage} />
-          {/* <Route path="/update" component={ProfilePage} /> */}
+          <Route exact path="/register" component={RegisterPage} />
+          <Route exact path="/login" component={LoginPage} />
           <Route path="/:slug" component={ListData} />
         </Switch>
       </CSSTransition>
