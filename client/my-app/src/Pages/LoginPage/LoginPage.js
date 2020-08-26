@@ -59,7 +59,7 @@ const LoginPage = () => {
               <div className="login100-form-logo">
                 <img src={logo} alt="Logo" />
               </div>
-              <span className="login100-form-title p-t-20 p-b-40 m-t-35">
+              <span className="login100-form-title p-t-20 p-b-30 m-t-35">
                 Login Here
               </span>
               {/** =========== Email ============ */}
@@ -76,11 +76,12 @@ const LoginPage = () => {
                     width: "100%",
                     height: "50px",
                     borderRadius: "25px",
+                    padding: "0px 30px 0px 70px",
                   }}
                 />
                 <span className="focus-input100"></span>
                 <span className="symbol-input100">
-                  <i className="fa fa-user"></i>
+                  <i className="fa fa-user" style={{ marginTop: "10px" }}></i>
                 </span>
               </div>
 
@@ -98,108 +99,17 @@ const LoginPage = () => {
                     width: "100%",
                     height: "50px",
                     borderRadius: "25px",
+                    padding: "0px 30px 0px 70px",
+                    outline: "none",
                   }}
                 />
                 <span className="focus-input100"></span>
                 <span className="symbol-input100">
-                  <i className="fa fa-lock"></i>
+                  <i className="fa fa-lock" style={{ marginTop: "10px" }}></i>
                 </span>
               </div>
-              <div>
-                <Button type="submit" variant="contained" color="primary">
-                  Login
-                </Button>
-              </div>
-              <div className="text-center p-t-46 p-b-20">
-                <a className="txt2" href="/register">
-                  sign up
-                </a>
-                <span className="txt2"> or login using</span>
-              </div>
-              <div className="flex-c-m">
-                <MyGoogleLogin />
-              </div>
-            </form>
-
-            {/* <Form className="login100-form" onSubmit={(e) => handleSubmit(e)}>
-              <Form.Group>
-                <FormControl>
-                  <InputLabel>Email</InputLabel>
-                  <Input
-                    type="text"
-                    name="email"
-                    aria-describedby="my-helper-text"
-                    onChange={(e) => handleOnchance(e)}
-                    className="input100"
-                  />
-                </FormControl>
-
-                <FormControl>
-                  <InputLabel>Password</InputLabel>
-                  <Input
-                    type="password"
-                    name="password"
-                    aria-describedby="my-helper-text"
-                    onChange={(e) => handleOnchance(e)}
-                    className="input100"
-                  />
-                </FormControl>
-
-                <div>
-                  <Button type="submit" variant="contained" color="primary">
-                    Login
-                  </Button>
-                </div>
-
-                <div className="text-center p-t-46 p-b-20">
-                  <a className="txt2" href="/register">
-                    sign up
-                  </a>
-                  <span className="txt2"> or login using</span>
-                </div>
-
-                <div className="flex-c-m">
-                  <MyGoogleLogin />
-                </div>
-              </Form.Group>
-            </Form> */}
-          </div>
-        </div>
-      </div>
-
-      {/* <div className="container-login100">
-        <div className="wrap-login100"> */}
-      {/** [======== SACRED LINE ==========] */}
-      {/* <Form className="login100-form" onSubmit={(e) => handleSubmit(e)}>
-            <span className="login100-form-title mb-4">
-              Login to start Exploring
-            </span>
-            <Form.Group>
-              <FormControl className="wrap-input100">
-                <InputLabel className="label-input100">Email</InputLabel>
-                <span className="focus-input100"></span>
-                <Input
-                  type="text"
-                  name="email"
-                  aria-describedby="my-helper-text"
-                  onChange={(e) => handleOnchance(e)}
-                  className="input100"
-                />
-              </FormControl>
-
-              <FormControl className="wrap-input100">
-                <InputLabel className="label-input100">Password</InputLabel>
-                <span className="focus-input100"></span>
-                <Input
-                  type="password"
-                  name="password"
-                  aria-describedby="my-helper-text"
-                  onChange={(e) => handleOnchance(e)}
-                  className="input100"
-                />
-              </FormControl>
-
-              <div className="container-login100-form-btn ">
+              {/** ========= Button ======= */}
+              <div className="container-login100-form-btn p-t-17">
                 <Button
                   className="login100-form-btn"
                   type="submit"
@@ -209,24 +119,33 @@ const LoginPage = () => {
                   Login
                 </Button>
               </div>
-
-              <div className="text-center p-t-46 p-b-20">
-                <a className="txt2" href="/register">
-                  sign up
+              <div className="p-t-15 p-b-20" style={{ display: "inherit" }}>
+                <div className="p-l-8">
+                  <MyGoogleLogin />
+                </div>
+                <span
+                  className="p-r-13 p-l-15 p-t-7"
+                  style={{ color: "white", fontSize: "20px" }}
+                >
+                  Or{" "}
+                </span>
+                <a
+                  className="txt1 p-r-20 p-t-7 "
+                  href="/register"
+                  style={{
+                    color: "white",
+                    textDecoration: "none",
+                    fontSize: "20px",
+                  }}
+                >
+                  Create new Account
+                  <i className="fa fa-long-arrow-right p-l-10"></i>
                 </a>
-                <span className="txt2"> or login using</span>
               </div>
-
-              <div className="flex-c-m">
-                <MyGoogleLogin />
-              </div>
-            </Form.Group>
-          </Form>
-          <div className="login-100-more">
-            <p>haahahah</p>
+            </form>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

@@ -45,7 +45,7 @@ const MyGoogleLogin = () => {
         onSuccess={onSuccess}
         onFailure={onFailure}
         cookiePolicy={"single_host_origin"}
-        style={{ marginTop: "100px" }}
+        style={{ marginTop: "100px", width: "70px" }}
       />
     </div>
   );
