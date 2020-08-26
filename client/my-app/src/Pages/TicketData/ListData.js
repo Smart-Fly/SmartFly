@@ -11,6 +11,8 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
 // import Aos from 'aos'
 // import 'aos/dist/aos'
 
@@ -33,6 +35,18 @@ function AirbnbThumbComponent(props) {
     </span>
   );
 }
+
+const styles = {
+  root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    borderRadius: 3,
+    border: 0,
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  },
+};
 
 const AirbnbSlider = withStyles({
   root: {
@@ -71,6 +85,7 @@ const AirbnbSlider = withStyles({
   },
 })(Slider);
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -97,7 +112,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ListData = () => {
+const ListData = (props) => {
+  const { children, className, ...other } = props;
   const classes = useStyles();
   const theme = useTheme();
   const { slug } = useParams();
@@ -390,7 +406,7 @@ const ListData = () => {
       <Container className="mt-5 pt-4">
       <div className="clearfix ">
       <center>
-      <Button variant="primary" onClick={() => toModal()}>
+      <Button className={clsx(classes.root, className)} onClick={() => toModal()}>
       Get Predictions
       </Button>
       <br></br>
@@ -542,6 +558,11 @@ else{
   </div>
   )
 }
+};
+ListData.propTypes = {
+  children: PropTypes.node,
+  classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
 };
 
 export default ListData;

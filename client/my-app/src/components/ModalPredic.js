@@ -37,7 +37,6 @@ const ModalPredic = (props) => {
       </>
     );
   };
-  console.log(Math.round(0.9698275862068966));
 
   return (
     <div>
