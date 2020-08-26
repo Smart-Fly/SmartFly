@@ -106,7 +106,7 @@ const ListData = () => {
     Garuda: false,
     Batik: false,
     Citilink: false,
-    Multi: false
+    Multi: false,
   });
   const [value, setValue] = React.useState([400000, 3000000]);
   const {
@@ -124,21 +124,19 @@ const ListData = () => {
       arrive: data.aAirportCode,
     },
   });
-  console.log(ValueModal)
+  console.log(ValueModal);
   const getPredict = () => {
     getPredictions();
     if (dataPredictions) {
-      console.log(dataPredictions, 'dataa')
+      console.log(dataPredictions, "dataa");
     } else {
-      console.log(loadingPredictions)
+      console.log(loadingPredictions);
     }
   };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-
 
   useEffect(() => {
     getFlight({
@@ -160,55 +158,68 @@ const ListData = () => {
     return (
       <>
         <LinearProgress color="secondary" />
-          <div id='cek'>
-        <Container >
-          <br></br>
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-          <br></br>
-          <Skeleton variant="rect" width={1100} height={120} />
-        </Container>
-          </div>
+        <div id="cek">
+          <Container>
+            <br></br>
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+            <br></br>
+            <Skeleton variant="rect" width={1100} height={120} />
+          </Container>
+        </div>
       </>
     );
   }
   // let bucket = []
 
   if (ticket) {
-
   }
   const allTicket = () => {
-    let filterAllTicket = ticket.getFlight.AllData.filter((filterTicket) => filterTicket.price > value[0] && filterTicket.price < value[1]);
+    let filterAllTicket = ticket.getFlight.AllData.filter(
+      (filterTicket) =>
+        filterTicket.price > value[0] && filterTicket.price < value[1]
+    );
     if (ValueModal.Lion) {
-      let filterLion = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("lion air" || "lion"));
-      return filterLion
+      let filterLion = filterAllTicket.filter(
+        (data2) => data2.airline.toLocaleLowerCase() === ("lion air" || "lion")
+      );
+      return filterLion;
     }
     if (ValueModal.Garuda) {
-      let filterGaruda = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("garuda" || "garuda indonesia"));
-      return filterGaruda
-
+      let filterGaruda = filterAllTicket.filter(
+        (data2) =>
+          data2.airline.toLocaleLowerCase() === ("garuda" || "garuda indonesia")
+      );
+      return filterGaruda;
     }
     if (ValueModal.Batik) {
-      let filterBatik = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("batik air" || "batik"));
-      return filterBatik
-
+      let filterBatik = filterAllTicket.filter(
+        (data2) =>
+          data2.airline.toLocaleLowerCase() === ("batik air" || "batik")
+      );
+      return filterBatik;
     }
     if (ValueModal.Citilink) {
-      let filterCitilink = filterAllTicket.filter((data2) => data2.airline.toLocaleLowerCase() === ("citilink" || "citilink indonesia"));
-      console.log(filterCitilink)
-      return filterCitilink
+      let filterCitilink = filterAllTicket.filter(
+        (data2) =>
+          data2.airline.toLocaleLowerCase() ===
+          ("citilink" || "citilink indonesia")
+      );
+      console.log(filterCitilink);
+      return filterCitilink;
     }
     if (ValueModal.Multi) {
-      let filterMulti = filterAllTicket.filter((data2) => data2.airline === ("Multi-maskapai" || "Multi-airline"));
-      return filterMulti
+      let filterMulti = filterAllTicket.filter(
+        (data2) => data2.airline === ("Multi-maskapai" || "Multi-airline")
+      );
+      return filterMulti;
     } else {
       return filterAllTicket;
     }
-
   };
   // console.log(bucket,'array')
 
@@ -221,7 +232,6 @@ const ListData = () => {
     }).format(money);
   };
 
-
   // if (ticket) {
   //   console.log(ticket.getFlight.AllData, 'data total')
   //   console.log(allTicket(), 'data filter')
@@ -232,11 +242,13 @@ const ListData = () => {
   };
 
   return (
-    <div id="booking1" >
+    <div id="booking1">
       <ModalFilter
         show={modalShowFilter}
         filted={(dataModal) => {
-         { setValueModal(dataModal)}
+          {
+            setValueModal(dataModal);
+          }
         }}
         onHide={() => {
           setModalShowFilter(false);
@@ -250,21 +262,28 @@ const ListData = () => {
           setModalShow(false);
         }}
       ></ModalPredict>
-      <Container >
+      <Container>
         <div className="clearfix ">
           <center>
-
-        <br></br>
+            <br></br>
             <Button variant="primary" onClick={() => toModal()}>
               Get Predictions
-      </Button>
-            <Button variant="primary" style={{margin:'10px'}} onClick={() => setModalShowFilter(true)}>
+            </Button>
+            <Button
+              variant="primary"
+              style={{ margin: "10px" }}
+              onClick={() => setModalShowFilter(true)}
+            >
               Filter check
-      </Button>
+            </Button>
           </center>
-          <Typography className="float-left" style={{ color: 'white' }}>{toRupiah(value[0])}</Typography>
-          <Typography className="float-right" style={{ color: 'white' }}>{toRupiah(value[1])}</Typography>
-          </div>
+          <Typography className="float-left" style={{ color: "white" }}>
+            {toRupiah(value[0])}
+          </Typography>
+          <Typography className="float-right" style={{ color: "white" }}>
+            {toRupiah(value[1])}
+          </Typography>
+        </div>
         <AirbnbSlider
           value={value}
           onChange={handleChange}
@@ -273,25 +292,27 @@ const ListData = () => {
           min={0}
           max={5000000}
         />
-          <br></br>
-          <br></br>
+        <br></br>
+        <br></br>
 
-        {ticket && allTicket().map((tiket, i) => {
-          return (
-            <Row className="mb-4">
-              <Col  >
-                <CardResult
-                  className="shadow rounded"
-                  tiket={tiket} key={i} />
-              </Col>
-            </Row >
-          )
-        })
-        }
+        {ticket &&
+          allTicket().map((tiket, i) => {
+            return (
+              <Row className="mb-4">
+                <Col>
+                  <CardResult
+                    className="shadow rounded"
+                    tiket={tiket}
+                    key={i}
+                  />
+                </Col>
+              </Row>
+            );
+          })}
       </Container>
       <br></br>
     </div>
   );
-}
+};
 
 export default ListData;

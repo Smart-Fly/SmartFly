@@ -15,6 +15,7 @@ export const USER_LOGIN = gql`
     userLogin(dataUser: $loginInfo) {
       access_token
       subsStatus
+      userName
     }
   }
 `;

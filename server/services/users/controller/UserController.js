@@ -43,9 +43,11 @@ class UserController {
 
             if (compare) {
               let access_token = encode(user);
-              res
-                .status(200)
-                .json({ access_token, subsStatus: user.subsStatus });
+              res.status(200).json({
+                access_token,
+                subsStatus: user.subsStatus,
+                userName: user.userName,
+              });
             } else {
               next({ name: "INVALID_PASSWORD" });
             }
@@ -103,7 +105,7 @@ class UserController {
   }
 
   static async getPromotion(req, res, next) {
-    // await cron.schedule("2 * * * * *", async function () {
+    // await cron.schedule("5 * * * * *", async function () {
     console.log("---------------------");
     console.log("Running Cron Job");
     try {
