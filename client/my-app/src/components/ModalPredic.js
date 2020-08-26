@@ -1,9 +1,9 @@
 import './StylePredic.css'
-import React, { useState, createRef } from "react";
+import React, {  createRef } from "react";
 import { Modal } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
-const graph = require("../asset/graph1.png")
+// const graph = require("../asset/graph1.png")
 // const graph2 = require("../asset/graph2.png")
 const graph2 = require("../img/analis.svg")
 const useStyles = makeStyles((theme) => ({
@@ -16,14 +16,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ModalPredic = (props) => {
-  const classes = useStyles();
   const wrapper = createRef();
   const { dataPredictions } = props;
-console.log(props)
   const sentence = () => {
     let temp = "";
     let { accuracy } = dataPredictions.predictions;
-    // console.log(accuracy)
     if (accuracy > 0) {
       temp = "Buy Now";
     } else {

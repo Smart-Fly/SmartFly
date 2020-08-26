@@ -2,36 +2,75 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
   }
+  @font-face {
+	font-family: Montserrat-Regular;
+	src: url("../../asset/Montserrat/Montserrat-Regular.ttf");
+  }
+  
+  @font-face {
+	font-family: Montserrat-ExtraBold;
+	src: url("../../asset/Montserrat/Montserrat-ExtraBold.ttf");
+  }
+  
+  @font-face {
+	font-family: Montserrat-Bold;
+	src: url("../../asset/Montserrat/Montserrat-Bold.ttf")format('truetype');
+  }
+  
   
   body {
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
 
 	padding: 0;
 	margin: 0;
 	/* background-image: url('https://images3.alphacoders.com/785/thumb-1920-785576.png'); */
   }
 #booking1 {
-	font-family: 'Lato', sans-serif;
 	/* background-image: url('../img/background.jpg'); */
 	/* background-position: right; */
 	/* color: #191a1e; */
 	/* height: auto;
 	width: auto; */
 	min-height: 100vh;
+	/* top: 30vh; */
 
 	/* height: 100%; */
 	background: linear-gradient(45deg, #2196f3 50%, #21cbf3 50%)
 	
 }
 
+.data-ticket{
+	/* font-family: "Montserrat-Bold"; */
+
+	top: 8vh;
+/* min-height: 100vh; */
+position: relative;
+
+}
+
+#filter-style{
+	font-family: "Montserrat-Bold";
+	/* left: 50vh; */
+	/* flex */
+	position: relative;
+	top: 7vh;
+	z-index: 1;
+	/* right:  50vh; */
+	/* left: 1rem; */
+	/* background-color: rgba(57, 143, 255, 0.8);
+	margin: 10px;
+	padding: 1vh;
+	border-radius: 1vh;
+	width: 100vh; */
+}
 
 #cek {
 	/* background-size: "cover"; */
 	/* -webkit-text-size-adjust: 100%; */
 	/* transform: translateY(10%); */
 	
-	background-size: cover;
 	/* overflow: hidden; */
+	background-size: cover;
 	min-height: 100vh;
 	
 	background: linear-gradient(45deg, #2196f3 50%, #21cbf3 50%)

@@ -1,7 +1,6 @@
-import React, { useState, createRef } from "react";
+import React, {  createRef } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
-import CircularProgress from "@material-ui/core/CircularProgress";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
@@ -15,9 +14,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ModalFilter = (props) => {
-  const classes = useStyles();
   const wrapper = createRef();
-  const [checked, setChecked] = React.useState(false);
   const [airlines, setAirlines] = React.useState({
     Lion: false,
     Garuda: false,
@@ -25,8 +22,6 @@ const ModalFilter = (props) => {
     Citilink: false,
     Multi: false
   });
-  console.log(airlines, 'airness')
-  // console.log(props,'propsee')
   const handleChangeG = (event) => {
     setAirlines({ ...airlines, Garuda: event.target.checked });
   };
@@ -129,13 +124,16 @@ const ModalFilter = (props) => {
         </Modal.Body>
         </center>
 
-        <Modal.Footer>
-        
-          <Button variant="primary" onClick={() => props.filted(airlines)}>
+        <center>
+        {/* <Modal.Footer> */}
+
+          <Button  onClick={() => props.filted(airlines)}>
             Save Changes
           </Button>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
+          {/* <Button onClick={props.onHide}>Close</Button> */}
+        {/* </Modal.Footer> */}
+        </center>
+        <br></br>
       </Modal>
     </div>
   ); 

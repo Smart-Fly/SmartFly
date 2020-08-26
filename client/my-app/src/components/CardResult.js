@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   CardContent,
@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
     textAlign: "center",
+    width: '147vh',
+    height: '12vw'
   },
   details: {
     display: "flex",
@@ -37,7 +39,7 @@ const CardResult = (props) => {
   // console.log(props.tiket)
   const data = props.tiket;
   const classes = useStyles();
-  const theme = useTheme();
+
 
   const handleImage = () => {
 
@@ -51,7 +53,7 @@ const CardResult = (props) => {
       return "https://i.pinimg.com/originals/83/bd/70/83bd70f58c962ded056b2d57227de1d5.jpg"
 
     } else if (data.airline === "Multi-maskapai" || data.airline === 'Multi-airline') {
-      return data.airLineLogo
+      return "https://static.tiket.photos/image/upload/v1534837894/string/2018/08/21/c6f70a1c-74f7-4527-bd01-641b0ed42614a79db5b8a6ab2f777f51d58b8fb0b2d3.png"
     }
     else {
       return data.airLineLogo
@@ -59,9 +61,9 @@ const CardResult = (props) => {
   }
 
   const nameAirline =()=>{
-    if (data.airline == "Citilink Indonesia" ) {
+    if (data.airline === "Citilink Indonesia" ) {
         return "Citilink"
-      }else if(data.airline == "Garuda Indonesia"){
+      }else if(data.airline === "Garuda Indonesia"){
         return "Garuda"
 
     }
@@ -82,7 +84,7 @@ const CardResult = (props) => {
               src={handleImage()}
             />
           </CardMedia>
-          {data.airline == "Multi-airline" ?
+          {data.airline === "Multi-airline" || data.airline === "Multi-maskapai" ?
           <Typography gutterBottom variant="h5" component="h2" >
             {nameAirline() }
           </Typography>
@@ -125,8 +127,6 @@ const CardResult = (props) => {
             <Button
               href={data.url}
               target="_blank"
-              target="_blank"
-              size="big"
               variant="contained"
               startIcon={<TelegramIcon/>}
             >

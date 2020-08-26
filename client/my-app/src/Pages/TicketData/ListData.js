@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import CardResult from "../../components/CardResult";
 import Button from '@material-ui/core/Button';
 import { Slider, Typography } from "@material-ui/core";
@@ -13,6 +13,8 @@ import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
 import FilterListIcon from '@material-ui/icons/FilterList';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const GET_PRED = gql`
   query getPrediction($depart: String, $arrive: String) {
@@ -36,7 +38,7 @@ function AirbnbThumbComponent(props) {
 
 const AirbnbSlider = withStyles({
   root: {
-    color: "#3a8589",
+    color: "#cffffe",
     height: 3,
     padding: "13px 0",
   },
@@ -55,7 +57,7 @@ const AirbnbSlider = withStyles({
       // display: inline-block !important;
       height: 9,
       width: 1,
-      backgroundColor: "currentColor",
+      backgroundColor: "#005086",
       marginLeft: 1,
       marginRight: 1,
     },
@@ -71,35 +73,9 @@ const AirbnbSlider = withStyles({
   },
 })(Slider);
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  details: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  content: {
-    flex: "1 0 auto",
-  },
-  cover: {
-    width: 151,
-  },
-  controls: {
-    display: "flex",
-    alignItems: "center",
-    paddingLeft: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-  },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
-}));
 
 const ListData = () => {
-  const classes = useStyles();
-  const theme = useTheme();
+  const contextRef = React.createRef()
   const { slug } = useParams();
   const [modalShow, setModalShow] = useState(false);
   const [modalShowFilter, setModalShowFilter] = useState(false);
@@ -128,21 +104,16 @@ const ListData = () => {
   }, [ticket])
   const [
     getPredictions,
-    { loading: loadingPredictions, data: dataPredictions },
+    { data: dataPredictions },
   ] = useLazyQuery(GET_PRED, {
     variables: {
       depart: data.dAirportCode,
       arrive: data.aAirportCode,
     },
   });
-  // console.log(ValueModal)
   const getPredict = () => {
     getPredictions();
-    if (dataPredictions) {
-      console.log(dataPredictions, "dataa");
-    } else {
-      console.log(loadingPredictions);
-    }
+
   };
 
   const handleChange = (event, newValue) => {
@@ -165,28 +136,30 @@ const ListData = () => {
     });
   }, [slug, data, getFlight]);
 
-
+useEffect(() => {
+  Aos.init({duration:1000})
+}, [])
 
 
   const onFilter = (params) => {
     const newTicketLocal = ticket.getFlight.AllData.filter(ticketfil => {
       const filterPrice = ticketfil.price > value[0] && ticketfil.price < value[1]
-      if (ticketfil.airline.toLocaleLowerCase() == ("lion air" || "lion")) {
+      if (ticketfil.airline.toLocaleLowerCase() === ("lion air" || "lion")) {
         if (params.Lion) return filterPrice
       }
-      else if (ticketfil.airline == ("Garuda" || "Garuda Indonesia")) {
+      else if (ticketfil.airline === ("Garuda" || "Garuda Indonesia")) {
         if (params.Garuda) return filterPrice
       }
-      else if (ticketfil.airline.toLocaleLowerCase() == ("batik air" || "batik")) {
+      else if (ticketfil.airline.toLocaleLowerCase() === ("batik air" || "batik")) {
         if (params.Batik) return filterPrice
       }
-      else if (ticketfil.airline == ("Citilink" || "Citilink Indonesia")) {
+      else if (ticketfil.airline === ("Citilink" || "Citilink Indonesia")) {
         if (params.Citilink) return filterPrice
       }
-      else if (ticketfil.airline == ("Multi-maskapai" || "Multi-airline")) {
+      else if (ticketfil.airline === ("Multi-maskapai" || "Multi-airline")) {
         if (params.Multi) return filterPrice
-      } else if (params.Lion == false && params.Garuda == false
-        && params.Batik == false && params.Citilink == false && params.Multi == false) {
+      } else if (params.Lion === false && params.Garuda === false
+        && params.Batik === false && params.Citilink === false && params.Multi === false) {
         return filterPrice
       }
     })
@@ -197,7 +170,6 @@ const ListData = () => {
     if (ticket != null) {
       onFilter(ValueModal)
     }
-    console.log(value)
   }, [value])
 
   if (loading) {
@@ -230,10 +202,6 @@ const ListData = () => {
   };
 
 
-  if (ticket) {
-    console.log(ticketLocal, 'data total')
-    // console.log(allTicket(), 'data filter')
-  }
   const toModal = () => {
     getPredict();
     setModalShow(true);
@@ -244,6 +212,7 @@ const ListData = () => {
     setModalShowFilter(false)
   }
 
+  console.log(ticketLocal)
   return (
     <div >
       <div id="booking1" >
@@ -259,44 +228,51 @@ const ListData = () => {
           }}
         ></ModalPredict>
         <Container>
-          <div className="clearfix ">
-            <center>
+          <div className="clearfix mb-2">
+            <div id="filter-style">
+              <center>
 
-              <br></br>
-              <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
-                Get Predictions
+                <br></br>
+                <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
+                  Get Predictions
       </Button>
-              <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
-                Filter check
+                <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+                  Filter check
             </Button>
-            </center>
-            <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
-            <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+              </center>
+              <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
+              <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+              <AirbnbSlider
+                value={value}
+                onChange={handleChange}
+                ThumbComponent={AirbnbThumbComponent}
+                step={100000}
+                min={0}
+                max={5000000}
+              />
+            </div>
           </div>
-          <AirbnbSlider
-            value={value}
-            onChange={handleChange}
-            ThumbComponent={AirbnbThumbComponent}
-            step={100000}
-            min={0}
-            max={5000000}
-          />
-          <br></br>
-          <br></br>
 
+          <div className="data-ticket">
           {ticket && ticketLocal.map((tiket, i) => {
             return (
               <Row className="mb-4">
                 <Col  >
-                  <CardResult
+                <div  data-aos='fade-up'>
+               
+                  <CardResult 
                     className="shadow rounded"
                     tiket={tiket} key={i} />
+                    </div>
                 </Col>
               </Row >
             )
           })
           }
+          </div>
         </Container>
+        <br></br>
+        <br></br>
         <br></br>
       </div>
     </div>
