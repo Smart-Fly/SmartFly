@@ -1,25 +1,25 @@
-import React, { useState } from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import React, { useState, useEffect } from "react";
+import client from "../config/config";
+import Modal from "../components/Modal";
+import Menu from "@material-ui/core/Menu";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-// import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import SearchIcon from "@material-ui/icons/Search";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
-import { useLocation } from "react-router-dom";
-// import { colors } from "@material-ui/core";
 import { Button } from "@material-ui/core";
-import Modal from "../components/Modal";
 import SearchIcon from '@material-ui/icons/Search';
+import { Form } from "react-bootstrap";
+import { useMutation } from "@apollo/client";
+import { useLocation } from "react-router-dom";
+import { GET_CACHE_USER } from "../query/cacheQuery";
+import { fade, makeStyles } from "@material-ui/core/styles";
+import { UPDATE_SUBSCRIPTION } from "../query/userQuery";
 
+const logoSmartFly = require("../asset/SmartFlyLogo.png");
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -85,173 +85,196 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  logo: {
+    borderRadius: "30%",
+    width: "4rem",
+    height: "4rem",
+  },
 }));
 
 const Navbar = () => {
   const { pathname } = useLocation();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [modalShow, setModalShow] = useState(false);
-
   const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const menuId = "primary-search-account-menu";
+
+  /** START STATE YANG DIGUNAKAN */
+  const [showUserName, setShowUserName] = useState(""); // check Login
+  const [showSubsStatus, setShowSubsstatus] = useState(false);
+  const [showButton, setShowButton] = useState(false);
+  const [userSubsToUpdate, setUserSubsToUpdate] = useState({
+    access_token: "",
+    subsStatus: false,
+  }); // Ini buat onSubmit yang dikirim ke server
+
+  /** END STATE YANG DIGUNAKAN */
+
+  const { cacheUser } = client.readQuery({
+    query: GET_CACHE_USER,
+  });
+
+  const [updateSubscription, { data, loading }] = useMutation(
+    UPDATE_SUBSCRIPTION
+  );
+
+  useEffect(() => {
+    if (cacheUser) {
+      const { userNameCache, subsStatusCache } = cacheUser;
+      setShowUserName(userNameCache);
+      setShowSubsstatus(subsStatusCache);
+    }
+  }, [cacheUser]);
+
+  const toggleSwitchChange = (e) => {
+    const { checked } = e.target;
+    setShowSubsstatus(checked);
+    setShowButton(true);
+    setUserSubsToUpdate();
+  };
+
+  const handleSubmitSubs = (e) => {
+    e.preventDefault();
+    updateSubscription({
+      variables: {
+        updateData: {
+          ...setUserSubsToUpdate,
+          subsStatus: showSubsStatus,
+          access_token: localStorage.getItem("access_token"),
+        },
+      },
+    });
+    handleMenuClose();
+  };
+
+  /** ============= END FUNGSI UPDATE DARI LUQMAN ================ */
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
   const handleMenuClose = () => {
     setAnchorEl(null);
-    handleMobileMenuClose();
   };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
-
-  const menuId = "primary-search-account-menu";
   const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
-
-  const mobileMenuId = "primary-search-account-menu-mobile";
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
-  return (
     <>
-      <div className={classes.grow}>
-        <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
-        <AppBar
-          
-          color="default"
-          style={
-            pathname === "/"
-              ? {  background: "transparent", boxShadow: "none", color: "blue" }
-              : { position:"static", boxShadow: "none", color: "black" }
-          }
-        >
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="open drawer"
-            >
-              {/* <MenuIcon /> */}
-            </IconButton>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Smart-Fly
-            </Typography>
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
-              {pathname !== "/" ? (
-                <Button
-                  onClick={() => setModalShow(true)}
-                  color="primary"
-                  variant="contained"
-                  startIcon={<SearchIcon/>}
-                >
-                  New Search
+
+      <Menu
+        anchorEl={anchorEl}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        id={menuId}
+        keepMounted
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        open={isMenuOpen}
+        onClose={handleMenuClose}
+        position="absolute"
+      >
+        <div className="row justify-content-start">
+          <MenuItem onClick={handleMenuClose}>
+            <div className="col-lg-12">
+              <span style={{ fontSize: 15 }}>
+                You are Sign in as {showUserName}
+              </span>
+            </div>
+          </MenuItem>
+
+          <MenuItem>
+            <Form onSubmit={(e) => handleSubmitSubs(e)}>
+              <FormControlLabel
+                control={
+                  <Switch
+                    name="checkedA"
+                    checked={showSubsStatus}
+                    onChange={toggleSwitchChange}
+                    variant="primary"
+                  />
+                }
+                label="Change Subs Plan"
+              />
+              {showButton ? (
+                <Button type="submit" variant="primary">
+                  Save changes
                 </Button>
               ) : null}
-            </div>
-            <div className={classes.grow} />
-            <div className={classes.sectionDesktop}>
-              {/* <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                aria-label="show 17 new notifications"
-                color="inherit"
-              >
-                <Badge badgeContent={17} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton> */}
-              <IconButton
-                edge="end"
-                aria-label="account of current user"
-                aria-controls={menuId}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton
-                aria-label="show more"
-                aria-controls={mobileMenuId}
-                aria-haspopup="true"
-                onClick={handleMobileMenuOpen}
-                color="inherit"
-              >
-                <MoreIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
-        </AppBar>
-        {renderMobileMenu}
-        {renderMenu}
-      </div>
+            </Form>
+          </MenuItem>
+        </div>
+      </Menu>
     </>
   );
+
+  if (pathname !== "/login" && pathname !== "/register") {
+    return (
+      <>
+        <div className={classes.grow}>
+          <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
+          <AppBar
+            // position="absolute"
+            // style={
+            //   pathname === "/"
+            //     ? {
+            //         background: "transparent",
+            //         boxShadow: "none",
+            //         color: "blue",
+            //       }
+            //     : {
+            //         background: "transparent",
+            //         boxShadow: "none",
+            //         color: "black",
+            //       }
+            // }
+            color="light"
+            style={{ background: "transparent" }}
+            title={<img src={logoSmartFly} />}
+          >
+            <Toolbar>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="open drawer"
+              ></IconButton>
+              <img src={logoSmartFly} alt="logo" className={classes.logo} />
+              <Typography className={classes.title} variant="h6" noWrap>
+                Smart-Fly
+              </Typography>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
+                {pathname !== "/" ? (
+                  <Button
+                    onClick={() => setModalShow(true)}
+                    color="primary"
+                    variant="contained"
+                    startIcon={<SearchIcon />}
+                  >
+                    New Search
+                  </Button>) : null}
+              </div>
+              <div className={classes.grow} />
+              <div className={classes.sectionDesktop}>
+                <IconButton
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                >
+                  <AccountCircle style={{ fontSize: 40 }} />
+                </IconButton>
+              </div>
+            </Toolbar>
+            {/* {isLoggedIn ? renderMenu : null} */}
+            {renderMenu}
+          </AppBar>
+        </div>
+      </>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Navbar;

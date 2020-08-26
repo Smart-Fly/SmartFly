@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const router = require("./routes");
 const errorHandler = require("./middleware/errorHandler");
-// const UserController = require("./controller/UserController");
+const UserController = require("./controller/UserController");
 
 const port = process.env.PORT || 3001;
 const app = express();

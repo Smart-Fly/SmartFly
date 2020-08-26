@@ -139,17 +139,15 @@ const ListData = () => {
   const getPredict = () => {
     getPredictions();
     if (dataPredictions) {
-      console.log(dataPredictions, 'dataa')
+      console.log(dataPredictions, "dataa");
     } else {
-      console.log(loadingPredictions)
+      console.log(loadingPredictions);
     }
   };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-
 
   useEffect(() => {
     getFlight({
@@ -205,24 +203,26 @@ const ListData = () => {
   if (loading) {
     return (
       <>
-        <LinearProgress color="secondary" />
-        <div id='cek'>
+        <div id='cek' >
+          <LinearProgress color="secondary" />
           <Container >
             <br></br>
             <br></br>
-            <Skeleton variant="rect" width={1100} height={120} />
-            <br></br>
-            <Skeleton variant="rect" width={1100} height={120} />
-            <br></br>
-            <Skeleton variant="rect" width={1100} height={120} />
-            <br></br>
-            <Skeleton variant="rect" width={1100} height={120} />
+            <div style={{ marginTop: '60px' }} >
+
+              <Skeleton variant="rect" width={1100} height={120} />
+              <br></br>
+              <Skeleton variant="rect" width={1100} height={120} />
+              <br></br>
+              <Skeleton variant="rect" width={1100} height={120} />
+              <br></br>
+              <Skeleton variant="rect" width={1100} height={120} />
+            </div>
           </Container>
         </div>
       </>
     );
   }
-
 
   const toRupiah = (money) => {
     return money.toLocaleString('id-ID')
@@ -245,60 +245,63 @@ const ListData = () => {
   }
 
   return (
-    <div id="booking1" >
-      <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)}
-        onHide={() => {
-          setModalShowFilter(false);
-        }}
-      />
-
-      <ModalPredict show={modalShow} dataPredictions={dataPredictions}
-        onHide={() => {
-          setModalShow(false);
-        }}
-      ></ModalPredict>
-      <Container >
-        <div className="clearfix ">
-          <center>
-
-            <br></br>
-            <Button startIcon={<FilterListIcon/>} variant="primary" onClick={() => toModal()}>
-              Get Predictions
-      </Button>
-            <Button startIcon={<FilterListIcon/>} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
-              Filter check
-      </Button>
-          </center>
-          <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
-          <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
-        </div>
-        <AirbnbSlider
-          value={value}
-          onChange={handleChange}
-          ThumbComponent={AirbnbThumbComponent}
-          step={100000}
-          min={0}
-          max={5000000}
+    <div >
+      <div id="booking1" >
+        <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)}
+          onHide={() => {
+            setModalShowFilter(false);
+          }}
         />
-        <br></br>
-        <br></br>
 
-        {ticket && ticketLocal.map((tiket, i) => {
-          return (
-            <Row className="mb-4">
-              <Col  >
-                <CardResult
-                  className="shadow rounded"
-                  tiket={tiket} key={i} />
-              </Col>
-            </Row >
-          )
-        })
-        }
-      </Container>
-      <br></br>
+        <ModalPredict show={modalShow} dataPredictions={dataPredictions}
+          onHide={() => {
+            setModalShow(false);
+          }}
+        ></ModalPredict>
+        <Container>
+          <div className="clearfix ">
+            <center>
+
+              <br></br>
+              <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
+                Get Predictions
+      </Button>
+              <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+                Filter check
+            </Button>
+            </center>
+            <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
+            <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+          </div>
+          <AirbnbSlider
+            value={value}
+            onChange={handleChange}
+            ThumbComponent={AirbnbThumbComponent}
+            step={100000}
+            min={0}
+            max={5000000}
+          />
+          <br></br>
+          <br></br>
+
+          {ticket && ticketLocal.map((tiket, i) => {
+            return (
+              <Row className="mb-4">
+                <Col  >
+                  <CardResult
+                    className="shadow rounded"
+                    tiket={tiket} key={i} />
+                </Col>
+              </Row >
+            )
+          })
+          }
+        </Container>
+        <br></br>
+      </div>
     </div>
+
   );
-}
+};
 
 export default ListData;

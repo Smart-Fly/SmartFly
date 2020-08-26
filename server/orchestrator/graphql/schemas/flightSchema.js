@@ -18,7 +18,6 @@ const typeDefs = gql`
     AllData: [dataPrice!]
   }
 
-
   input FlightInput {
     dAirportCode: String!
     aAirportCode: String!
