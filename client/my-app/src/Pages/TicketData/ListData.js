@@ -11,8 +11,6 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
-// import Aos from 'aos'
-// import 'aos/dist/aos'
 
 const GET_PRED = gql`
   query getPrediction($depart: String, $arrive: String) {
@@ -124,7 +122,7 @@ const ListData = () => {
       arrive: data.aAirportCode,
     },
   });
-  console.log(ValueModal)
+  console.log(ValueModal);
   const getPredict = () => {
     getPredictions();
     if (dataPredictions) {
@@ -322,7 +320,6 @@ const ListData = () => {
 
   // FIlter
 
-
   const dataTraveloka = () => {
     let filterTraveloka = ticket.getFlight.Traveloka.filter(
       (dum) => dum.price > value[0] && dum.price < value[1]
@@ -367,52 +364,59 @@ const ListData = () => {
 
   //     console.log(ticket.getFlight.Tiket)
   // }
-  if(allData.length === 0){
+  if (allData.length === 0) {
     return (
       <div id="booking1" className="section1">
-      <ModalFilter
-      show={modalShowFilter}
-      filted={(dataModal) => {
-        setValueModal(dataModal);
-      }}
-      onHide={() => {
-        setModalShowFilter(false);
-      }}
-      />
+        <ModalFilter
+          show={modalShowFilter}
+          filted={(dataModal) => {
+            setValueModal(dataModal);
+          }}
+          onHide={() => {
+            setModalShowFilter(false);
+          }}
+        />
 
-      <ModalPredict
-      show={modalShow}
-      dataPredictions={dataPredictions}
-      onHide={() => {
-        setModalShow(false);
-      }}
-      ></ModalPredict>
-      <Container className="mt-5 pt-4">
-      <div className="clearfix ">
-      <center>
-      <Button variant="primary" onClick={() => toModal()}>
-      Get Predictions
-      </Button>
-      <br></br>
-      <Button variant="primary" onClick={() => setModalShowFilter(true)}>
-      Filter check
-      </Button>
-      {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+        <ModalPredict
+          show={modalShow}
+          dataPredictions={dataPredictions}
+          onHide={() => {
+            setModalShow(false);
+          }}
+        ></ModalPredict>
+        <Container className="mt-5 pt-4">
+          <div className="clearfix ">
+            <center>
+              <Button variant="primary" onClick={() => toModal()}>
+                Get Predictions
+              </Button>
+              <br></br>
+              <Button
+                variant="primary"
+                onClick={() => setModalShowFilter(true)}
+              >
+                Filter check
+              </Button>
+              {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
       <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
-      </center>
-      <Typography className="float-left" style={{color:'white'}}>{toRupiah(value[0])}</Typography>
-      <Typography className="float-right" style={{color:'white'}}>{toRupiah(value[1])}</Typography>
-      </div>
-      <AirbnbSlider
-      value={value}
-      onChange={handleChange}
-      ThumbComponent={AirbnbThumbComponent}
-      step={100000}
-      min={0}
-      max={5000000}
-      />
+            </center>
+            <Typography className="float-left" style={{ color: "white" }}>
+              {toRupiah(value[0])}
+            </Typography>
+            <Typography className="float-right" style={{ color: "white" }}>
+              {toRupiah(value[1])}
+            </Typography>
+          </div>
+          <AirbnbSlider
+            value={value}
+            onChange={handleChange}
+            ThumbComponent={AirbnbThumbComponent}
+            step={100000}
+            min={0}
+            max={5000000}
+          />
 
-      {/* {dummy.map((tiket, i) => {
+          {/* {dummy.map((tiket, i) => {
         return (
           <Row className="mb-4">
           <Col  >
@@ -424,124 +428,134 @@ const ListData = () => {
           </Col>
           </Row >
         )
-      })} */
-    }
-    {ticket && dataTraveloka().map((tiket, i) => {
-      return (
-        <Row className="mb-4">
-        <Col  >
-        <CardResult
-        className="shadow rounded"
-        tiket={tiket} key={i} />
-        </Col>
-        </Row >
-      )
-    })
-  }
-  {
-    ticket && dataTiket().map((tiket, i) => {
-      return (
-        <Row className="mb-4">
-        <Col  >
-        <CardResult
-        className="shadow rounded"
-        tiket={tiket} key={i} />
-        </Col>
-        </Row >
-      )
-    })}
+      })} */}
+          {ticket &&
+            dataTraveloka().map((tiket, i) => {
+              return (
+                <Row className="mb-4">
+                  <Col>
+                    <CardResult
+                      className="shadow rounded"
+                      tiket={tiket}
+                      key={i}
+                    />
+                  </Col>
+                </Row>
+              );
+            })}
+          {ticket &&
+            dataTiket().map((tiket, i) => {
+              return (
+                <Row className="mb-4">
+                  <Col>
+                    <CardResult
+                      className="shadow rounded"
+                      tiket={tiket}
+                      key={i}
+                    />
+                  </Col>
+                </Row>
+              );
+            })}
 
-    {ticket && dataPegiPegi().map((tiket, i) => {
-      return (
-        <Row className="mb-4">
-        <Col  >
-
-        <CardResult
-        className="shadow rounded"
-        tiket={tiket} key={i} />
-        </Col>
-        </Row >
-      )
-    })}
-    </Container>
-    </div>
-  );
-  }
-else{
-  return (
-    <div id="booking1" className="section1">
-    <ModalFilter
-    show={modalShowFilter}
-    filted={(dataModal) => {
-      setValueModal(dataModal);
-    }}
-    onHide={() => {
-      setModalShowFilter(false);
-    }}
-    />
-
-    <ModalPredict
-    show={modalShow}
-    dataPredictions={dataPredictions}
-    onHide={() => {
-      setModalShow(false);
-    }}
-    ></ModalPredict>
-    <Container className="mt-5 pt-4">
-    <div className="clearfix ">
-    <center>
-    <Button variant="primary" onClick={() => toModal()}>
-    Get Predictions
-    </Button>
-    <br></br>
-    <Button variant="primary" onClick={() => setModalShowFilter(true)}>
-    Filter check
-    </Button>
-    {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
-    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
-    </center>
-    <Typography className="float-left">{toRupiah(value[0])}</Typography>
-    <Typography className="float-right">{toRupiah(value[1])}</Typography>
-    </div>
-    <AirbnbSlider
-    value={value}
-    onChange={handleChange}
-    ThumbComponent={AirbnbThumbComponent}
-    step={100000}
-    min={0}
-    max={5000000}
-    />
-
-    {/* {dummy.map((tiket, i) => {
-      return (
-        <Row className="mb-4">
-        <Col  >
-
-        <CardResult
-        className="shadow rounded"
-
-        tiket={tiket} key={i} />
-        </Col>
-        </Row >
-      )
-    })} */
-  }
-  {ticket && allData.map((tiket, i) => {
+          {ticket &&
+            dataPegiPegi().map((tiket, i) => {
+              return (
+                <Row className="mb-4">
+                  <Col>
+                    <CardResult
+                      className="shadow rounded"
+                      tiket={tiket}
+                      key={i}
+                    />
+                  </Col>
+                </Row>
+              );
+            })}
+        </Container>
+      </div>
+    );
+  } else {
     return (
-      <Row className="mb-4">
-      <Col  >
-      <CardResult
-      className="shadow rounded"
-      tiket={tiket} key={i} />
-      </Col>
-      </Row >
-    )
-  })
-}
-  </Container>
-  </div>
-  )
-}
+      <div id="booking1" className="section1">
+        <ModalFilter
+          show={modalShowFilter}
+          filted={(dataModal) => {
+            setValueModal(dataModal);
+          }}
+          onHide={() => {
+            setModalShowFilter(false);
+          }}
+        />
+
+        <ModalPredict
+          show={modalShow}
+          dataPredictions={dataPredictions}
+          onHide={() => {
+            setModalShow(false);
+          }}
+        ></ModalPredict>
+        <Container className="mt-5 pt-4">
+          <div className="clearfix ">
+            <center>
+              <Button variant="primary" onClick={() => toModal()}>
+                Get Predictions
+              </Button>
+              <br></br>
+              <Button
+                variant="primary"
+                onClick={() => setModalShowFilter(true)}
+              >
+                Filter check
+              </Button>
+              {/* <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button>
+    <Button variant="primary" onClick={() => toModal()} >Get Predictions</Button> */}
+            </center>
+            <Typography className="float-left">{toRupiah(value[0])}</Typography>
+            <Typography className="float-right">
+              {toRupiah(value[1])}
+            </Typography>
+          </div>
+          <AirbnbSlider
+            value={value}
+            onChange={handleChange}
+            ThumbComponent={AirbnbThumbComponent}
+            step={100000}
+            min={0}
+            max={5000000}
+          />
+
+          {/* {dummy.map((tiket, i) => {
+      return (
+        <Row className="mb-4">
+        <Col  >
+
+        <CardResult
+        className="shadow rounded"
+
+        tiket={tiket} key={i} />
+        </Col>
+        </Row >
+      )
+    })} */}
+          {ticket &&
+            allData.map((tiket, i) => {
+              return (
+                <Row className="mb-4">
+                  <Col>
+                    <CardResult
+                      className="shadow rounded"
+                      tiket={tiket}
+                      key={i}
+                    />
+                  </Col>
+                </Row>
+              );
+            })}
+        </Container>
+      </div>
+    );
+  }
 };
 
 export default ListData;

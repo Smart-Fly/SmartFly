@@ -1,26 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import client from "../config/config";
+import Modal from "../components/Modal";
+import Menu from "@material-ui/core/Menu";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-// import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import SearchIcon from "@material-ui/icons/Search";
+import Switch from "@material-ui/core/Switch";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
+import { Form } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
-// import { colors } from "@material-ui/core";
-import { Button } from "@material-ui/core";
-import Modal from "../components/Modal";
 import { GET_CACHE_USER } from "../query/cacheQuery";
-import client from "../config/config";
-import { set } from "date-fns";
+import { fade, makeStyles } from "@material-ui/core/styles";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -93,12 +87,22 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   const [modalShow, setModalShow] = useState(false);
   const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const menuId = "primary-search-account-menu";
-  const mobileMenuId = "primary-search-account-menu-mobile";
+
+  /** START STATE YANG DIGUNAKAN */
+  const [isLoggedIn, setIsLoggedIn] = useState(null); // check Login
+  const [updatedSubsStatus, setUpdatedStatus] = useState();
+  const [checkedSubsStatus, setCheckedSubsStatus] = useState(null); // Buat ngerubah value di switch
+  const [updateSubs, setUpdateSubs] = useState({
+    access_token: localStorage.getItem("access_token"),
+    subsStatus: false,
+  }); // Ini buat onSubmit yang dikirim ke server
+
+  /** END STATE YANG DIGUNAKAN */
+
+  /** ============= START FUNGSI UPDATE DARI LUQMAN ================ */
   const [userInfo, setUserInfo] = useState({
     userName: "",
     subsStatus: false,
@@ -115,79 +119,79 @@ const Navbar = () => {
         userName: userNameCache,
         subsStatus: subsStatusCache,
       });
+      setCheckedSubsStatus(subsStatusCache);
     }
-  }, [cacheUser]);
+  }, [cacheUser, userInfo]);
+
+  const handleChange = (e) => {
+    const { name, checked } = e.target;
+    setUpdateSubs({ ...updateSubs, [name]: checked });
+  };
+
+  useEffect(() => {
+    checkLoggedIn();
+  });
+
+  const checkLoggedIn = () => {
+    localStorage.getItem("access_token");
+    if ("access_token") {
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  const toggleChecked = (e) => {
+    const { name, checked } = e.target;
+    setUpdateSubs({ ...updateSubs, [name]: checked });
+    // setCheckedSubsStatus()
+  };
+
+  /** ============= END FUNGSI UPDATE DARI LUQMAN ================ */
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
   const handleMenuClose = () => {
     setAnchorEl(null);
-    handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
   };
 
   const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
+    <>
+      <Menu
+        anchorEl={anchorEl}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        id={menuId}
+        keepMounted
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+        open={isMenuOpen}
+        onClose={handleMenuClose}
+      >
+        <div className="row">
+          <MenuItem onClick={handleMenuClose}>
+            <div className="col-sm-12">
+              <span>You re signed in as</span>
+            </div>
+            <div className="col-sm-8">
+              <span>{userInfo.userName}</span>
+            </div>
+          </MenuItem>
+        </div>
 
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
+        <div className="row justify content center">
+          <MenuItem onClick={handleMenuClose}>
+            <FormControlLabel
+              control={
+                <Switch checked={checkedSubsStatus} onChange={toggleChecked} />
+              }
+              label="Normal"
+            />
+            {/* {updatedStatus ? <Button>Save changes!</Button> : null} */}
+          </MenuItem>
+        </div>
+      </Menu>
+    </>
   );
 
   if (pathname !== "/login" && pathname !== "/register") {
@@ -217,9 +221,7 @@ const Navbar = () => {
                 className={classes.menuButton}
                 color="inherit"
                 aria-label="open drawer"
-              >
-                {/* <MenuIcon /> */}
-              </IconButton>
+              ></IconButton>
               <Typography className={classes.title} variant="h6" noWrap>
                 Smart-Fly
               </Typography>
@@ -245,24 +247,13 @@ const Navbar = () => {
                   onClick={handleProfileMenuOpen}
                   color="inherit"
                 >
-                  <AccountCircle />
-                </IconButton>
-              </div>
-              <div className={classes.sectionMobile}>
-                <IconButton
-                  aria-label="show more"
-                  aria-controls={mobileMenuId}
-                  aria-haspopup="true"
-                  onClick={handleMobileMenuOpen}
-                  color="inherit"
-                >
-                  <MoreIcon />
+                  <AccountCircle style={{ fontSize: 40 }} />
                 </IconButton>
               </div>
             </Toolbar>
+            {/* {isLoggedIn ? renderMenu : null} */}
+            {renderMenu}
           </AppBar>
-          {renderMobileMenu}
-          {renderMenu}
         </div>
       </>
     );
