@@ -11,6 +11,7 @@ import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { Button } from "@material-ui/core";
+import SearchIcon from '@material-ui/icons/Search';
 import { Form } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { useLocation } from "react-router-dom";
@@ -159,6 +160,7 @@ const Navbar = () => {
 
   const renderMenu = (
     <>
+
       <Menu
         anchorEl={anchorEl}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
@@ -243,12 +245,12 @@ const Navbar = () => {
                 {pathname !== "/" ? (
                   <Button
                     onClick={() => setModalShow(true)}
-                    variant="outlined"
                     color="primary"
+                    variant="contained"
+                    startIcon={<SearchIcon />}
                   >
                     New Search
-                  </Button>
-                ) : null}
+                  </Button>) : null}
               </div>
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>

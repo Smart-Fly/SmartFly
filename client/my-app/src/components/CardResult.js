@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardMedia,
 } from "@material-ui/core";
+import TelegramIcon from '@material-ui/icons/Telegram';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -56,6 +57,18 @@ const CardResult = (props) => {
       return data.airLineLogo
     }
   }
+
+  const nameAirline =()=>{
+    if (data.airline == "Citilink Indonesia" ) {
+        return "Citilink"
+      }else if(data.airline == "Garuda Indonesia"){
+        return "Garuda"
+
+    }
+    else{
+      return data.airline
+    }
+  } 
   return (
     <>
       <Card className={classes.root}>
@@ -69,17 +82,22 @@ const CardResult = (props) => {
               src={handleImage()}
             />
           </CardMedia>
-          <Typography gutterBottom variant="h4" component="h1">
-            {data.airline}
+          {data.airline == "Multi-airline" ?
+          <Typography gutterBottom variant="h5" component="h2" >
+            {nameAirline() }
           </Typography>
+          :
+          <Typography gutterBottom variant="h4" component="h1" >
+            {nameAirline() }
+          </Typography>}
         </CardContent>
 
         <CardActions disableSpacing>
           <CardHeader
-            title="Departure"
-            subheader={data.departureTime}
+          subheader="Departure"
+          title={data.departureTime}
           ></CardHeader>
-          <CardHeader title="Arrival" subheader={data.arrivalTime}></CardHeader>
+          <CardHeader subheader="Arrival" title={data.arrivalTime}></CardHeader>
         </CardActions>
         <CardContent>
           <Typography>
@@ -98,10 +116,11 @@ const CardResult = (props) => {
         <CardActions disableSpacing>
           <CardContent>
             <Typography gutterBottom variant="h4" component="h1">
-              {Intl.NumberFormat("id", {
-                style: "currency",
-                currency: "idr",
-              }).format(data.price)}
+             Rp {
+              
+              data.price.toLocaleString('id-ID')
+              }
+
             </Typography>
             <Button
               href={data.url}
@@ -109,6 +128,7 @@ const CardResult = (props) => {
               target="_blank"
               size="big"
               variant="contained"
+              startIcon={<TelegramIcon/>}
             >
               Buy Now
             </Button>

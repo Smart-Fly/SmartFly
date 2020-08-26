@@ -53,10 +53,12 @@ const ModalFilter = (props) => {
         centered
       >
         <Modal.Header closeButton>
+
           <Modal.Title id="contained-modal-title-vcenter">
             <center>Filter Airlines</center>
           </Modal.Title>
         </Modal.Header>
+          <center>
         <Modal.Body>
           <FormControlLabel
             label='Garuda Indonesia'
@@ -125,7 +127,10 @@ const ModalFilter = (props) => {
           />
 
         </Modal.Body>
+        </center>
+
         <Modal.Footer>
+        
           <Button variant="primary" onClick={() => props.filted(airlines)}>
             Save Changes
           </Button>

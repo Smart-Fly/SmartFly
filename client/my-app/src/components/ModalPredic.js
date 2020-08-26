@@ -1,10 +1,11 @@
+import './StylePredic.css'
 import React, { useState, createRef } from "react";
 import { Modal } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 const graph = require("../asset/graph1.png")
-const graph2 = require("../asset/graph2.png")
-
+// const graph2 = require("../asset/graph2.png")
+const graph2 = require("../img/analis.svg")
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -30,11 +31,11 @@ console.log(props)
     }
 
     return (
-      <>
+      <div >
         <h2> {temp} </h2>
-        <img src={accuracy > 0 ? graph : graph2} width="300" height="300" />
+        <img src={ graph2} width="300" height="300" />
         <h3> Accuracy: {accuracy.toFixed(2) * 100} % </h3>
-      </>
+      </div>
     );
   };
   return (
@@ -46,6 +47,7 @@ console.log(props)
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
+
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             <center>Future Price Forecast</center>
@@ -54,7 +56,7 @@ console.log(props)
         <Modal.Body>
           <center>
             {dataPredictions ? (
-              <div>
+              <div  >
                 <h3>Predictions for the future</h3>
                 {sentence()}
               </div>
@@ -69,6 +71,7 @@ console.log(props)
           </Button> */}
           {/* <Button onClick={props.onHide}>Close</Button> */}
         </Modal.Footer>
+
       </Modal>
     </div>
   );
