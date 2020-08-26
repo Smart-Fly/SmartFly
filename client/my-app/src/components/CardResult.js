@@ -37,6 +37,25 @@ const CardResult = (props) => {
   const data = props.tiket;
   const classes = useStyles();
   const theme = useTheme();
+
+  const handleImage = () => {
+
+    if (data.airline === "Lion" || data.airline === 'Lion Air') {
+      return "https://logos-download.com/wp-content/uploads/2016/05/Lion_Air_logo_small.png"
+    } else if (data.airline === "Batik Air" || data.airline === 'Batik') {
+      return "https://1.bp.blogspot.com/-0LhrImUBias/Xn4ECOnTDLI/AAAAAAAABxo/GXXicXuEEU0mjJnAbAkKPD-ZQdQV8BRzQCLcBGAsYHQ/s1600/Logo%2BBatik%2BAir.png"
+    } else if (data.airline === "Citilink Indonesia" || data.airline === 'Citilink') {
+      return "https://i.pinimg.com/originals/e9/0c/43/e90c43e10bd7786eac217ddd61359652.png"
+    } else if (data.airline === "Garuda Indonesia" || data.airline === 'Garuda') {
+      return "https://i.pinimg.com/originals/83/bd/70/83bd70f58c962ded056b2d57227de1d5.jpg"
+
+    } else if (data.airline === "Multi-maskapai" || data.airline === 'Multi-airline') {
+      return data.airLineLogo
+    }
+    else {
+      return data.airLineLogo
+    }
+  }
   return (
     <>
       <Card className={classes.root}>
@@ -47,7 +66,7 @@ const CardResult = (props) => {
               width="150"
               height="120"
               alt="airline-logo"
-              src={(data.airline === "Lion" || data.airline === 'Lion Air') ? 'https://logos-download.com/wp-content/uploads/2016/05/Lion_Air_logo_small.png' : data.airLineLogo}
+              src={handleImage()}
             />
           </CardMedia>
           <Typography gutterBottom variant="h4" component="h1">
@@ -63,11 +82,14 @@ const CardResult = (props) => {
           <CardHeader title="Arrival" subheader={data.arrivalTime}></CardHeader>
         </CardActions>
         <CardContent>
-          <CardMedia>
-            {" "}
+          <Typography>
+
+            <br></br>
+          </Typography>
+          <CardMedia >
             <img
-              width="180"
-              height="80"
+              width="200"
+              height="100"
               alt="flight-service-logo"
               src={data.companyLogo}
             />

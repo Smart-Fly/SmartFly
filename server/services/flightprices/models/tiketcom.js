@@ -5,7 +5,7 @@ const nightmare = Nightmare({ show: false })
 const cheerio = require('cheerio')
 
 let airline, price, airLineLogo, departureTime, arrivalTime, companyLogo, url
-let dataJson = { airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "", url: "" }
+let dataJson = { travelAgent:"", airline: "", price: null, departureTime: "", arrivalTime: "", airLineLogo: "", companyLogo: "", url: "" }
 let result = []
 
 const getData = html => {
@@ -36,7 +36,7 @@ const getData = html => {
     dataJson.companyLogo = companyLogo
     dataJson.url = url
 
-    result.push({ airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
+    result.push({ travelAgent:"Tiket",airline, departureTime, arrivalTime, price, airLineLogo, companyLogo, url })
   })
 }
 

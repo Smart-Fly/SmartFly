@@ -1,42 +1,157 @@
 {
-  "Traveloka": [
+  "AllData": [
     {
+      "travelAgent": "Traveloka",
       "airline": "Lion",
       "departureTime": "05:00",
       "arrivalTime": "06:30",
       "price": 471700,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
       "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
+      "travelAgent": "Traveloka",
       "airline": "Lion",
       "departureTime": "07:00",
       "arrivalTime": "08:30",
       "price": 471700,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
       "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
+      "travelAgent": "Traveloka",
       "airline": "Lion",
       "departureTime": "09:00",
       "arrivalTime": "10:30",
       "price": 471700,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
       "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "19:00",
+      "arrivalTime": "20:30",
+      "price": 471700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "05:00",
+      "arrivalTime": "06:30",
+      "price": 471700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "07:00",
+      "arrivalTime": "08:30",
+      "price": 471700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "09:00",
+      "arrivalTime": "10:30",
+      "price": 471700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "19:00",
+      "arrivalTime": "20:30",
+      "price": 471700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "05:00",
+      "arrivalTime": "06:30",
+      "price": 471700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "07:00",
+      "arrivalTime": "08:30",
+      "price": 471700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "09:00",
+      "arrivalTime": "10:30",
+      "price": 471700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "19:00",
+      "arrivalTime": "20:30",
+      "price": 471700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "Traveloka",
       "airline": "Lion",
       "departureTime": "12:30",
       "arrivalTime": "14:00",
       "price": 525600,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
       "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "12:30",
+      "arrivalTime": "14:00",
+      "price": 525600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "12:30",
+      "arrivalTime": "14:00",
+      "price": 525600,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "Traveloka",
       "airline": "Batik",
       "departureTime": "14:00",
       "arrivalTime": "15:30",
@@ -46,332 +161,17 @@
       "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
+      "travelAgent": "Traveloka",
       "airline": "Batik",
       "departureTime": "16:00",
       "arrivalTime": "17:30",
       "price": 630300,
       "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
       "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Batik",
-      "departureTime": "06:00",
-      "arrivalTime": "07:30",
-      "price": 668600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Batik",
-      "departureTime": "08:00",
-      "arrivalTime": "09:30",
-      "price": 732400,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Batik",
-      "departureTime": "10:30",
-      "arrivalTime": "12:00",
-      "price": 732400,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Batik",
-      "departureTime": "15:00",
-      "arrivalTime": "16:30",
-      "price": 732400,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Batik",
-      "departureTime": "17:00",
-      "arrivalTime": "18:30",
-      "price": 732400,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Citilink",
-      "departureTime": "05:45",
-      "arrivalTime": "07:20",
-      "price": 745600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Citilink",
-      "departureTime": "07:35",
-      "arrivalTime": "09:10",
-      "price": 745600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Citilink",
-      "departureTime": "12:00",
-      "arrivalTime": "13:30",
-      "price": 745600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Citilink",
-      "departureTime": "13:40",
-      "arrivalTime": "15:10",
-      "price": 745600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "05:15",
-      "arrivalTime": "10:10",
-      "price": 933200,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "04:30",
-      "arrivalTime": "08:00",
-      "price": 991500,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "07:35",
-      "arrivalTime": "09:10",
-      "price": 1033700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "04:30",
-      "arrivalTime": "08:00",
-      "price": 1159800,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "01:30",
-      "arrivalTime": "08:30",
-      "price": 1207100,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "01:30",
-      "arrivalTime": "10:00",
-      "price": 1267600,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "04:45",
-      "arrivalTime": "09:10",
-      "price": 1284100,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Lion",
-      "departureTime": "00:40",
-      "arrivalTime": "08:30",
-      "price": 1378700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "08:30",
-      "arrivalTime": "10:10",
-      "price": 1418700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "14:00",
-      "arrivalTime": "15:35",
-      "price": 1418700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "15:10",
-      "arrivalTime": "16:50",
-      "price": 1418700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "01:10",
-      "arrivalTime": "08:30",
-      "price": 1429300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "02:00",
-      "arrivalTime": "08:30",
-      "price": 1529400,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
       "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
-      "airline": "Multi-airline",
-      "departureTime": "02:00",
-      "arrivalTime": "10:00",
-      "price": 1589900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "15:15",
-      "arrivalTime": "09:55(+1d)",
-      "price": 1733900,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "05:55",
-      "arrivalTime": "17:00",
-      "price": 1746300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "05:55",
-      "arrivalTime": "11:40",
-      "price": 1810100,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Multi-airline",
-      "departureTime": "05:55",
-      "arrivalTime": "13:30",
-      "price": 1810100,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "06:15",
-      "arrivalTime": "14:05",
-      "price": 2586400,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "09:25",
-      "arrivalTime": "06:30(+1d)",
-      "price": 3590700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "12:55",
-      "arrivalTime": "06:30(+1d)",
-      "price": 3590700,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    },
-    {
-      "airline": "Garuda",
-      "departureTime": "07:05",
-      "arrivalTime": "16:00",
-      "price": 4807300,
-      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
-      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
-      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=CGK.SUB&dt=28-08-2020.NA&ps=1.0.0&sc=economy"
-    }
-  ],
-  "Tiket": [
-    {
-      "airline": "Lion Air",
-      "departureTime": "05:00",
-      "arrivalTime": "06:30",
-      "price": 471700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "07:00",
-      "arrivalTime": "08:30",
-      "price": 471700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "09:00",
-      "arrivalTime": "10:30",
-      "price": 471700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "12:30",
-      "arrivalTime": "14:00",
-      "price": 525600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
+      "travelAgent": "Tiket",
       "airline": "Batik Air",
       "departureTime": "14:00",
       "arrivalTime": "15:30",
@@ -381,287 +181,17 @@
       "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
     },
     {
+      "travelAgent": "Tiket",
       "airline": "Batik Air",
       "departureTime": "16:00",
       "arrivalTime": "17:30",
       "price": 630300,
       "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
       "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
     },
     {
-      "airline": "Batik Air",
-      "departureTime": "06:00",
-      "arrivalTime": "07:30",
-      "price": 668600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Batik Air",
-      "departureTime": "08:00",
-      "arrivalTime": "09:30",
-      "price": 732400,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Batik Air",
-      "departureTime": "10:30",
-      "arrivalTime": "12:00",
-      "price": 732400,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Batik Air",
-      "departureTime": "15:00",
-      "arrivalTime": "16:30",
-      "price": 732400,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Batik Air",
-      "departureTime": "17:00",
-      "arrivalTime": "18:30",
-      "price": 732400,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Citilink Indonesia",
-      "departureTime": "12:00",
-      "arrivalTime": "13:30",
-      "price": 745600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Citilink Indonesia",
-      "departureTime": "13:40",
-      "arrivalTime": "15:10",
-      "price": 745600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Citilink Indonesia",
-      "departureTime": "05:45",
-      "arrivalTime": "07:20",
-      "price": 745600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Citilink Indonesia",
-      "departureTime": "07:35",
-      "arrivalTime": "09:10",
-      "price": 745600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "05:15",
-      "arrivalTime": "10:10",
-      "price": 933200,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "04:30",
-      "arrivalTime": "08:00",
-      "price": 991500,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Garuda Indonesia",
-      "departureTime": "07:35",
-      "arrivalTime": "09:10",
-      "price": 1033700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "04:30",
-      "arrivalTime": "08:00",
-      "price": 1159800,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "01:30",
-      "arrivalTime": "08:30",
-      "price": 1207100,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "01:30",
-      "arrivalTime": "10:00",
-      "price": 1267600,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "04:45",
-      "arrivalTime": "09:10",
-      "price": 1284100,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "00:40",
-      "arrivalTime": "08:30",
-      "price": 1378700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Garuda Indonesia",
-      "departureTime": "06:00",
-      "arrivalTime": "07:30",
-      "price": 1418700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Garuda Indonesia",
-      "departureTime": "14:00",
-      "arrivalTime": "15:35",
-      "price": 1418700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Garuda Indonesia",
-      "departureTime": "08:30",
-      "arrivalTime": "10:10",
-      "price": 1418700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Garuda Indonesia",
-      "departureTime": "15:10",
-      "arrivalTime": "16:50",
-      "price": 1418700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Batik Air",
-      "departureTime": "01:10",
-      "arrivalTime": "08:30",
-      "price": 1429300,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Garuda Indonesia",
-      "departureTime": "11:00",
-      "arrivalTime": "16:55",
-      "price": 2586400,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Garuda Indonesia",
-      "departureTime": "01:45",
-      "arrivalTime": "06:45",
-      "price": 3590700,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "00:40",
-      "arrivalTime": "10:00",
-      "price": 1439200,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    },
-    {
-      "airline": "Batik Air",
-      "departureTime": "02:00",
-      "arrivalTime": "08:30",
-      "price": 1529400,
-      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
-      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
-      "url": "https://www.tiket.com/pesawat/search?d=CGK&a=SUB&dType=AIRPORT&aType=AIRPORT&date=2020-08-28&adult=1&child=0&infant=0&class=economy"
-    }
-  ],
-  "PegiPegi": [
-    {
-      "airline": "Lion Air",
-      "departureTime": "05:00",
-      "arrivalTime": "06:30",
-      "price": 471700,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "07:00",
-      "arrivalTime": "08:30",
-      "price": 471700,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "09:00",
-      "arrivalTime": "10:30",
-      "price": 471700,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
-    },
-    {
-      "airline": "Lion Air",
-      "departureTime": "12:30",
-      "arrivalTime": "14:00",
-      "price": 525600,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
-    },
-    {
+      "travelAgent": "PegiPegi",
       "airline": "Batik Air",
       "departureTime": "14:00",
       "arrivalTime": "15:30",
@@ -671,204 +201,727 @@
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Batik Air",
       "departureTime": "16:00",
       "arrivalTime": "17:30",
       "price": 630300,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Citilink",
+      "departureTime": "15:50",
+      "arrivalTime": "17:20",
+      "price": 708400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Citilink Indonesia",
+      "departureTime": "15:50",
+      "arrivalTime": "17:20",
+      "price": 708400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Citilink",
+      "departureTime": "15:50",
+      "arrivalTime": "17:20",
+      "price": 708400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Batik",
+      "departureTime": "06:00",
+      "arrivalTime": "07:30",
+      "price": 732400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Batik",
+      "departureTime": "08:00",
+      "arrivalTime": "09:30",
+      "price": 732400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Batik",
+      "departureTime": "10:30",
+      "arrivalTime": "12:00",
+      "price": 732400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Batik",
+      "departureTime": "15:00",
+      "arrivalTime": "16:30",
+      "price": 732400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
       "airline": "Batik Air",
       "departureTime": "06:00",
       "arrivalTime": "07:30",
-      "price": 668600,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "price": 732400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
     },
     {
+      "travelAgent": "Tiket",
+      "airline": "Batik Air",
+      "departureTime": "08:00",
+      "arrivalTime": "09:30",
+      "price": 732400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Batik Air",
+      "departureTime": "10:30",
+      "arrivalTime": "12:00",
+      "price": 732400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Batik Air",
+      "departureTime": "15:00",
+      "arrivalTime": "16:30",
+      "price": 732400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Batik Air",
+      "departureTime": "06:00",
+      "arrivalTime": "07:30",
+      "price": 732400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Batik Air",
       "departureTime": "08:00",
       "arrivalTime": "09:30",
       "price": 732400,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Batik Air",
       "departureTime": "10:30",
       "arrivalTime": "12:00",
       "price": 732400,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Batik Air",
       "departureTime": "15:00",
       "arrivalTime": "16:30",
       "price": 732400,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
-      "airline": "Batik Air",
-      "departureTime": "17:00",
-      "arrivalTime": "18:30",
-      "price": 732400,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "travelAgent": "Traveloka",
+      "airline": "Citilink",
+      "departureTime": "05:45",
+      "arrivalTime": "07:20",
+      "price": 745600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Citilink",
+      "departureTime": "07:35",
+      "arrivalTime": "09:10",
+      "price": 745600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Citilink",
+      "departureTime": "12:00",
+      "arrivalTime": "13:30",
+      "price": 745600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Citilink",
+      "departureTime": "13:40",
+      "arrivalTime": "15:10",
+      "price": 745600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450350561012-6584b693edd67d75cfc25ecff41c5704.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Citilink Indonesia",
+      "departureTime": "12:00",
+      "arrivalTime": "13:30",
+      "price": 745600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Citilink Indonesia",
+      "departureTime": "13:40",
+      "arrivalTime": "15:10",
+      "price": 745600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Citilink Indonesia",
+      "departureTime": "05:45",
+      "arrivalTime": "07:20",
+      "price": 745600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Citilink Indonesia",
+      "departureTime": "07:35",
+      "arrivalTime": "09:10",
+      "price": 745600,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1535614929/string/2018/08/30/49e042b5-678f-494e-b5d9-cf44c995749d49e436f1e3a69001e841c131152203b9.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Citilink",
       "departureTime": "05:45",
       "arrivalTime": "07:20",
       "price": 745600,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Citilink",
       "departureTime": "07:35",
       "arrivalTime": "09:10",
       "price": 745600,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Citilink",
       "departureTime": "12:00",
       "arrivalTime": "13:30",
       "price": 745600,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Citilink",
       "departureTime": "13:40",
       "arrivalTime": "15:10",
       "price": 745600,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/QG.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Batik",
+      "departureTime": "17:00",
+      "arrivalTime": "18:30",
+      "price": 796200,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Batik Air",
+      "departureTime": "17:00",
+      "arrivalTime": "18:30",
+      "price": 796200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Batik Air",
+      "departureTime": "17:00",
+      "arrivalTime": "18:30",
+      "price": 796200,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "05:15",
+      "arrivalTime": "10:10",
+      "price": 933200,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "05:15",
+      "arrivalTime": "10:10",
+      "price": 933200,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Lion Air",
       "departureTime": "05:15",
       "arrivalTime": "10:10",
       "price": 933200,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
-      "airline": "Lion Air",
-      "departureTime": "04:30",
-      "arrivalTime": "08:00",
-      "price": 991500,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "travelAgent": "Tiket",
+      "airline": "Garuda Indonesia",
+      "departureTime": "07:35",
+      "arrivalTime": "09:10",
+      "price": 1033700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "07:35",
       "arrivalTime": "09:10",
       "price": 1033700,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
-      "airline": "Lion Air",
-      "departureTime": "04:30",
-      "arrivalTime": "08:00",
-      "price": 1159800,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "00:40",
+      "arrivalTime": "08:30",
+      "price": 1121300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "01:30",
+      "arrivalTime": "08:30",
+      "price": 1121300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
       "airline": "Lion Air",
       "departureTime": "01:30",
       "arrivalTime": "08:30",
-      "price": 1181800,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "price": 1121300,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
     },
     {
+      "travelAgent": "Tiket",
       "airline": "Lion Air",
       "departureTime": "00:40",
-      "arrivalTime": "10:00",
-      "price": 1243400,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "arrivalTime": "08:30",
+      "price": 1121300,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
     },
     {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "00:40",
+      "arrivalTime": "08:30",
+      "price": 1121300,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "01:30",
+      "arrivalTime": "08:30",
+      "price": 1121300,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "04:30",
+      "arrivalTime": "08:00",
+      "price": 1134500,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "04:30",
+      "arrivalTime": "08:00",
+      "price": 1134500,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "00:40",
+      "arrivalTime": "10:00",
+      "price": 1181800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "01:30",
+      "arrivalTime": "10:00",
+      "price": 1181800,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
       "airline": "Lion Air",
       "departureTime": "01:30",
       "arrivalTime": "10:00",
-      "price": 1267600,
-      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
-      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "price": 1181800,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
     },
     {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "00:40",
+      "arrivalTime": "10:00",
+      "price": 1181800,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "00:40",
+      "arrivalTime": "10:00",
+      "price": 1181800,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "01:30",
+      "arrivalTime": "10:00",
+      "price": 1181800,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Lion Air",
+      "departureTime": "04:30",
+      "arrivalTime": "08:00",
+      "price": 1199400,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Lion",
+      "departureTime": "04:45",
+      "arrivalTime": "09:10",
+      "price": 1284100,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2015/12/17/1450349861201-09ec8f298222a73d66e8e96aa3b918f0.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Lion Air",
+      "departureTime": "04:45",
+      "arrivalTime": "09:10",
+      "price": 1284100,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836616/string/2018/08/21/77df219f-f1d2-494b-a5e7-a339a30e68dd36101a6e250cd0c3b727098ef19b62c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Lion Air",
       "departureTime": "04:45",
       "arrivalTime": "09:10",
       "price": 1284100,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/JT.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "06:00",
+      "arrivalTime": "07:30",
+      "price": 1418700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "07:35",
+      "arrivalTime": "09:10",
+      "price": 1418700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "08:30",
+      "arrivalTime": "10:10",
+      "price": 1418700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "14:00",
+      "arrivalTime": "15:35",
+      "price": 1418700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "15:10",
+      "arrivalTime": "16:50",
+      "price": 1418700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Garuda Indonesia",
+      "departureTime": "06:00",
+      "arrivalTime": "07:30",
+      "price": 1418700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Garuda Indonesia",
+      "departureTime": "14:00",
+      "arrivalTime": "15:35",
+      "price": 1418700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Garuda Indonesia",
+      "departureTime": "08:30",
+      "arrivalTime": "10:10",
+      "price": 1418700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Garuda Indonesia",
+      "departureTime": "15:10",
+      "arrivalTime": "16:50",
+      "price": 1418700,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534836229/string/2018/08/21/93102e79-7442-458e-a227-789bd08eddb0c4f3f430c09d1128f1f0019aaaec2679.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
+      "airline": "Garuda Indonesia",
+      "departureTime": "06:00",
+      "arrivalTime": "07:30",
+      "price": 1418700,
+      "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
+      "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "08:30",
       "arrivalTime": "10:10",
       "price": 1418700,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "14:00",
       "arrivalTime": "15:35",
       "price": 1418700,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "15:10",
       "arrivalTime": "16:50",
       "price": 1418700,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Multi-airline",
+      "departureTime": "01:10",
+      "arrivalTime": "08:30",
+      "price": 1429300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Batik Air",
+      "departureTime": "01:10",
+      "arrivalTime": "08:30",
+      "price": 1429300,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Multi-maskapai",
       "departureTime": "01:10",
       "arrivalTime": "08:30",
       "price": 1429300,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Multi-airline",
+      "departureTime": "02:00",
+      "arrivalTime": "08:30",
+      "price": 1529400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Tiket",
+      "airline": "Batik Air",
+      "departureTime": "02:00",
+      "arrivalTime": "08:30",
+      "price": 1529400,
+      "airLineLogo": "https://static.tiket.photos/image/upload/v1534831998/string/2018/08/21/ed396405-de36-47de-bb63-a77ede31b440496ffdd3b1650405cea0fe5d6ca8b5c6.png",
+      "companyLogo": "https://static.tiket.photos/image/upload/v1597136405/logo/2020/08/11/3830ff03-834c-4f2d-a89c-9f29a2e725d2-1597136403994-762b7bf36c0c10337996249d3bdec1d1.png",
+      "url": "https://www.tiket.com/pesawat/search?d=JKTC&a=SUB&dType=CITY&aType=AIRPORT&date=2020-08-27&adult=1&child=0&infant=0&class=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Multi-maskapai",
       "departureTime": "02:00",
       "arrivalTime": "08:30",
@@ -878,15 +931,37 @@
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Multi-airline",
+      "departureTime": "02:00",
+      "arrivalTime": "10:00",
+      "price": 1589900,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Multi-maskapai",
       "departureTime": "02:00",
       "arrivalTime": "10:00",
       "price": 1589900,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "15:15",
+      "arrivalTime": "09:55(+1d)",
+      "price": 1733900,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "15:15",
       "arrivalTime": "09:55",
@@ -896,33 +971,97 @@
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Multi-airline",
+      "departureTime": "05:55",
+      "arrivalTime": "17:00",
+      "price": 2277600,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Multi-maskapai",
       "departureTime": "05:55",
       "arrivalTime": "17:00",
-      "price": 1746300,
+      "price": 2277600,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Multi-airline",
+      "departureTime": "05:55",
+      "arrivalTime": "11:40",
+      "price": 2341400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Multi-airline",
+      "departureTime": "05:55",
+      "arrivalTime": "13:30",
+      "price": 2341400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/13/1576208649600-12471f9b7ffa159361f7bbbfb63065ee.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Multi-maskapai",
       "departureTime": "05:55",
       "arrivalTime": "11:40",
-      "price": 1810100,
+      "price": 2341400,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Multi-maskapai",
       "departureTime": "05:55",
       "arrivalTime": "13:30",
-      "price": 1810100,
+      "price": 2341400,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/ID.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "14:45",
+      "arrivalTime": "09:15(+1d)",
+      "price": 2415900,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "16:30",
+      "arrivalTime": "09:15(+1d)",
+      "price": 2415900,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "18:40",
+      "arrivalTime": "09:15(+1d)",
+      "price": 2415900,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "14:45",
       "arrivalTime": "09:15",
@@ -932,6 +1071,7 @@
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "16:30",
       "arrivalTime": "09:15",
@@ -941,6 +1081,7 @@
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "18:40",
       "arrivalTime": "09:15",
@@ -950,40 +1091,74 @@
       "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "06:15",
+      "arrivalTime": "14:05",
+      "price": 2586400,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "06:15",
       "arrivalTime": "14:05",
       "price": 2586400,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "12:55",
+      "arrivalTime": "06:30(+1d)",
+      "price": 3590700,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "09:25",
       "arrivalTime": "06:30",
       "price": 3590700,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "12:55",
       "arrivalTime": "06:30",
       "price": 3590700,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     },
     {
+      "travelAgent": "Traveloka",
+      "airline": "Garuda",
+      "departureTime": "07:05",
+      "arrivalTime": "16:00",
+      "price": 4807300,
+      "airLineLogo": "https://ik.imagekit.io/tvlk/image/imageResource/2019/12/12/1576140134467-906ded3638e9045d664adc40caa8ec47.png?tr=q-75",
+      "companyLogo": "https://press.traveloka.com/wp-content/uploads/2016/09/Traveloka_Primary_Logo.png",
+      "url": "https://www.traveloka.com/en-id/flight/onewaysearch?ap=JKTA.SUB&dt=27-08-2020.NA&ps=1.0.0&sc=economy"
+    },
+    {
+      "travelAgent": "PegiPegi",
       "airline": "Garuda Indonesia",
       "departureTime": "07:05",
       "arrivalTime": "16:00",
       "price": 4807300,
       "airLineLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/maskapai/mini/GA.png",
       "companyLogo": "https://www.pegipegi.com/tiket-pesawat/sys/img/logo.svg",
-      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/CGK/SUB/28-08-2020/1/0/0"
+      "url": "https://www.pegipegi.com/tiket-pesawat/sys/search-results/JKT/SUB/27-08-2020/1/0/0"
     }
   ]
 }

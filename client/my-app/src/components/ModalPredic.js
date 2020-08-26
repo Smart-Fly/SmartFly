@@ -18,7 +18,7 @@ const ModalPredic = (props) => {
   const classes = useStyles();
   const wrapper = createRef();
   const { dataPredictions } = props;
-
+console.log(props)
   const sentence = () => {
     let temp = "";
     let { accuracy } = dataPredictions.predictions;
@@ -37,8 +37,6 @@ const ModalPredic = (props) => {
       </>
     );
   };
-  console.log(Math.round(0.9698275862068966));
-
   return (
     <div>
       <Modal

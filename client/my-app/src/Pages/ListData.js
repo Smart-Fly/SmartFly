@@ -164,10 +164,8 @@ const ListData = () => {
                     return (
                         <Row className="mb-4">
                             <Col  >
-
                                 <CardResult
                                     className="shadow rounded"
-
                                     tiket={tiket} key={i} />
                             </Col>
                         </Row >
@@ -180,10 +178,8 @@ const ListData = () => {
                     return (
                         <Row className="mb-4">
                             <Col  >
-
                                 <CardResult
                                     className="shadow rounded"
-
                                     tiket={tiket} key={i} />
                             </Col>
                         </Row >
