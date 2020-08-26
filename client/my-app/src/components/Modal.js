@@ -29,9 +29,10 @@ const ModalForm = (props) => {
   const wrapper = createRef();
   // const classes = useStyles();
   const [alert, setAlert] = useState(false);
-
+  let tomorrow = new Date();
+  tomorrow.setDate(new Date().getDate() + 1);
   const history = useHistory();
-  const [selectedDate, setSelectedDate] = useState(new Date()); //Date
+  const [selectedDate, setSelectedDate] = useState(tomorrow); //Date
   const [clases, setClases] = useState("economy"); // class
   const [from, setFrom] = useState(); // from
   const [to, setTo] = useState(); //too
@@ -108,30 +109,6 @@ const ModalForm = (props) => {
               ) : null}
 
               <form onSubmit={(e) => goSubmit(e)}>
-                <div className="form-group">
-                  <RadioGroup
-                    row
-                    aria-label="position"
-                    name="position"
-                    defaultValue=""
-                  >
-                    <FormControlLabel
-                      value="Roundtrip"
-                      control={<Radio color="primary" />}
-                      label="Roundtrip"
-                    />
-                    <FormControlLabel
-                      value="One way"
-                      control={<Radio color="primary" />}
-                      label="One way"
-                    />
-                    <FormControlLabel
-                      value="Multi-City"
-                      control={<Radio color="primary" />}
-                      label="Multi-City"
-                    />
-                  </RadioGroup>
-                </div>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group">
@@ -200,7 +177,7 @@ const ModalForm = (props) => {
                         id="date-picker-dialog"
                         label="Departing"
                         // variant="inline"
-                        inputVariant="outlined"
+                        // inputVariant="outlined"
                         // className="form-control"
                         format="MM/dd/yyyy"
                         value={selectedDate}

@@ -174,11 +174,12 @@ const Navbar = () => {
       <div className={classes.grow}>
         <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
         <AppBar
-          position="absolute"
+          
+          color="default"
           style={
             pathname === "/"
-              ? { background: "transparent", boxShadow: "none", color: "blue" }
-              : { background: "transparent", boxShadow: "none", color: "black" }
+              ? {  background: "transparent", boxShadow: "none", color: "blue" }
+              : { position:"static", boxShadow: "none", color: "black" }
           }
         >
           <Toolbar>
@@ -207,7 +208,7 @@ const Navbar = () => {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              <IconButton aria-label="show 4 new mails" color="inherit">
+              {/* <IconButton aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="secondary">
                   <MailIcon />
                 </Badge>
@@ -219,7 +220,7 @@ const Navbar = () => {
                 <Badge badgeContent={17} color="secondary">
                   <NotificationsIcon />
                 </Badge>
-              </IconButton>
+              </IconButton> */}
               <IconButton
                 edge="end"
                 aria-label="account of current user"
