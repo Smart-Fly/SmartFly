@@ -5,6 +5,7 @@ const typeDefs = gql`
   type Login {
     access_token: String
     subsStatus: Boolean
+    userName: String
   }
 
   type User {
