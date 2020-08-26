@@ -1,4 +1,4 @@
-export { default as Home } from "./Home/Home";
-export { default as ListData } from "./TicketData/ListData";
-export { default as LoginPage } from "./LoginPage/LoginPage";
-export { default as RegisterPage } from "./RegisterPage/RegisterPage";
+export { default as Home } from "./Home/Home.js";
+export { default as ListData } from "./TicketData/ListData.js";
+export { default as LoginPage } from "./LoginPage/LoginPage.js";
+export { default as RegisterPage } from "./RegisterPage/RegisterPage.js";

@@ -205,7 +205,11 @@ const Navbar = () => {
 
   /** ======================== INI NAVBAR ========================= */
 
-  if (pathname !== "/login" && pathname !== "/register") {
+  if (
+    pathname !== "/login" &&
+    pathname !== "/register" &&
+    pathname !== "/flip"
+  ) {
     return (
       <>
         <div className={classes.grow}>
