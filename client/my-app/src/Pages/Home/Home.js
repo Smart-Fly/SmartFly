@@ -23,8 +23,10 @@ const styles = {
 };
 
 const Home = () => {
+  let tomorrow = new Date();
+  tomorrow.setDate(new Date().getDate() + 1);
   const history = useHistory();
-  const [selectedDate, setSelectedDate] = useState(new Date()); //Date
+  const [selectedDate, setSelectedDate] = useState(tomorrow); //Date
   const [clases, setClases] = useState("economy"); // class
   const [from, setFrom] = useState(); // from
   const [to, setTo] = useState(); //too
@@ -96,13 +98,13 @@ const Home = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-7 col-md-offset-1">
+              <div className="col-md-8 ">
                 <div className="booking-form">
                   <form onSubmit={(e) => goSubmit(e)}>
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-group">
-                          <span className="form-label">Flying from</span>
+                          <span className="form-label-top">Flying from</span>
                           <br></br>
                           <Select
                             // className="basic-single"
@@ -131,7 +133,7 @@ const Home = () => {
                       </div>
                       <div className="col-md-6">
                         <div className="form-group">
-                          <span className="form-label">Flying to</span>
+                          <span className="form-label-top">Flying to</span>
                           <br></br>
                           <Select
                             // className="basic-single"

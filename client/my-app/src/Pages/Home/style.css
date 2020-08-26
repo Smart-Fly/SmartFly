@@ -113,6 +113,17 @@
 	font-size: 12px;
 	color: #98c9ee;
 }
+.booking-form .form-label-top {
+	position: absolute;
+	top: 6px;
+	left: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: -54px;
+	height: 24px;
+	font-size: 12px;
+	color: #98c9ee;
+}
 
 .booking-form .form-checkbox input {
 	position: absolute !important;
@@ -186,7 +197,6 @@
 
 .booking-cta h1 {
 	font-size: 52px;
-	text-transform: uppercase;
 	color: #1182d8;
 	font-weight: 400;
 }
