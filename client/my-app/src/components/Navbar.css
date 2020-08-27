@@ -1,7 +1,47 @@
-.menuItemComponent {
-  justify-content: center;
+:root {
+  --bg: #242526;
+  --bg-accent: #484a4d;
+  --text-color: #dadce1;
+  --nav-size: 60px;
+  --border: 1px solid #474a4d;
+  --border-radius: 8px;
+  --speed: 500ms;
 }
 
-.nameComponent {
-  height: ;
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../../asset/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  src: url("../../asset/Montserrat/Montserrat-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../../asset/Montserrat/Montserrat-Bold.ttf");
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/** Navigation Bar */
+
+.costumMenuItem {
+  display: flex;
+  justify-content: flex-end;
+}
+
+span {
+  font-family: Montserrat;
 }
