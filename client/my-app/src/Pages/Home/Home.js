@@ -48,7 +48,6 @@ const Home = () => {
   };
   const handleSelectFrom = (e) => {
     if (e) {
-      // console.log(e)
       setFrom(e.value);
     }
   };
@@ -63,21 +62,28 @@ const Home = () => {
   var todayDate = selectedDate.toISOString().slice(0, 10);
   const goSubmit = (e) => {
     e.preventDefault();
-
-    history.push({
-      pathname: `/${from}?${to}!${todayDate}@${totalAdults}#${totalChildren}$${totalInfant}=${clases}+`,
-      state: {
-        data: {
-          dAirportCode: from,
-          aAirportCode: to,
-          planDate: todayDate,
-          psAdult: +totalAdults,
-          psChild: +totalChildren,
-          psInfant: +totalInfant,
-          classType: clases,
-        },
+if (from !== undefined && to !== undefined) {
+  
+  history.push({
+    pathname: `/${from}?${to}!${todayDate}@${totalAdults}#${totalChildren}$${totalInfant}=${clases}+`,
+    state: {
+      data: {
+        dAirportCode: from,
+        aAirportCode: to,
+        planDate: todayDate,
+        psAdult: +totalAdults,
+        psChild: +totalChildren,
+        psInfant: +totalInfant,
+        classType: clases,
       },
-    });
+    },
+  });
+}
+
+else{
+  // console.log("object")
+  // console.log(from,to)
+}
   };
 
   return (

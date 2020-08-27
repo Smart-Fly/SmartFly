@@ -178,9 +178,7 @@ const ListData = () => {
         <div id="cek">
           <LinearProgress color="secondary" />
           <Container>
-            <br></br>
-            <br></br>
-            <div style={{ marginTop: "60px" }}>
+            <div style={{ marginTop: "30px" }}>
               <Skeleton variant="rect" width={1100} height={120} />
               <br></br>
               <Skeleton variant="rect" width={1100} height={120} />

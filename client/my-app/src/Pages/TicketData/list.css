@@ -43,7 +43,7 @@
 	
 	position: -webkit-sticky;
 	position: sticky;
-	top: 0;
+	top: 4vh;
 
 }
 
@@ -54,7 +54,7 @@
 	
 	/* overflow: hidden; */
 	/* background-size: cover; */
-	/* min-height: 100vh; */
+	min-height: 86.5vh;
 	
 	background: linear-gradient(45deg, #2196f3 50%, #21cbf3 50%)
 	
