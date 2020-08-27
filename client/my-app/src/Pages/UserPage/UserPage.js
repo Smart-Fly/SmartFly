@@ -10,7 +10,6 @@ import MyGoogleLogin from "../../components/MyGoogleLogin";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
-import { createMuiTheme } from "@material-ui/core";
 const loginBG = require("../../asset/LoginBG.jpeg");
 const logo = require("../../asset/LogoWithoutBg.png");
 
@@ -81,16 +80,17 @@ const UserPage = () => {
   };
   const handleCheckOnChange = (e) => {
     const { name, checked } = e.target;
-    console.log(checked, "INI CHECKBOX");
     setUpdateSubs({ ...updateSubs, [name]: checked });
   };
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
     register({
       variables: {
-        newUserInput: { userRegisterInfo, subsStatus: updateSubs.subsStatus },
+        newUserInput: {
+          ...userRegisterInfo,
+          subsStatus: updateSubs.subsStatus,
+        },
       },
-      // console.log(newUserInput, "adadada");
     });
   };
 
@@ -237,7 +237,7 @@ const UserPage = () => {
                     className="input100"
                     placeholder="Email"
                     type="text"
-                    name="email"
+                    name="userName"
                     aria-describedby="my-helper-text"
                     onChange={(e) => handleRegisterOnChange(e)}
                     style={{
@@ -294,8 +294,8 @@ const UserPage = () => {
                   <input
                     className="input100"
                     placeholder="Password"
-                    type="text"
-                    name="email"
+                    type="password"
+                    name="password"
                     aria-describedby="my-helper-text"
                     onChange={(e) => handleRegisterOnChange(e)}
                     style={{

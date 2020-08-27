@@ -15,7 +15,7 @@ import { useMutation } from "@apollo/client";
 import { useLocation, useHistory } from "react-router-dom";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import { UPDATE_SUBSCRIPTION } from "../query/userQuery";
-const logoSmartFly = require("../asset/SmartFlyLogo.png");
+const logoSmartFly = require("../asset/LogoWithoutBg.png");
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -76,22 +76,18 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
     },
   },
-  sectionMobile: {
-    display: "flex",
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
-  },
-  logo: {
-    borderRadius: "30%",
-    width: "4rem",
-    height: "4rem",
+  stylingMenu: {
+    transform: "none",
+    transformOrigin: "none",
+    borderRadius: "500",
+    flexDirection: "column",
   },
 }));
 
-const Navbar = () => {
+const Navbar = (props) => {
   const { pathname } = useLocation();
-  const classes = useStyles();
+  const { test } = props;
+  const classes = useStyles(test);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [modalShow, setModalShow] = useState(false);
   const isMenuOpen = Boolean(anchorEl);
@@ -103,6 +99,7 @@ const Navbar = () => {
   const [showUserName, setShowUserName] = useState(""); // check Login
   const [showSubsStatus, setShowSubsstatus] = useState(false);
   const [showButton, setShowButton] = useState(false);
+  const [stringToBoolean, setStringToBoolean] = useState("");
   const [updateSubscription] = useMutation(UPDATE_SUBSCRIPTION);
   const [userSubsToUpdate] = useState({
     access_token: "",
@@ -114,9 +111,17 @@ const Navbar = () => {
   useEffect(() => {
     if (localStorage) {
       setShowUserName(localStorage.getItem("userName"));
-      setShowSubsstatus(localStorage.getItem("userName"));
+      setStringToBoolean(localStorage.getItem("subsStatus"));
     }
   }, [localStorage]);
+
+  useEffect(() => {
+    if (stringToBoolean === "true") {
+      setShowButton(true);
+    } else {
+      setShowButton(false);
+    }
+  }, [stringToBoolean]);
 
   const toggleSwitchChange = (e) => {
     const { checked } = e.target;
@@ -135,6 +140,7 @@ const Navbar = () => {
         },
       },
     });
+    setShowButton(false);
     handleMenuClose();
   };
 
@@ -156,17 +162,20 @@ const Navbar = () => {
   /** ====================== INI RENDER MENU ====================== */
   const renderMenu = (
     <>
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        id={menuId}
-        keepMounted
-        transformOrigin={{ vertical: "top", horizontal: "right" }}
-        open={isMenuOpen}
-        onClose={handleMenuClose}
-        position="absolute"
-      >
-        <div className="row justify-content-center">
+      <div style={{ backgroundColor: "black", borderRadius: "25px" }}>
+        <Menu
+          anchorEl={anchorEl}
+          // anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          id={menuId}
+          keepMounted
+          // transformOrigin={{ vertical: "bottom", horizontal: "right" }}
+          open={isMenuOpen}
+          onClose={handleMenuClose}
+          position="absolute"
+          className={classes.stylingMenu}
+          style={{ borderRadius: "25px" }}
+          borderRadius="25%"
+        >
           <MenuItem onClick={handleMenuClose}>
             <div className="col-lg-12">
               <span style={{ fontSize: 15 }}>
@@ -175,8 +184,8 @@ const Navbar = () => {
             </div>
           </MenuItem>
 
-          <MenuItem>
-            <Form onSubmit={(e) => handleSubmitSubs(e)}>
+          <Form onSubmit={(e) => handleSubmitSubs(e)}>
+            <MenuItem style={{ opacity: "20" }}>
               <FormControlLabel
                 control={
                   <Switch
@@ -186,18 +195,26 @@ const Navbar = () => {
                     variant="primary"
                   />
                 }
-                label="Change Subs Plan"
+                label="Change Subs Plan?"
+                labelPlacement="start"
                 style={{ maxWidth: "600px" }}
               />
-              {showButton ? (
-                <Button type="submit" variant="primary">
+            </MenuItem>
+            {showButton ? (
+              <MenuItem>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  size="small"
+                  color="primary"
+                >
                   Save changes
                 </Button>
-              ) : null}
-            </Form>
-          </MenuItem>
-        </div>
-      </Menu>
+              </MenuItem>
+            ) : null}
+          </Form>
+        </Menu>
+      </div>
     </>
   );
 
@@ -205,11 +222,7 @@ const Navbar = () => {
 
   /** ======================== INI NAVBAR ========================= */
 
-  if (
-    pathname !== "/login" &&
-    pathname !== "/register" &&
-    pathname !== "/flip"
-  ) {
+  if (pathname !== "/login" && pathname !== "/register") {
     return (
       <>
         <div className={classes.grow}>
@@ -228,9 +241,8 @@ const Navbar = () => {
             //         boxShadow: "none",
             //       }
             // }
-            color="light"
+            color="default"
             style={{ background: "transparent", boxShadow: "none" }}
-            title={<img src={logoSmartFly} />}
           >
             <Toolbar>
               <IconButton
@@ -239,7 +251,7 @@ const Navbar = () => {
                 color="inherit"
                 aria-label="open drawer"
               ></IconButton>
-              <img src={logoSmartFly} alt="logo" className={classes.logo} />
+              <img src={logoSmartFly} alt="logo" style={{ width: "100px" }} />
               <div className={classes.search}>
                 <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
                 {pathname !== "/" ? (
@@ -267,7 +279,7 @@ const Navbar = () => {
                     <AccountCircle style={{ fontSize: 40 }} />
                   </IconButton>
                 ) : (
-                  <Button variant="primary" onClick={goToLoginPage}>
+                  <Button variant="text" onClick={goToLoginPage}>
                     Log In
                   </Button>
                 )}
