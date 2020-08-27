@@ -96,7 +96,6 @@ const Navbar = () => {
   const [modalShow, setModalShow] = useState(false);
   const isMenuOpen = Boolean(anchorEl);
   const menuId = "primary-search-account-menu";
-
   /** ============= START FUNGSI UPDATE DARI LUQMAN ================ */
 
   /** START STATE YANG DIGUNAKAN */
@@ -215,7 +214,9 @@ const Navbar = () => {
         <div className={classes.grow}>
           <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
           <AppBar
-            position="absolute"
+            position={ pathname === "/login" ||
+            pathname === "/register" ||
+            pathname === "/flip" || pathname === "/" ? "absolute" : 'static' }
             // style={
             //   pathname === "/"
             //     ? {

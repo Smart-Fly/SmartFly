@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
   CardContent,
@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
     textAlign: "center",
+    width: '`100%',
+    height: '12vw'
   },
   details: {
     display: "flex",
@@ -37,32 +39,28 @@ const CardResult = (props) => {
   // console.log(props.tiket)
   const data = props.tiket;
   const classes = useStyles();
-  const theme = useTheme();
+
 
   const handleImage = () => {
-    if (data.airline === "Lion" || data.airline === "Lion Air") {
-      return "https://logos-download.com/wp-content/uploads/2016/05/Lion_Air_logo_small.png";
-    } else if (data.airline === "Batik Air" || data.airline === "Batik") {
-      return "https://1.bp.blogspot.com/-0LhrImUBias/Xn4ECOnTDLI/AAAAAAAABxo/GXXicXuEEU0mjJnAbAkKPD-ZQdQV8BRzQCLcBGAsYHQ/s1600/Logo%2BBatik%2BAir.png";
-    } else if (
-      data.airline === "Citilink Indonesia" ||
-      data.airline === "Citilink"
-    ) {
-      return "https://i.pinimg.com/originals/e9/0c/43/e90c43e10bd7786eac217ddd61359652.png";
-    } else if (
-      data.airline === "Garuda Indonesia" ||
-      data.airline === "Garuda"
-    ) {
-      return "https://i.pinimg.com/originals/83/bd/70/83bd70f58c962ded056b2d57227de1d5.jpg";
-    } else if (
-      data.airline === "Multi-maskapai" ||
-      data.airline === "Multi-airline"
-    ) {
-      return data.airLineLogo;
-    } else {
-      return data.airLineLogo;
+
+    if (data.airline === "Lion" || data.airline === 'Lion Air') {
+      return "https://logos-download.com/wp-content/uploads/2016/05/Lion_Air_logo_small.png"
+    } else if (data.airline === "Batik Air" || data.airline === 'Batik') {
+      return "https://1.bp.blogspot.com/-0LhrImUBias/Xn4ECOnTDLI/AAAAAAAABxo/GXXicXuEEU0mjJnAbAkKPD-ZQdQV8BRzQCLcBGAsYHQ/s1600/Logo%2BBatik%2BAir.png"
+    } else if (data.airline === "Citilink Indonesia" || data.airline === 'Citilink') {
+      return "https://i.pinimg.com/originals/e9/0c/43/e90c43e10bd7786eac217ddd61359652.png"
+    } else if (data.airline === "Garuda Indonesia" || data.airline === 'Garuda') {
+      return "https://i.pinimg.com/originals/83/bd/70/83bd70f58c962ded056b2d57227de1d5.jpg"
+
+    } else if (data.airline === "Multi-maskapai" || data.airline === 'Multi-airline') {
+      return "https://static.tiket.photos/image/upload/v1534837894/string/2018/08/21/c6f70a1c-74f7-4527-bd01-641b0ed42614a79db5b8a6ab2f777f51d58b8fb0b2d3.png"
     }
-  };
+    else {
+      return data.airLineLogo
+    }
+  }
+
+
 
   const nameAirline = () => {
     if (data.airline === "Citilink Indonesia") {
@@ -86,15 +84,14 @@ const CardResult = (props) => {
               src={handleImage()}
             />
           </CardMedia>
-          {data.airline === "Multi-airline" ? (
-            <Typography gutterBottom variant="h5" component="h2">
+          {data.airline === "Multi-airline" || data.airline === "Multi-maskapai" ?
+            <Typography gutterBottom variant="h5" component="h2" >
               {nameAirline()}
             </Typography>
-          ) : (
-            <Typography gutterBottom variant="h4" component="h1">
+            :
+            <Typography gutterBottom variant="h4" component="h1" >
               {nameAirline()}
-            </Typography>
-          )}
+            </Typography>}
         </CardContent>
 
         <CardActions disableSpacing>
@@ -125,7 +122,6 @@ const CardResult = (props) => {
             <Button
               href={data.url}
               target="_blank"
-              size="big"
               variant="contained"
               startIcon={<TelegramIcon />}
             >

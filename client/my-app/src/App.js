@@ -8,6 +8,7 @@ import {
   // ListData,
   RegisterPage,
   UserPage,
+  ListData
 } from "./Pages";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/register" component={RegisterPage} />
           <Route exact path="/login" component={UserPage} />
-          {/* <Route path="/:slug" component={ListData} /> */}
+          <Route path="/:slug" component={ListData} />
         </Switch>
       </Router>
     </ApolloProvider>

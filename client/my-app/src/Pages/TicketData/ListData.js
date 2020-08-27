@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import CardResult from "../../components/CardResult";
 import Button from "@material-ui/core/Button";
 import { Slider, Typography } from "@material-ui/core";
@@ -12,7 +12,9 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
-import FilterListIcon from "@material-ui/icons/FilterList";
+import FilterListIcon from '@material-ui/icons/FilterList';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const GET_PRED = gql`
   query getPrediction($depart: String, $arrive: String) {
@@ -36,7 +38,7 @@ function AirbnbThumbComponent(props) {
 
 const AirbnbSlider = withStyles({
   root: {
-    color: "#3a8589",
+    color: "#cffffe",
     height: 3,
     padding: "13px 0",
   },
@@ -55,7 +57,7 @@ const AirbnbSlider = withStyles({
       // display: inline-block !important;
       height: 9,
       width: 1,
-      backgroundColor: "currentColor",
+      backgroundColor: "#005086",
       marginLeft: 1,
       marginRight: 1,
     },
@@ -71,35 +73,9 @@ const AirbnbSlider = withStyles({
   },
 })(Slider);
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  details: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  content: {
-    flex: "1 0 auto",
-  },
-  cover: {
-    width: 151,
-  },
-  controls: {
-    display: "flex",
-    alignItems: "center",
-    paddingLeft: theme.spacing(1),
-    paddingBottom: theme.spacing(1),
-  },
-  playIcon: {
-    height: 38,
-    width: 38,
-  },
-}));
 
 const ListData = () => {
-  const classes = useStyles();
-  const theme = useTheme();
+  const contextRef = React.createRef()
   const { slug } = useParams();
   const [modalShow, setModalShow] = useState(false);
   const [modalShowFilter, setModalShowFilter] = useState(false);
@@ -126,26 +102,23 @@ const ListData = () => {
   }, [ticket]);
   const [
     getPredictions,
-    { loading: loadingPredictions, data: dataPredictions },
+    { data: dataPredictions },
   ] = useLazyQuery(GET_PRED, {
     variables: {
       depart: data.dAirportCode,
       arrive: data.aAirportCode,
     },
   });
-  // console.log(ValueModal)
   const getPredict = () => {
     getPredictions();
-    if (dataPredictions) {
-      console.log(dataPredictions, "dataa");
-    } else {
-      console.log(loadingPredictions);
-    }
+
   };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  console.log(data)
 
   useEffect(() => {
     getFlight({
@@ -163,40 +136,41 @@ const ListData = () => {
     });
   }, [slug, data, getFlight]);
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  }, [])
+
+
   const onFilter = (params) => {
-    const newTicketLocal = ticket.getFlight.AllData.filter((ticketfil) => {
-      const filterPrice =
-        ticketfil.price > value[0] && ticketfil.price < value[1];
+    const newTicketLocal = ticket.getFlight.AllData.filter(ticketfil => {
+      const filterPrice = ticketfil.price > value[0] && ticketfil.price < value[1]
       if (ticketfil.airline.toLocaleLowerCase() === ("lion air" || "lion")) {
-        if (params.Lion) return filterPrice;
-      } else if (ticketfil.airline === ("Garuda" || "Garuda Indonesia")) {
-        if (params.Garuda) return filterPrice;
-      } else if (
-        ticketfil.airline.toLocaleLowerCase() === ("batik air" || "batik")
-      ) {
-        if (params.Batik) return filterPrice;
-      } else if (ticketfil.airline === ("Citilink" || "Citilink Indonesia")) {
-        if (params.Citilink) return filterPrice;
-      } else if (ticketfil.airline === ("Multi-maskapai" || "Multi-airline")) {
-        if (params.Multi) return filterPrice;
-      } else if (
-        params.Lion === false &&
-        params.Garuda === false &&
-        params.Batik === false &&
-        params.Citilink === false &&
-        params.Multi === false
-      ) {
-        return filterPrice;
+        if (params.Lion) return filterPrice
       }
-    });
-    setTicketLocal(newTicketLocal);
-  };
+      else if (ticketfil.airline === ("Garuda" || "Garuda Indonesia")) {
+        if (params.Garuda) return filterPrice
+      }
+      else if (ticketfil.airline.toLocaleLowerCase() === ("batik air" || "batik")) {
+        if (params.Batik) return filterPrice
+      }
+      else if (ticketfil.airline === ("Citilink" || "Citilink Indonesia")) {
+        if (params.Citilink) return filterPrice
+      }
+      else if (ticketfil.airline === ("Multi-maskapai" || "Multi-airline")) {
+        if (params.Multi) return filterPrice
+      } else if (params.Lion === false && params.Garuda === false
+        && params.Batik === false && params.Citilink === false && params.Multi === false) {
+        return filterPrice
+      }
+    })
+    setTicketLocal(newTicketLocal)
+  }
 
   useEffect(() => {
     if (ticket != null) {
       onFilter(ValueModal);
     }
-  }, [value, ValueModal, ticket]);
+  }, [value])
 
   if (loading) {
     return (
@@ -225,10 +199,6 @@ const ListData = () => {
     return money.toLocaleString("id-ID");
   };
 
-  if (ticket) {
-    console.log(ticketLocal, "data total");
-    // console.log(allTicket(), 'data filter')
-  }
   const toModal = () => {
     getPredict();
     setModalShow(true);
@@ -239,80 +209,78 @@ const ListData = () => {
     setModalShowFilter(false);
   };
 
+  console.log(ticketLocal)
   return (
-    <div>
-      <div id="booking1">
-        <ModalFilter
-          show={modalShowFilter}
-          filted={(dataModal) => toModalFilter(dataModal)}
-          onHide={() => {
-            setModalShowFilter(false);
-          }}
-        />
+    <>
+      <div className="limitter">
+        <div className='list-data-container'>
+          <div className="wrapping-data">
+            <div className="main-page">
+              <div className="page-content">
 
-        <ModalPredict
-          show={modalShow}
-          dataPredictions={dataPredictions}
-          onHide={() => {
-            setModalShow(false);
-          }}
-        ></ModalPredict>
-        <Container>
-          <div className="clearfix ">
-            <center>
-              <br></br>
-              <Button
-                startIcon={<FilterListIcon />}
-                variant="primary"
-                onClick={() => toModal()}
-              >
-                Get Predictions
-              </Button>
-              <Button
-                startIcon={<FilterListIcon />}
-                variant="primary"
-                style={{ margin: "10px" }}
-                onClick={() => setModalShowFilter(true)}
-              >
-                Filter check
-              </Button>
-            </center>
-            <Typography className="float-left" style={{ color: "white" }}>
-              Rp {toRupiah(value[0])}
-            </Typography>
-            <Typography className="float-right" style={{ color: "white" }}>
-              Rp {toRupiah(value[1])}
-            </Typography>
+                <div className="dataStyle">
+
+                  <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)} onHide={() => { setModalShowFilter(false); }} />
+
+                  <ModalPredict
+                    show={modalShow}
+                    dataPredictions={dataPredictions}
+                    onHide={() => {
+                      setModalShow(false);
+                    }}
+                  ></ModalPredict>
+
+                  {/* ______======____Filter Container _________________++++++++++++++++___________ */}
+
+                  {/* <div className="style-filter" id="filter-style"> */}
+
+                  <div className="button-filter">
+
+                    <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
+                      Get Predictions
+                      </Button>
+                    <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+                      Filter check
+                    </Button>
+                  </div>
+                  <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
+                  <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+                  <AirbnbSlider
+                    value={value}
+                    onChange={handleChange}
+                    ThumbComponent={AirbnbThumbComponent}
+                    step={100000}
+                    min={0}
+                    max={5000000}
+                  />
+                  {/* </div> */}
+                </div>
+
+                {/* ___________________Data Ticket Card _________________++++++++++++++++___________ */}
+
+                <div className="dataStyle">
+
+                  {ticket && ticketLocal.map((tiket, i) => {
+                    return (
+                        <div data-aos='fade-up'>
+                        <CardResult
+                          className="shadow rounded"
+                          tiket={tiket} key={i} />
+                        </div>
+                    )
+                  })
+                  }
+                </div>
+              </div>
+            </div>
+
           </div>
-          <AirbnbSlider
-            value={value}
-            onChange={handleChange}
-            ThumbComponent={AirbnbThumbComponent}
-            step={100000}
-            min={0}
-            max={5000000}
-          />
-          <br></br>
-          <br></br>
 
-          {ticket &&
-            ticketLocal.map((tiket, i) => {
-              return (
-                <Row className="mb-4">
-                  <Col>
-                    <CardResult
-                      className="shadow rounded"
-                      tiket={tiket}
-                      key={i}
-                    />
-                  </Col>
-                </Row>
-              );
-            })}
-        </Container>
-        <br></br>
+        </div>
+
       </div>
-    </div>
+    </>
+
   );
 };
 
