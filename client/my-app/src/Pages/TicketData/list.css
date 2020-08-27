@@ -25,12 +25,8 @@
 	margin: 0;
 	/* background-image: url('https://images3.alphacoders.com/785/thumb-1920-785576.png'); */
   }
-.limitter {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 50px 1fr 50px;
-	grid-template-areas:
-    "main-page";
+.full-container {
+
 	min-height: 100vh;
 	background: linear-gradient(45deg, #2196f3 50%, #21cbf3 50%)
 	
@@ -103,18 +99,19 @@
 	/* font-family: "Montserrat-Bold"; */
 	/* left: 50vh; */
 	/* flex */
-	/* top: 0px; */
-
+	top: 0px;
+	position: -webkit-sticky;
+	position: sticky;
 	/* z-index: 1; */
 	/* right:  50vh; */
 	/* left: 1rem; */
 	/* margin: 10px; */
 	/* padding: 1vh; */
-	/* background-color: burlywood;
-	border-radius: 1vh;
-	width: 100vh;
+	background-color: burlywood;
+	/* border-radius: 1vh; */
+	/* width: 100vh; */
 	position: -webkit-sticky;
-	position: sticky; */
+	position: sticky;
 }
 
 #cek {

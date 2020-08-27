@@ -209,76 +209,90 @@ const ListData = () => {
     setModalShowFilter(false);
   };
 
-  console.log(ticketLocal)
+  // console.log(ticketLocal)
   return (
     <>
-      <div className="limitter">
+
+      <div className="full-container">
+
+        <div className="container-fluid">
+
+          <div className="row">
+
+            {/* <div className="limitter">
         <div className='list-data-container'>
           <div className="wrapping-data">
-            <div className="main-page">
               <div className="page-content">
+                <div className="dataStyle"> */}
+            <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)} onHide={() => { setModalShowFilter(false); }} />
+            <ModalPredict
+              show={modalShow}
+              dataPredictions={dataPredictions}
+              onHide={() => {
+                setModalShow(false);
+              }}
+            ></ModalPredict>
 
-                <div className="dataStyle">
+            {/* ______======____Filter Container _________________++++++++++++++++___________ */}
 
-                  <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)} onHide={() => { setModalShowFilter(false); }} />
+            {/* <div className="style-filter" id="filter-style"> */}
 
-                  <ModalPredict
-                    show={modalShow}
-                    dataPredictions={dataPredictions}
-                    onHide={() => {
-                      setModalShow(false);
-                    }}
-                  ></ModalPredict>
 
-                  {/* ______======____Filter Container _________________++++++++++++++++___________ */}
+            <div className="col-2 mt-5">
+<div className="filter-style">
 
-                  {/* <div className="style-filter" id="filter-style"> */}
-
-                  <div className="button-filter">
-
-                    <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
-                      Get Predictions
+              <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
+                Get Predictions
                       </Button>
-                    <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
-                      Filter check
+              <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+                Filter check
                     </Button>
+              <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
+              <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+              <AirbnbSlider
+                value={value}
+                onChange={handleChange}
+                ThumbComponent={AirbnbThumbComponent}
+                step={100000}
+                min={0}
+                max={5000000}
+              />
+            </div>
+            {/* </div> */}
+            </div>
+
+            {/* ___________________Data Ticket Card _________________++++++++++++++++___________ */}
+
+            <div className="col-8 mt-5">
+
+              {ticket && ticketLocal.map((tiket, i) => {
+                return (
+                  <Row className="mb-4">
+                  <Col  >
+                  <div data-aos='fade-up'>
+                    <CardResult
+                      className="shadow rounded"
+                      tiket={tiket} key={i} />
                   </div>
-                  <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
-                  <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
-                  <AirbnbSlider
-                    value={value}
-                    onChange={handleChange}
-                    ThumbComponent={AirbnbThumbComponent}
-                    step={100000}
-                    min={0}
-                    max={5000000}
-                  />
-                  {/* </div> */}
-                </div>
-
-                {/* ___________________Data Ticket Card _________________++++++++++++++++___________ */}
-
-                <div className="dataStyle">
-
-                  {ticket && ticketLocal.map((tiket, i) => {
-                    return (
-                        <div data-aos='fade-up'>
-                        <CardResult
-                          className="shadow rounded"
-                          tiket={tiket} key={i} />
-                        </div>
-                    )
-                  })
-                  }
-                </div>
+                    </Col>
+                    </Row >
+                )
+              })
+              }
+              {/* </div>
               </div>
             </div>
 
           </div>
 
-        </div>
+          
+        </div> */}
+            </div>
+          </div>
 
+        </div>
       </div>
+
     </>
 
   );
