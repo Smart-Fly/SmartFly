@@ -109,19 +109,17 @@ const Navbar = (props) => {
   useEffect(() => {
     if (localStorage) {
       setShowUserName(localStorage.getItem("userName"));
-      if (localStorage.getItem("subsStatus") === "false") {
-        setShowSubsStatus(false);
-      } else {
+      if (localStorage.getItem("subsStatus") === "true") {
         setShowSubsStatus(true);
+      } else {
+        setShowSubsStatus(false);
       }
     }
-    console.log(typeof localStorage.getItem("subsStatus"));
   }, [localStorage]);
 
   const toggleSwitchChange = (e) => {
     const { checked } = e.target;
     setShowSubsStatus(checked);
-    console.log(showSubsStatus);
     setShowButton(true);
   };
 
@@ -143,7 +141,6 @@ const Navbar = (props) => {
   /** ============= END FUNGSI UPDATE DARI LUQMAN ================ */
 
   const handleProfileMenuOpen = (event) => {
-    console.log(event.currentTarget, "ini apa");
     setAnchorEl(event.currentTarget);
   };
 
