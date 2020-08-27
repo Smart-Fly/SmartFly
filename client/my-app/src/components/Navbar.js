@@ -96,9 +96,8 @@ const Navbar = (props) => {
 
   /** START STATE YANG DIGUNAKAN */
   const [showUserName, setShowUserName] = useState(""); // check Login
-  const [showSubsStatus, setShowSubsstatus] = useState(false);
+  const [showSubsStatus, setShowSubsStatus] = useState(false);
   const [showButton, setShowButton] = useState(false);
-  const [stringToBoolean, setStringToBoolean] = useState("");
   const [updateSubscription] = useMutation(UPDATE_SUBSCRIPTION);
   const [userSubsToUpdate] = useState({
     access_token: "",
@@ -110,21 +109,19 @@ const Navbar = (props) => {
   useEffect(() => {
     if (localStorage) {
       setShowUserName(localStorage.getItem("userName"));
-      setStringToBoolean(localStorage.getItem("subsStatus"));
+      if (localStorage.getItem("subsStatus") === "false") {
+        setShowSubsStatus(false);
+      } else {
+        setShowSubsStatus(true);
+      }
     }
+    console.log(typeof localStorage.getItem("subsStatus"));
   }, [localStorage]);
-
-  useEffect(() => {
-    if (stringToBoolean === "true") {
-      setShowButton(true);
-    } else {
-      setShowButton(false);
-    }
-  }, [stringToBoolean]);
 
   const toggleSwitchChange = (e) => {
     const { checked } = e.target;
-    setShowSubsstatus(checked);
+    setShowSubsStatus(checked);
+    console.log(showSubsStatus);
     setShowButton(true);
   };
 
@@ -178,7 +175,8 @@ const Navbar = (props) => {
           <MenuItem onClick={handleMenuClose}>
             <div className="col-lg-12">
               <span style={{ fontSize: 15 }}>
-                You are Sign in as <span color="blue">{showUserName}</span>
+                You are Sign in as{" "}
+                <span color="blue">{localStorage.getItem("userName")}</span>
               </span>
             </div>
           </MenuItem>
@@ -227,9 +225,14 @@ const Navbar = (props) => {
         <div className={classes.grow}>
           <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
           <AppBar
-            position={ pathname === "/login" ||
-            pathname === "/register" ||
-            pathname === "/flip" || pathname === "/" ? "absolute" : 'static' }
+            position={
+              pathname === "/login" ||
+              pathname === "/register" ||
+              pathname === "/flip" ||
+              pathname === "/"
+                ? "absolute"
+                : "static"
+            }
             // style={
             //   pathname === "/"
             //     ? {

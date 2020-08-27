@@ -37,7 +37,7 @@ const UserPage = () => {
   });
 
   const [updateSubs, setUpdateSubs] = useState(false);
-  const [register, { data: newUser }] = useMutation(USER_REGISTER);
+  const [register] = useMutation(USER_REGISTER);
   const handleLoginOnchance = (e) => {
     const { name, value } = e.target;
     setUserLoginData({ ...userLoginData, [name]: value });
@@ -353,7 +353,7 @@ const UserPage = () => {
                     type="submit"
                     variant="contained"
                     color="primary"
-                    // onClick={handleFlipCard}
+                    onClick={handleFlipCard}
                   >
                     Register
                   </Button>
