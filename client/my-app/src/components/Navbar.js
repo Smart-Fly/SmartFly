@@ -15,6 +15,7 @@ import { useMutation } from "@apollo/client";
 import { useLocation, useHistory } from "react-router-dom";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import { UPDATE_SUBSCRIPTION } from "../query/userQuery";
+import Swal from "sweetalert2";
 const logoSmartFly = require("../asset/LogoWithoutBg.png");
 
 const useStyles = makeStyles((theme) => ({
@@ -95,15 +96,18 @@ const Navbar = (props) => {
   /** ============= START FUNGSI UPDATE DARI LUQMAN ================ */
 
   /** START STATE YANG DIGUNAKAN */
+  const history = useHistory();
   const [showUserName, setShowUserName] = useState(""); // check Login
-  const [showSubsStatus, setShowSubsStatus] = useState(false);
+  const [showSubsStatus, setShowSubsStatus] = useState(null);
   const [showButton, setShowButton] = useState(false);
-  const [updateSubscription] = useMutation(UPDATE_SUBSCRIPTION);
+  const [updateSubscription, { data: successUpdateData }] = useMutation(
+    UPDATE_SUBSCRIPTION
+  );
+
   const [userSubsToUpdate] = useState({
     access_token: "",
     subsStatus: false,
-  }); // Ini buat onSubmit yang dikirim ke server
-  const history = useHistory();
+  });
   /** END STATE YANG DIGUNAKAN */
 
   useEffect(() => {
@@ -136,6 +140,12 @@ const Navbar = (props) => {
     });
     setShowButton(false);
     handleMenuClose();
+    Swal.fire({
+      title: "Success!",
+      text: "Your subscription plan has been updated",
+      icon: "success",
+      showCloseButton: true,
+    });
   };
 
   /** ============= END FUNGSI UPDATE DARI LUQMAN ================ */
@@ -150,6 +160,12 @@ const Navbar = (props) => {
 
   const goToLoginPage = () => {
     history.push("/login");
+  };
+
+  const handleLogoutButton = () => {
+    handleMenuClose();
+    localStorage.clear();
+    history.push("/");
   };
 
   /** ====================== INI RENDER MENU ====================== */
@@ -169,16 +185,16 @@ const Navbar = (props) => {
           style={{ borderRadius: "25px" }}
           borderRadius="25%"
         >
-          <MenuItem onClick={handleMenuClose}>
-            <div className="col-lg-12">
-              <span style={{ fontSize: 15 }}>
-                You are Sign in as{" "}
-                <span color="blue">{localStorage.getItem("userName")}</span>
+          <MenuItem onClick={handleMenuClose} style={{ width: "100%" }}>
+            <span style={{ fontSize: 15 }}>
+              You are Sign in as{" "}
+              <span style={{ color: "blue", fontSize: "large" }}>
+                {localStorage.getItem("userName")}
               </span>
-            </div>
+            </span>
           </MenuItem>
 
-          <Form onSubmit={(e) => handleSubmitSubs(e)}>
+          <Form style={{ margin: 0 }} onSubmit={(e) => handleSubmitSubs(e)}>
             <MenuItem style={{ opacity: "20" }}>
               <FormControlLabel
                 control={
@@ -187,11 +203,17 @@ const Navbar = (props) => {
                     checked={showSubsStatus}
                     onChange={toggleSwitchChange}
                     variant="primary"
+                    style={{ justifyContent: "end" }}
+                    color="primary"
                   />
                 }
                 label="Change Subs Plan?"
                 labelPlacement="start"
-                style={{ maxWidth: "600px" }}
+                style={{
+                  maxWidth: "600px",
+                  marginLeft: "0",
+                  marginRight: "20px",
+                }}
               />
             </MenuItem>
             {showButton ? (
@@ -201,12 +223,25 @@ const Navbar = (props) => {
                   variant="contained"
                   size="small"
                   color="primary"
+                  style={{ width: "100%" }}
                 >
                   Save changes
                 </Button>
               </MenuItem>
             ) : null}
           </Form>
+          <MenuItem>
+            <Button
+              type="button"
+              variant="contained"
+              size="small"
+              color="secondary"
+              style={{ width: "100%" }}
+              onClick={handleLogoutButton}
+            >
+              Log Out!
+            </Button>
+          </MenuItem>
         </Menu>
       </div>
     </>
@@ -280,13 +315,17 @@ const Navbar = (props) => {
                     <AccountCircle style={{ fontSize: 40 }} />
                   </IconButton>
                 ) : (
-                  <Button variant="text" onClick={goToLoginPage}>
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    onClick={goToLoginPage}
+                  >
                     Log In
                   </Button>
                 )}
               </div>
             </Toolbar>
-            {renderMenu}
+            {isMenuOpen ? renderMenu : null}
           </AppBar>
         </div>
       </>

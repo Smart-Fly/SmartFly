@@ -10,6 +10,7 @@ import MyGoogleLogin from "../../components/MyGoogleLogin";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@material-ui/icons/CheckBox";
+import Swal from "sweetalert2";
 const loginBG = require("../../asset/LoginBG.jpeg");
 const logo = require("../../asset/LogoWithoutBg.png");
 
@@ -25,7 +26,9 @@ const UserPage = () => {
     password: "",
   });
   const history = useHistory();
-  const [userLogin, { data: userLoginInfo, loading }] = useMutation(USER_LOGIN);
+  const [userLogin, { data: userLoginInfo, loading, error }] = useMutation(
+    USER_LOGIN
+  );
   /** =============== End State FOR Login Card ================ */
 
   /** =============== START State FOR register Card ================ */
@@ -35,16 +38,14 @@ const UserPage = () => {
     email: "",
     password: "",
   });
-
   const [updateSubs, setUpdateSubs] = useState(false);
-  const [register] = useMutation(USER_REGISTER);
+  const [register, { data: dataUserRegistered }] = useMutation(USER_REGISTER);
   const handleLoginOnchance = (e) => {
     const { name, value } = e.target;
     setUserLoginData({ ...userLoginData, [name]: value });
   };
   /** =============== End State FOR register Card ================ */
 
-  /** =============== Start Function FOR Login Card ================ */
   const handleSubmitLogin = (e) => {
     e.preventDefault();
     userLogin({
