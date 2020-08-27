@@ -213,52 +213,45 @@ const ListData = () => {
   return (
     <>
 
+
       <div className="full-container">
+
+        <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)} onHide={() => { setModalShowFilter(false); }} />
+        <ModalPredict
+          show={modalShow}
+          dataPredictions={dataPredictions}
+          onHide={() => {
+            setModalShow(false);
+          }}
+        ></ModalPredict>
+
+        {/* ______======____Filter Container _________________++++++++++++++++___________ */}
+
 
         <div className="container-fluid">
 
           <div className="row">
 
-            {/* <div className="limitter">
-        <div className='list-data-container'>
-          <div className="wrapping-data">
-              <div className="page-content">
-                <div className="dataStyle"> */}
-            <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)} onHide={() => { setModalShowFilter(false); }} />
-            <ModalPredict
-              show={modalShow}
-              dataPredictions={dataPredictions}
-              onHide={() => {
-                setModalShow(false);
-              }}
-            ></ModalPredict>
+              <div className="col-2 mt-5" >
+            <div id="filter-style">
 
-            {/* ______======____Filter Container _________________++++++++++++++++___________ */}
-
-            {/* <div className="style-filter" id="filter-style"> */}
-
-
-            <div className="col-2 mt-5">
-<div className="filter-style">
-
-              <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
-                Get Predictions
+                <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
+                  Get Predictions
                       </Button>
-              <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
-                Filter check
+                <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+                  Filter check
                     </Button>
-              <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
-              <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
-              <AirbnbSlider
-                value={value}
-                onChange={handleChange}
-                ThumbComponent={AirbnbThumbComponent}
-                step={100000}
-                min={0}
-                max={5000000}
-              />
-            </div>
-            {/* </div> */}
+                <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
+                <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+                <AirbnbSlider
+                  value={value}
+                  onChange={handleChange}
+                  ThumbComponent={AirbnbThumbComponent}
+                  step={100000}
+                  min={0}
+                  max={5000000}
+                />
+              </div>
             </div>
 
             {/* ___________________Data Ticket Card _________________++++++++++++++++___________ */}
@@ -268,25 +261,18 @@ const ListData = () => {
               {ticket && ticketLocal.map((tiket, i) => {
                 return (
                   <Row className="mb-4">
-                  <Col  >
-                  <div data-aos='fade-up'>
-                    <CardResult
-                      className="shadow rounded"
-                      tiket={tiket} key={i} />
-                  </div>
+                    <Col  >
+                      <div data-aos='fade-up'>
+                        <CardResult
+                          className="shadow rounded"
+                          tiket={tiket} key={i} />
+                      </div>
                     </Col>
-                    </Row >
+                  </Row >
                 )
               })
               }
-              {/* </div>
-              </div>
-            </div>
 
-          </div>
-
-          
-        </div> */}
             </div>
           </div>
 
