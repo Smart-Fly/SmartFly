@@ -11,13 +11,10 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 import Skeleton from "@material-ui/lab/Skeleton";
 import ModalPredict from "../../components/ModalPredic";
 import ModalFilter from "../../components/ModalFilter";
-<<<<<<< HEAD
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 // import Aos from 'aos'
 // import 'aos/dist/aos'
-=======
->>>>>>> development
 
 const GET_PRED = gql`
   query getPrediction($depart: String, $arrive: String) {
@@ -283,7 +280,6 @@ const ListData = (props) => {
           setModalShow(false);
         }}
       ></ModalPredict>
-<<<<<<< HEAD
       <Container className="mt-5 pt-4">
       <div className="clearfix ">
       <center>
@@ -347,7 +343,6 @@ const ListData = (props) => {
         </Row >
       )
     })}
-=======
       <Container>
         <div className="clearfix ">
           <center>
@@ -380,7 +375,6 @@ const ListData = (props) => {
         />
         <br></br>
         <br></br>
->>>>>>> development
 
         {ticket &&
           allTicket().map((tiket, i) => {
