@@ -25,12 +25,9 @@
 	margin: 0;
 	/* background-image: url('https://images3.alphacoders.com/785/thumb-1920-785576.png'); */
   }
-.limitter {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 50px 1fr 50px;
-	grid-template-areas:
-    "main-page";
+.full-container {
+
+  
 	min-height: 100vh;
 	background: linear-gradient(45deg, #2196f3 50%, #21cbf3 50%)
 	
@@ -40,81 +37,14 @@
 	justify-content: center;
 
 }
-.style-filter{
-	justify-content: center;
-	align-items: center;
-	width: 30vh;
-}
-.list-data-container{
-	width: 100%;
-	min-height: 100vh;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	padding: 20px;
-	position: relative;
-  	z-index: 1;
-
-}
-.wrapping-data{
-	width: 100%;
-}
-.main-page{
-	grid-area: main;
-}
-.page-content{
-	column-count: 1;
-  column-gap: 20px;
-  margin: 20px;
-}
-
-.data-ticket{
-	/* font-family: "Montserrat-Bold"; */
-
-	/* top: 8vh; */
-/* min-height: 100vh; */
-/* position: relative; */
-
-}
-.dataStyle{
-	display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-color: #82bef6;
-  margin-bottom: 20px;
-  -webkit-column-break-inside: avoid;
-  padding: 24px;
-  box-sizing: border-box;
-}
-.dataStyle:first-child {
-	height: 200px;
-  }
-  .dataStyle:nth-child(2) {
-	height: 200px;
-  }
 
 #filter-style{
-	/* font-family: "Montserrat-Bold"; */
-	/* left: 50vh; */
-	/* flex */
-	/* top: 0px; */
-
-	/* z-index: 1; */
-	/* right:  50vh; */
-	/* left: 1rem; */
-	/* margin: 10px; */
-	/* padding: 1vh; */
-	/* background-color: burlywood;
-	border-radius: 1vh;
-	width: 100vh;
+	
+	
 	position: -webkit-sticky;
-	position: sticky; */
+	position: sticky;
+	top: 0;
+
 }
 
 #cek {
@@ -137,13 +67,3 @@
 
 /* } */
 
-/* "Lion Air" ok
-"Lion" ok
-"Batik Air" ok
-"Batik"
-"Citilink Indonesia"  ok
-"Citilink" ok
-"Multi-airline" ok
-"Multi-maskapai" ok
-"Garuda Indonesia" ok ok
-"Garuda" ok */
