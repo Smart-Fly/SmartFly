@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { withStyles } from "@material-ui/core/styles";
 import CardResult from "../../components/CardResult";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 import { Slider, Typography } from "@material-ui/core";
 import { useParams, useLocation } from "react-router-dom";
 import { GET_FLIGHT_SEARCH } from "../../query/QueryPrice";
@@ -84,7 +84,7 @@ const ListData = () => {
     Garuda: true,
     Batik: true,
     Citilink: true,
-    Multi: true
+    Multi: true,
   });
   const [value, setValue] = React.useState([400000, 3000000]);
   const {
@@ -93,15 +93,13 @@ const ListData = () => {
 
   // const [ticketBucket, setTicketBucket] = useState([]);
   const [getFlight, { data: ticket, loading }] = useMutation(GET_FLIGHT_SEARCH);
-  const [ticketLocal, setTicketLocal] = useState([])
-
+  const [ticketLocal, setTicketLocal] = useState([]);
 
   useEffect(() => {
     if (ticket != null) {
-
-      setTicketLocal(ticket.getFlight.AllData)
+      setTicketLocal(ticket.getFlight.AllData);
     }
-  }, [ticket])
+  }, [ticket]);
   const [
     getPredictions,
     { data: dataPredictions },
@@ -120,6 +118,8 @@ const ListData = () => {
     setValue(newValue);
   };
 
+  console.log(data)
+
   useEffect(() => {
     getFlight({
       variables: {
@@ -136,9 +136,9 @@ const ListData = () => {
     });
   }, [slug, data, getFlight]);
 
-useEffect(() => {
-  Aos.init({duration:1000})
-}, [])
+  useEffect(() => {
+    Aos.init({ duration: 1000 })
+  }, [])
 
 
   const onFilter = (params) => {
@@ -168,20 +168,19 @@ useEffect(() => {
 
   useEffect(() => {
     if (ticket != null) {
-      onFilter(ValueModal)
+      onFilter(ValueModal);
     }
   }, [value])
 
   if (loading) {
     return (
       <>
-        <div id='cek' >
+        <div id="cek">
           <LinearProgress color="secondary" />
-          <Container >
+          <Container>
             <br></br>
             <br></br>
-            <div style={{ marginTop: '60px' }} >
-
+            <div style={{ marginTop: "60px" }}>
               <Skeleton variant="rect" width={1100} height={120} />
               <br></br>
               <Skeleton variant="rect" width={1100} height={120} />
@@ -197,85 +196,90 @@ useEffect(() => {
   }
 
   const toRupiah = (money) => {
-    return money.toLocaleString('id-ID')
-
+    return money.toLocaleString("id-ID");
   };
-
 
   const toModal = () => {
     getPredict();
     setModalShow(true);
   };
   const toModalFilter = (params) => {
-    onFilter(params)
-    setValueModal(params)
-    setModalShowFilter(false)
-  }
+    onFilter(params);
+    setValueModal(params);
+    setModalShowFilter(false);
+  };
 
   console.log(ticketLocal)
   return (
-    <div >
-      <div id="booking1" >
-        <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)}
-          onHide={() => {
-            setModalShowFilter(false);
-          }}
-        />
+    <>
+      <div className="limitter">
+        <div className='list-data-container'>
+          <div className="wrapping-data">
+            <div className="main-page">
+              <div className="page-content">
 
-        <ModalPredict show={modalShow} dataPredictions={dataPredictions}
-          onHide={() => {
-            setModalShow(false);
-          }}
-        ></ModalPredict>
-        <Container>
-          <div className="clearfix mb-2">
-            <div id="filter-style">
-              <center>
+                <div className="dataStyle">
 
-                <br></br>
-                <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
-                  Get Predictions
-      </Button>
-                <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
-                  Filter check
-            </Button>
-              </center>
-              <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
-              <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
-              <AirbnbSlider
-                value={value}
-                onChange={handleChange}
-                ThumbComponent={AirbnbThumbComponent}
-                step={100000}
-                min={0}
-                max={5000000}
-              />
+                  <ModalFilter show={modalShowFilter} filted={(dataModal) => toModalFilter(dataModal)} onHide={() => { setModalShowFilter(false); }} />
+
+                  <ModalPredict
+                    show={modalShow}
+                    dataPredictions={dataPredictions}
+                    onHide={() => {
+                      setModalShow(false);
+                    }}
+                  ></ModalPredict>
+
+                  {/* ______======____Filter Container _________________++++++++++++++++___________ */}
+
+                  {/* <div className="style-filter" id="filter-style"> */}
+
+                  <div className="button-filter">
+
+                    <Button startIcon={<FilterListIcon />} variant="primary" onClick={() => toModal()}>
+                      Get Predictions
+                      </Button>
+                    <Button startIcon={<FilterListIcon />} variant="primary" style={{ margin: '10px' }} onClick={() => setModalShowFilter(true)}>
+                      Filter check
+                    </Button>
+                  </div>
+                  <Typography className="float-left" style={{ color: 'white' }}>Rp {toRupiah(value[0])}</Typography>
+                  <Typography className="float-right" style={{ color: 'white' }}>Rp {toRupiah(value[1])}</Typography>
+                  <AirbnbSlider
+                    value={value}
+                    onChange={handleChange}
+                    ThumbComponent={AirbnbThumbComponent}
+                    step={100000}
+                    min={0}
+                    max={5000000}
+                  />
+                  {/* </div> */}
+                </div>
+
+                {/* ___________________Data Ticket Card _________________++++++++++++++++___________ */}
+
+                <div className="dataStyle">
+
+                  {ticket && ticketLocal.map((tiket, i) => {
+                    return (
+                        <div data-aos='fade-up'>
+                        <CardResult
+                          className="shadow rounded"
+                          tiket={tiket} key={i} />
+                        </div>
+                    )
+                  })
+                  }
+                </div>
+              </div>
             </div>
+
           </div>
 
-          <div className="data-ticket">
-          {ticket && ticketLocal.map((tiket, i) => {
-            return (
-              <Row className="mb-4">
-                <Col  >
-                <div  data-aos='fade-up'>
-               
-                  <CardResult 
-                    className="shadow rounded"
-                    tiket={tiket} key={i} />
-                    </div>
-                </Col>
-              </Row >
-            )
-          })
-          }
-          </div>
-        </Container>
-        <br></br>
-        <br></br>
-        <br></br>
+        </div>
+
       </div>
-    </div>
+    </>
 
   );
 };

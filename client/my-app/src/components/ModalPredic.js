@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import CircularProgress from "@material-ui/core/CircularProgress";
 // const graph = require("../asset/graph1.png")
 // const graph2 = require("../asset/graph2.png")
-const graph2 = require("../img/analis.svg")
+const graph2 = require("../img/analis.svg");
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -28,9 +28,9 @@ const ModalPredic = (props) => {
     }
 
     return (
-      <div >
+      <div>
         <h2> {temp} </h2>
-        <img src={ graph2} width="300" height="300" />
+        <img src={graph2} width="300" height="300" alt="prediction-img" />
         <h3> Accuracy: {accuracy.toFixed(2) * 100} % </h3>
       </div>
     );
@@ -44,7 +44,6 @@ const ModalPredic = (props) => {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
             <center>Future Price Forecast</center>
@@ -53,7 +52,7 @@ const ModalPredic = (props) => {
         <Modal.Body>
           <center>
             {dataPredictions ? (
-              <div  >
+              <div>
                 <h3>Predictions for the future</h3>
                 {sentence()}
               </div>
@@ -68,7 +67,6 @@ const ModalPredic = (props) => {
           </Button> */}
           {/* <Button onClick={props.onHide}>Close</Button> */}
         </Modal.Footer>
-
       </Modal>
     </div>
   );

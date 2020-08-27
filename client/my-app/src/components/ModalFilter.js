@@ -2,7 +2,7 @@ import React, {  createRef } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +20,7 @@ const ModalFilter = (props) => {
     Garuda: false,
     Batik: false,
     Citilink: false,
-    Multi: false
+    Multi: false,
   });
   const handleChangeG = (event) => {
     setAirlines({ ...airlines, Garuda: event.target.checked });
@@ -48,80 +48,78 @@ const ModalFilter = (props) => {
         centered
       >
         <Modal.Header closeButton>
-
           <Modal.Title id="contained-modal-title-vcenter">
             <center>Filter Airlines</center>
           </Modal.Title>
         </Modal.Header>
-          <center>
-        <Modal.Body>
-          <FormControlLabel
-            label='Garuda Indonesia'
-            labelPlacement="top"
-            control={
-              <Checkbox
-                checked={airlines.Garuda}
-                onChange={handleChangeG}
-                value={airlines.Garuda}
-                color="primary"
-                inputProps={{ "aria-label": "secondary checkbox" }}
-                value="Garuda"
-              />}
-          />
-          <FormControlLabel
-            label='Lion Air'
-            labelPlacement="top"
-            control={
-              <Checkbox
-                checked={airlines.Lion}
-
-                onChange={handleChangeL}
-                value={airlines.Lion}
-                color="primary"
-                inputProps={{ "aria-label": "secondary checkbox" }}
-                value="Lion"
-              />}
-          />
-          <FormControlLabel
-            label='Batik Air'
-            labelPlacement="top"
-            control={
-              <Checkbox
-                checked={airlines.Batik}
-
-                value={airlines.Batik}
-                onChange={handleChangeB}
-                color="primary"
-                inputProps={{ "aria-label": "secondary checkbox" }}
-              />}
-          />
-          <FormControlLabel
-            label='Multi-airline'
-            labelPlacement="top"
-            control={
-              <Checkbox
-                checked={airlines.Multi}
-
-                value={airlines.Multi}
-                onChange={handleChangeM}
-                color="primary"
-                inputProps={{ "aria-label": "secondary checkbox" }}
-              />}
-          />
-          <FormControlLabel
-            label='Citilink'
-            labelPlacement="top"
-            control={
-              <Checkbox
-                checked={airlines.Citilink}
-                value={airlines.Citilink}
-                onChange={handleChangeC}
-                color="primary"
-                inputProps={{ "aria-label": "secondary checkbox" }}
-              />}
-          />
-
-        </Modal.Body>
+        <center>
+          <Modal.Body>
+            <FormControlLabel
+              label="Garuda Indonesia"
+              labelPlacement="top"
+              control={
+                <Checkbox
+                  checked={airlines.Garuda}
+                  onChange={handleChangeG}
+                  value={airlines.Garuda}
+                  color="primary"
+                  inputProps={{ "aria-label": "secondary checkbox" }}
+                />
+              }
+            />
+            <FormControlLabel
+              label="Lion Air"
+              labelPlacement="top"
+              control={
+                <Checkbox
+                  checked={airlines.Lion}
+                  onChange={handleChangeL}
+                  value={airlines.Lion}
+                  color="primary"
+                  inputProps={{ "aria-label": "secondary checkbox" }}
+                />
+              }
+            />
+            <FormControlLabel
+              label="Batik Air"
+              labelPlacement="top"
+              control={
+                <Checkbox
+                  checked={airlines.Batik}
+                  value={airlines.Batik}
+                  onChange={handleChangeB}
+                  color="primary"
+                  inputProps={{ "aria-label": "secondary checkbox" }}
+                />
+              }
+            />
+            <FormControlLabel
+              label="Multi-airline"
+              labelPlacement="top"
+              control={
+                <Checkbox
+                  checked={airlines.Multi}
+                  value={airlines.Multi}
+                  onChange={handleChangeM}
+                  color="primary"
+                  inputProps={{ "aria-label": "secondary checkbox" }}
+                />
+              }
+            />
+            <FormControlLabel
+              label="Citilink"
+              labelPlacement="top"
+              control={
+                <Checkbox
+                  checked={airlines.Citilink}
+                  value={airlines.Citilink}
+                  onChange={handleChangeC}
+                  color="primary"
+                  inputProps={{ "aria-label": "secondary checkbox" }}
+                />
+              }
+            />
+          </Modal.Body>
         </center>
 
         <center>
@@ -136,7 +134,7 @@ const ModalFilter = (props) => {
         <br></br>
       </Modal>
     </div>
-  ); 
+  );
 };
 
 export default ModalFilter;

@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from "react";
-import client from "../config/config";
 import Modal from "../components/Modal";
 import Menu from "@material-ui/core/Menu";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import Switch from "@material-ui/core/Switch";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import { Button } from "@material-ui/core";
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
 import { Form } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
-import { useLocation } from "react-router-dom";
-import { GET_CACHE_USER } from "../query/cacheQuery";
+import { useLocation, useHistory } from "react-router-dom";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import { UPDATE_SUBSCRIPTION } from "../query/userQuery";
-
 const logoSmartFly = require("../asset/SmartFlyLogo.png");
+
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
@@ -99,39 +96,31 @@ const Navbar = () => {
   const [modalShow, setModalShow] = useState(false);
   const isMenuOpen = Boolean(anchorEl);
   const menuId = "primary-search-account-menu";
+  /** ============= START FUNGSI UPDATE DARI LUQMAN ================ */
 
   /** START STATE YANG DIGUNAKAN */
   const [showUserName, setShowUserName] = useState(""); // check Login
   const [showSubsStatus, setShowSubsstatus] = useState(false);
   const [showButton, setShowButton] = useState(false);
-  const [userSubsToUpdate, setUserSubsToUpdate] = useState({
+  const [updateSubscription] = useMutation(UPDATE_SUBSCRIPTION);
+  const [userSubsToUpdate] = useState({
     access_token: "",
     subsStatus: false,
   }); // Ini buat onSubmit yang dikirim ke server
-
+  const history = useHistory();
   /** END STATE YANG DIGUNAKAN */
 
-  const { cacheUser } = client.readQuery({
-    query: GET_CACHE_USER,
-  });
-
-  const [updateSubscription, { data, loading }] = useMutation(
-    UPDATE_SUBSCRIPTION
-  );
-
   useEffect(() => {
-    if (cacheUser) {
-      const { userNameCache, subsStatusCache } = cacheUser;
-      setShowUserName(userNameCache);
-      setShowSubsstatus(subsStatusCache);
+    if (localStorage) {
+      setShowUserName(localStorage.getItem("userName"));
+      setShowSubsstatus(localStorage.getItem("userName"));
     }
-  }, [cacheUser]);
+  }, [localStorage]);
 
   const toggleSwitchChange = (e) => {
     const { checked } = e.target;
     setShowSubsstatus(checked);
     setShowButton(true);
-    setUserSubsToUpdate();
   };
 
   const handleSubmitSubs = (e) => {
@@ -139,7 +128,7 @@ const Navbar = () => {
     updateSubscription({
       variables: {
         updateData: {
-          ...setUserSubsToUpdate,
+          ...userSubsToUpdate,
           subsStatus: showSubsStatus,
           access_token: localStorage.getItem("access_token"),
         },
@@ -151,6 +140,7 @@ const Navbar = () => {
   /** ============= END FUNGSI UPDATE DARI LUQMAN ================ */
 
   const handleProfileMenuOpen = (event) => {
+    console.log(event.currentTarget, "ini apa");
     setAnchorEl(event.currentTarget);
   };
 
@@ -158,9 +148,13 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
+  const goToLoginPage = () => {
+    history.push("/login");
+  };
+
+  /** ====================== INI RENDER MENU ====================== */
   const renderMenu = (
     <>
-
       <Menu
         anchorEl={anchorEl}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
@@ -171,11 +165,11 @@ const Navbar = () => {
         onClose={handleMenuClose}
         position="absolute"
       >
-        <div className="row justify-content-start">
+        <div className="row justify-content-center">
           <MenuItem onClick={handleMenuClose}>
             <div className="col-lg-12">
               <span style={{ fontSize: 15 }}>
-                You are Sign in as {showUserName}
+                You are Sign in as <span color="blue">{showUserName}</span>
               </span>
             </div>
           </MenuItem>
@@ -192,6 +186,7 @@ const Navbar = () => {
                   />
                 }
                 label="Change Subs Plan"
+                style={{ maxWidth: "600px" }}
               />
               {showButton ? (
                 <Button type="submit" variant="primary">
@@ -205,28 +200,37 @@ const Navbar = () => {
     </>
   );
 
-  if (pathname !== "/login" && pathname !== "/register") {
+  /** ====================== INI RENDER MENU ====================== */
+
+  /** ======================== INI NAVBAR ========================= */
+
+  if (
+    pathname !== "/login" &&
+    pathname !== "/register" &&
+    pathname !== "/flip"
+  ) {
     return (
       <>
         <div className={classes.grow}>
           <Modal show={modalShow} onHide={() => setModalShow(false)}></Modal>
           <AppBar
-            // position="absolute"
+            position={ pathname === "/login" ||
+            pathname === "/register" ||
+            pathname === "/flip" || pathname === "/" ? "absolute" : 'static' }
             // style={
             //   pathname === "/"
             //     ? {
             //         background: "transparent",
             //         boxShadow: "none",
-            //         color: "blue",
+            //         border: "none",
             //       }
             //     : {
             //         background: "transparent",
             //         boxShadow: "none",
-            //         color: "black",
             //       }
             // }
             color="light"
-            style={{ background: "transparent" }}
+            style={{ background: "transparent", boxShadow: "none" }}
             title={<img src={logoSmartFly} />}
           >
             <Toolbar>
@@ -237,9 +241,6 @@ const Navbar = () => {
                 aria-label="open drawer"
               ></IconButton>
               <img src={logoSmartFly} alt="logo" className={classes.logo} />
-              <Typography className={classes.title} variant="h6" noWrap>
-                Smart-Fly
-              </Typography>
               <div className={classes.search}>
                 <div className={classes.searchIcon}>{/* <SearchIcon /> */}</div>
                 {pathname !== "/" ? (
@@ -250,23 +251,29 @@ const Navbar = () => {
                     startIcon={<SearchIcon />}
                   >
                     New Search
-                  </Button>) : null}
+                  </Button>
+                ) : null}
               </div>
               <div className={classes.grow} />
               <div className={classes.sectionDesktop}>
-                <IconButton
-                  edge="end"
-                  aria-label="account of current user"
-                  aria-controls={menuId}
-                  aria-haspopup="true"
-                  onClick={handleProfileMenuOpen}
-                  color="inherit"
-                >
-                  <AccountCircle style={{ fontSize: 40 }} />
-                </IconButton>
+                {localStorage.getItem("access_token") ? (
+                  <IconButton
+                    edge="end"
+                    aria-label="account of current user"
+                    aria-controls={menuId}
+                    aria-haspopup="true"
+                    onClick={handleProfileMenuOpen}
+                    color="inherit"
+                  >
+                    <AccountCircle style={{ fontSize: 40 }} />
+                  </IconButton>
+                ) : (
+                  <Button variant="primary" onClick={goToLoginPage}>
+                    Log In
+                  </Button>
+                )}
               </div>
             </Toolbar>
-            {/* {isLoggedIn ? renderMenu : null} */}
             {renderMenu}
           </AppBar>
         </div>

@@ -10,14 +10,14 @@ import {
   CardHeader,
   CardMedia,
 } from "@material-ui/core";
-import TelegramIcon from '@material-ui/icons/Telegram';
+import TelegramIcon from "@material-ui/icons/Telegram";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "space-around",
     textAlign: "center",
-    width: '147vh',
+    width: '`100%',
     height: '12vw'
   },
   details: {
@@ -60,17 +60,17 @@ const CardResult = (props) => {
     }
   }
 
-  const nameAirline =()=>{
-    if (data.airline === "Citilink Indonesia" ) {
-        return "Citilink"
-      }else if(data.airline === "Garuda Indonesia"){
-        return "Garuda"
 
+
+  const nameAirline = () => {
+    if (data.airline === "Citilink Indonesia") {
+      return "Citilink";
+    } else if (data.airline === "Garuda Indonesia") {
+      return "Garuda";
+    } else {
+      return data.airline;
     }
-    else{
-      return data.airline
-    }
-  } 
+  };
   return (
     <>
       <Card className={classes.root}>
@@ -85,28 +85,27 @@ const CardResult = (props) => {
             />
           </CardMedia>
           {data.airline === "Multi-airline" || data.airline === "Multi-maskapai" ?
-          <Typography gutterBottom variant="h5" component="h2" >
-            {nameAirline() }
-          </Typography>
-          :
-          <Typography gutterBottom variant="h4" component="h1" >
-            {nameAirline() }
-          </Typography>}
+            <Typography gutterBottom variant="h5" component="h2" >
+              {nameAirline()}
+            </Typography>
+            :
+            <Typography gutterBottom variant="h4" component="h1" >
+              {nameAirline()}
+            </Typography>}
         </CardContent>
 
         <CardActions disableSpacing>
           <CardHeader
-          subheader="Departure"
-          title={data.departureTime}
+            subheader="Departure"
+            title={data.departureTime}
           ></CardHeader>
           <CardHeader subheader="Arrival" title={data.arrivalTime}></CardHeader>
         </CardActions>
         <CardContent>
           <Typography>
-
             <br></br>
           </Typography>
-          <CardMedia >
+          <CardMedia>
             <img
               width="200"
               height="100"
@@ -118,17 +117,13 @@ const CardResult = (props) => {
         <CardActions disableSpacing>
           <CardContent>
             <Typography gutterBottom variant="h4" component="h1">
-             Rp {
-              
-              data.price.toLocaleString('id-ID')
-              }
-
+              Rp {data.price.toLocaleString("id-ID")}
             </Typography>
             <Button
               href={data.url}
               target="_blank"
               variant="contained"
-              startIcon={<TelegramIcon/>}
+              startIcon={<TelegramIcon />}
             >
               Buy Now
             </Button>
