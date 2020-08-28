@@ -186,6 +186,10 @@ const ListData = () => {
               <Skeleton variant="rect" width={1100} height={120} />
               <br></br>
               <Skeleton variant="rect" width={1100} height={120} />
+              <br></br>
+              <Skeleton variant="rect" width={1100} height={120} />
+              <br></br>
+              <br></br>
             </div>
           </Container>
         </div>

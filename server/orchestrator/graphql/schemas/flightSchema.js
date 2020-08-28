@@ -49,7 +49,7 @@ const resolvers = {
         try {
           const searchToAdd = args.search
           const addToSearch = await axios.post(`http://localhost:3003/flightPrice`, searchToAdd)
-          await redis.set(`prices-${uKey.dACode}/${uKey.aACode}/${uKey.pDate}/${uKey.cType}`, JSON.stringify(addToSearch.data), 'EX', 1800)
+          await redis.set(`prices-${uKey.dACode}/${uKey.aACode}/${uKey.pDate}/${uKey.cType}`, JSON.stringify(addToSearch.data), 'EX', 180000000)
           return addToSearch.data
 
         } catch (err) {

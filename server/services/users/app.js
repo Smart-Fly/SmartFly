@@ -18,8 +18,12 @@ app.use(express.json());
 app.use(router);
 
 app.use(errorHandler);
-app.listen(port, () => {
-  console.log(`users running on port ${port}`);
-});
+if (process.env.NODE_ENV === "test") {
+  
+  module.exports = app
+}else{
 
-// module.exports = app
+  app.listen(port, () => {
+    console.log(`users running on port ${port}`);
+  });
+}
