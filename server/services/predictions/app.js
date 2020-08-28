@@ -63,6 +63,12 @@ app.get("/pricePrediction/:departure/:arrival", (req, res) => {
 
 app.use(routes);
 
-app.listen(port, () => {
-  console.log(`predictions listening to port ${port}`);
-});
+if (process.env.NODE_ENV === "test") {
+
+  module.exports = app
+} else {
+  app.listen(port, () => {
+    console.log(`predictions listening to port ${port}`);
+  });
+}
+// module.exports = app

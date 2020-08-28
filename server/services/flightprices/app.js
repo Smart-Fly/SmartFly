@@ -8,8 +8,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-app.listen(port, () => {
-  console.log(`flightPrices application listening on port ${port}`);
-});
-
-// module.exports = app
+if (process.env.NODE_ENV === "test") {
+  
+  module.exports = app
+}else{
+  app.listen(port, () => {
+    console.log(`flightPrices application listening on port ${port}`);
+  });
+}
+  // module.exports = app

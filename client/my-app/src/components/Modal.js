@@ -64,7 +64,7 @@ const ModalForm = (props) => {
   var todayDate = selectedDate.toISOString().slice(0, 10);
   const goSubmit = (e) => {
     e.preventDefault();
-
+    if (from !== undefined && to !== undefined) {
     history.push({
       pathname: `/${from}?${to}!${todayDate}@${totalAdults}#${totalChildren}$${totalInfant}=${clases}+`,
       state: {
@@ -80,6 +80,9 @@ const ModalForm = (props) => {
       },
     });
     props.onHide();
+  }else{
+    
+  }
   };
 
   return (

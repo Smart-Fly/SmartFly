@@ -5,8 +5,8 @@ const SearchModel = require("../models/search");
 describe("Test Route GET /prediction/:departure/:arrival", () => {
   beforeAll((done) => {
     return SearchModel.insertOne({
-      departure: "jakarta",
-      arrival: "bali",
+      departure: "Jakarta",
+      arrival: "Bali",
       date: new Date().getDate(),
     })
       .then(() => {
